@@ -1,0 +1,167 @@
+<?php
+extract($this->viewData['cliente']);
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/clientes">Clientes</a></li>                    
+                    <li class="active">Atualizar</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="content mt-3">
+    <div class="animated fadeIn">        
+        <form method="post" name="editar_clientes" enctype="multipart/form-data">           
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header"><strong>Dados</strong><small> pessoais</small></div>
+                    <div class="card-body card-block">
+                        <div class="form-group col-lg-6">
+                            <label class=" form-control-label">Nome</label>
+                            <input type="text" name="nome_cliente" value="<?= $nome_cliente ?>" placeholder="Digite seu nome" class="form-control">
+                        </div>                        
+                        <div class="form-group col-lg-6">
+                            <label class=" form-control-label">Sobrenome</label>
+                            <input type="text" name="sobrenome_cliente" value="<?= $sobrenome_cliente ?>" placeholder="Digite seu sobrenome" class="form-control">
+                        </div>                        
+                        <div class="form-group  col-lg-6">
+                            <label class=" form-control-label">Email</label>
+                            <input type="email" name="email_cliente" value="<?= $email_cliente ?>" placeholder="Digite seu email" class="form-control">
+                        </div>                        
+                        <div class="form-group col-lg-6">
+                            <label class=" form-control-label">Senha</label>
+                            <input type="password" name="senha_cliente"  value="" placeholder="Digite sua senha" class="form-control">
+                        </div>                        
+                        <div class="form-group col-lg-6">
+                            <label class=" form-control-label">Confirmar senha</label>
+                            <input type="password" name="senhac" value="" placeholder="Confirme a senha digitada!" class="form-control">
+                        </div>                         
+                        <div class="form-group col-lg-3">
+                            <label class=" form-control-label">Data de nascimento</label>
+                            <input type="date" name="data_nasc_cliente" value="<?= $data_nasc_cliente ?>" placeholder="Confirme a senha digitada!" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label class=" form-control-label">CPF</label>
+                            <input type="text" name="cpf_cliente" value="<?= $cpf_cliente ?>" placeholder="CPF cadastrado" class="form-control">
+                        </div>                         
+                        <div class="form-group col-3 col-lg-2">
+                            <label class=" form-control-label">Telefone</label>
+                            <input type="text" name="telefone_cliente_prefixo" value="<?= substr($telefone_cliente, 0,2) ?>" placeholder="(99)" class="form-control">
+                        </div>
+                        <div class="form-group col-9 col-lg-3">
+                            <label class=" form-control-label">&nbsp;</label>
+                            <input type="text" name="telefone_cliente" value="<?= substr($telefone_cliente, 2,10) ?>" placeholder="9 9999 9999" class="form-control">
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label class=" form-control-label">Sexo</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="sexo_cliente1" <?= $sexo_cliente == 1 ? ' checked' : ''; ?>  name="sexo_cliente" value="1" class="custom-control-input">
+                                <label class="custom-control-label" for="sexo_cliente1">Masculino</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="sexo_cliente2" <?= $sexo_cliente == 0 ? ' checked' : ''; ?> name="sexo_cliente" value="0" class="custom-control-input">
+                                <label class="custom-control-label" for="sexo_cliente2">Feminino</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><strong>Informações</strong><small> de endereço</small></div>
+                    <div class="card-body card-block">
+                        <div class="form-group col-lg-2">
+                            <label class=" form-control-label">CEP</label>
+                            <input type="text" name="cep_cliente" value="<?= $cep_cliente ?>" placeholder="CEP" class="form-control">
+                        </div> 
+                        <div class="form-group col-lg-6">
+                            <label class=" form-control-label">Logradouro</label>
+                            <input type="text" name="logradouro_cliente" value="<?= $logradouro_cliente ?>" placeholder="Rua, Avenida, Travessa..." class="form-control">
+                        </div>                        
+                        <div class="form-group col-lg-1">
+                            <label class=" form-control-label">Nº</label>
+                            <input type="text" name="numero_cliente" value="<?= $numero_cliente ?>" placeholder="000" class="form-control">
+                        </div>                        
+                        <div class="form-group  col-lg-3">
+                            <label class=" form-control-label">Complemento</label>
+                            <input type="email" name="complemento_cliente" value="<?= $complemento_cliente ?>" placeholder="Complemento" class="form-control">
+                        </div>                        
+                        <div class="form-group col-lg-3">
+                            <label class=" form-control-label">Bairro</label>
+                            <input type="text" name="bairro_cliente"  value="<?= $bairro_cliente ?>" placeholder="Bairro" class="form-control">
+                        </div>                        
+                        <div class="form-group col-lg-3">
+                            <label class=" form-control-label">Cidade</label>
+                            <input type="text" name="cidade_cliente" value="<?= $cidade_cliente ?>" placeholder="Cidade" class="form-control">
+                        </div>                         
+                        <div class="form-group col-lg-3">
+                            <label class=" form-control-label">Estado</label>
+                            <div class="input-group mb-3">                                
+                                <select class="custom-select" name="estado_cliente" id="inputGroupSelect01">
+                                    <option>Escolha...</option>
+                                    <?php
+                                    foreach ($this->viewData['estados'] as $estado):
+                                        $select = $estado_cliente == $estado['estado_sigla'] ? ' selected' : '';
+                                        echo '<option' . $select . ' value="' . $estado['estado_sigla'] . '">' . $estado['estado_nome'] . '</option>';
+                                    endforeach;
+                                    ?>                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="card">
+                    <div class="card-header"><strong>Status</strong> do cliente</div>
+                    <div class="card-body card-block">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline1" <?= $status_cliente ? ' checked' : ''; ?> name="status_cliente" value="1" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline1">Cliente ativado</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" <?= !$status_cliente ? ' checked' : ''; ?> name="status_cliente" value="0" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadioInline2">Cliente desativado</label>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">                        
+                        <button type="submit" class="btn btn-success btn-large">Atualizar Cliente</button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="id_cliente" id="id_user" value="<?= $id_cliente; ?>">
+        </form>
+    </div>
+</div><!-- .animated -->
+</div><!-- .content -->
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_clientes">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atualização de cliente</h5>
+                <button type="button" class="close btn_close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Atualizando cliente...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close close_modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

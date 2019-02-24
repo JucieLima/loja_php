@@ -1,0 +1,216 @@
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>">Dashboard</a></li> 
+                    <li><a href="<?= BASE_URL; ?>admin/produtos">Produtos</a></li> 
+                    <li class="active">Cadastrar</li> 
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <form method="post" name="cadastra_produto" enctype="multipart/form-data">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header"><strong>Imagens</strong><small> do produto</small></div>
+                    <div class="card-body card-block">                        
+                        <div class="card mb-3">                            
+                            <div class="row">
+                                <div class="col-12 product_gallery">
+
+                                </div>                            
+                            </div>                            
+                            <div class="card-body">
+                                <p class="card-text">Escolha as imagens para serem mostradas na galeria do produto a ser cadastrado</p>
+                                <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                <button class="btn btn-info" id="choose_image_products">escolher imagens</button>
+                                <input type="file" accept="images" name="imagem_produto[]" multiple="multiple" id="image_products">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">                    
+                    <div class="card-header"><strong>Dados</strong><small> principais</small></div>
+                    <div class="card-body card-block">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class=" form-control-label">Selecine a categoria</label>
+                                <select class="custom-select" name="categoria_produto">                                
+                                    <option value="">Selecione uma categoria</option>
+                                    <?php
+                                    foreach ($this->viewData['categorias'] as $cat):
+                                        echo '<option value="' . $cat['id_categoria'] . '">' . $cat['titulo_categoria'] . '</option>';
+                                    endforeach;
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class=" form-control-label">Selecine o fornecedor</label>
+                                <select class="custom-select" name="fornecedor_produto">                                
+                                    <option value="">Selecione um fornecedor</option>
+                                    <?php
+                                    foreach ($this->viewData['fornecedores'] as $fo):
+                                        echo '<option value="' . $fo['id_fornecedor'] . '">' . $fo['nome_fantasia_fornecedor'] . '</option>';
+                                    endforeach;
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class=" form-control-label">Selecine a marca</label>
+                                <select class="custom-select" name="marca_produto">                                
+                                    <option value="">Selecione uma marca</option>
+                                    <?php
+                                    foreach ($this->viewData['fabricantes'] as $fo):
+                                        echo '<option value="' . $fo['id_marca'] . '">' . $fo['titulo_marca'] . '</option>';
+                                    endforeach;
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class=" form-control-label">Nome do produto</label>
+                            <input type="text" name="titulo_produto" placeholder="Digite o nome do produto." class="form-control">
+                        </div> 
+                        <div class="form-group col-md-2">
+                            <label class=" form-control-label">Preço de custo do produto</label>
+                            <input type="text" name="preco_custo_produto" placeholder="00,00 R$" class="form-control money">
+                        </div> 
+                        <div class="form-group col-md-2">
+                            <label class=" form-control-label">Preço de venda do produto</label>
+                            <input type="text" name="preco_venda_produto" placeholder="00,00 R$" class="form-control money">
+                        </div>                         
+                        <div class="form-group col-md-2">
+                            <label class=" form-control-label">Desconto</label>
+                            <input type="text" name="desconto_produto" placeholder="00,00 R$" class="form-control money">
+                        </div>                         
+                        <div class="form-group col-md-12">
+                            <label class=" form-control-label">Descrição</label>
+                            <input type="text" name="descricao_produto" placeholder="Faça uma breve descrição do produto." class="form-control">
+                        </div> 
+                        <div class="form-group col-12">
+                            <label class=" form-control-label">Detalhes</label>
+                            <textarea name="detalhes_produto" id="ck_editor"  placeholder="Escreva aqui os detalhes e informações que aparecerão na página principal do produto." class="form-control"></textarea>
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Quantidade em estoque</label>
+                            <input type="text" name="quantidade_produto" placeholder="00" class="form-control">
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Quantidade  mínima em estoque (%)</label>
+                            <input type="text" name="qtd_min_produto" placeholder="00,00%" class="form-control percent">
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label class=" form-control-label">Status</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="ativod_produto1" checked  name="ativo_produto" value="1" class="custom-control-input">
+                                <label class="custom-control-label" for="ativod_produto1">Disponível</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="ativod_produto2" name="ativo_produto" value="0" class="custom-control-input">
+                                <label class="custom-control-label" for="ativod_produto2">Indisponível</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Peso e medidas</strong> <small>para cálculo de frete</small></div>
+                    <div class="card-body card-block">
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Altura (cm)</label>
+                            <input type="text" name="altura_produto" placeholder="00 (cm)" class="form-control">
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Largura (cm)</label>
+                            <input type="text" name="largura_produto" placeholder="00 (cm)" class="form-control">
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Comprimento (cm)</label>
+                            <input type="text" name="comprimento_produto" placeholder="00 (cm)" class="form-control">
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Peso estimado (Kg)</label>
+                            <select class="custom-select" name="peso_produto">                                
+                                <option value="0,3">0,300 gramas</option>
+                                <?php
+                                for ($i = 1; $i <= 30; $i++):
+                                    echo '<option value="' . $i . '">' . $i . 'kg</option>';
+                                endfor;
+                                ?>
+                            </select>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">
+                        <button type="submit" class="btn btn-success btn-large">Cadastrar Produto</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!-- .animated -->
+</div><!-- .content -->
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_produtos_cad">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cadastro de produto</h5>
+                <button type="button" class="close btn_close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Salvando produto...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_cadastro_produto" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastro de Produto</h5>
+                <button type="button" class="close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info" role="alert">
+                    <i class="fa fa-spinner fa-spin fa-fw"></i> Aguarde, carregando...
+                </div>                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger close_modal"  data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

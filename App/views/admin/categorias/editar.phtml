@@ -1,0 +1,104 @@
+<?php
+extract($this->viewData['categoria']);
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/Categorias">Categorias</a></li>
+                    <li class="active">Atualizar</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="content mt-3">
+    <div class="animated fadeIn"> 
+        <form method="post" name="atualiza_categorias" enctype="multipart/form-data">            
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header"><strong>Dados </strong><small> da categoria</small></div>
+                    <div class="card-body card-block">
+                        <div class="form-group">
+                            <label class=" form-control-label">Título</label>
+                            <input type="text" name="titulo_categoria" value="<?= $titulo_categoria; ?>" placeholder="Digite um título para a categoria" class="form-control">
+                        </div> 
+                        <div class="form-group">
+                            <label class=" form-control-label">URL</label>
+                            <input type="text" name="url_categoria" value="<?= $url_categoria; ?>"  placeholder="Personalizar URL da categoria" class="form-control">
+                            <span class="font-weight-light text-muted">Este campo não é obrigatório</span>
+                        </div> 
+                        <div class="form-group">
+                            <label  class=" form-control-label">Categoria mãe</label>
+                            <select class="custom-select" name="mae_categoria">
+                                <option value="" selected="selected">Categoria principal</option>
+                                <?php
+                                foreach ($this->viewData['categorias'] as $cat):
+                                    $selected = $cat['id_categoria'] == $mae_categoria ? ' selected="selected"' : '';
+                                    echo '<option value="' . $cat['id_categoria'] . '"' . $selected . '>' . $cat['titulo_categoria'] . '</option>';
+                                    if(count($cat['filhas']) > 0):
+                                        $this->viewData['mae'] = $cat['id_categoria'];
+                                        $this->viewData['filhas'] = $cat['filhas'];
+                                        $this->viewData['level'] = 1;
+                                        $this->getView('admin/categorias/filha');                                      
+                                    endif;
+                                endforeach;
+                                ?>
+                            </select>
+                            <span class="font-weight-light text-muted">Para criar uma subcategoria selecione uma categoria mãe</span>
+                        </div>
+                        <span>Status</span>
+                        <div class="form-group">                            
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" <?= $ativo_categoria ? ' checked' : ''; ?> name="ativo_categoria" id="inlineRadio1" value="1">
+                                <label class="form-check-label" for="inlineRadio1">ativada</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" <?= !$ativo_categoria ? ' checked' : ''; ?> name="ativo_categoria" id="inlineRadio2" value="0">
+                                <label class="form-check-label" for="inlineRadio2">desativada</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">
+                        <button type="submit" class="btn btn-success btn-large">Atualizar categoria</button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="id_categoria" value="<?= $id_categoria; ?>">
+        </form>
+    </div>
+</div><!-- .animated -->
+</div><!-- .content -->
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_categorias_cad">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atualização de categoria</h5>
+                <button type="button" class="close btn_close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Salvando categoria...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close close_modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

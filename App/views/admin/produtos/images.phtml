@@ -1,0 +1,18 @@
+<?php
+
+use CoffeeCode\Cropper\Cropper;
+
+$cropper = new Cropper("cache/thumbs");
+$i = 0;
+foreach ($this->viewData as $imagem):
+    $i++;
+    echo "<div class='col-lg-2' id=" . $imagem['imagem_id'] . "><div class='product_preview'>";
+    echo '<img src="' . BASE_URL . $cropper->make('uploads/' . $imagem['imagem_uri'], 500, 500) . '" alt="Imagem ' . $i . ' do produto" title="Imagem ' . $i . ' do produto">';
+    if ($imagem['imagem_main']):
+        echo '<span class="main_image rounded"><i class="fa fa-image"></i> Capa</span>';
+    else:
+        echo '<a href="#"  id="'.$imagem['imagem_id'].'" class="btn btn-info btn_image rounded" title="Usar esta imagem como a capa"><i class="fa fa-image"></i></a>';
+    endif;
+    echo '<a href="#" id="' . $imagem['imagem_id'] . '" class="btn btn-danger rounded btn_delete" title="Excluir esta imagem"><i class="fa fa-trash"></i></a>';
+    echo "</div></div>";
+endforeach;

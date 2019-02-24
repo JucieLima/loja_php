@@ -1,0 +1,88 @@
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/fornecedores">Fabricantes</a></li>
+                    <li class="active">Índice</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Table Head</strong>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Razão Social</th>
+                                    <th scope="col">Nome Fantasia</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($this->viewData['fornecedores'] as $fornecedor):
+                                    extract($fornecedor);
+                                    ?>
+                                    <tr id="<?= $id_fornecedor; ?>">
+                                        <th scope="row"><?= $id_fornecedor; ?></th>
+                                        <td><?= $rasao_social_fornecedor; ?></td>
+                                        <td><?= $nome_fantasia_fornecedor; ?></td>
+                                        <td><?= $ativo_fornecedor ? 'Ativo' : 'Desativado'; ?></td>
+                                        <td>
+                                            <a href="<?= BASE_URL . 'admin/fornecedores/editar/' . $id_fornecedor; ?>" title="editar fornecedor" class="btn btn-success"><i class="fa fa-edit"></i> editar</a> 
+                                            <a href="<?= BASE_URL; ?>" title="excluir fornecedor" data-name="<?= $nome_fantasia_fornecedor; ?>" class="btn btn-danger delete_fornecedor" id="<?= $id_fornecedor; ?>"><i class="fa fa-trash"></i> excluir</a>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                endforeach;
+                                ?>
+                            </tbody>
+                        </table>
+                        <?php
+                        $pager = new App\Helpers\Pager($this->viewData['pagina'], $this->viewData['paginas'], $this->viewData['limit'], $this->viewData['offset'], 'admin/fornecedores/pagina');
+                        echo $pager->showPager();
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_fornecedores">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cadastro de fornecedor</h5>
+                <button type="button" class="close btn_close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Cadastrando fornecedor...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close close_modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

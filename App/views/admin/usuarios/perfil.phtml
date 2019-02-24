@@ -1,0 +1,141 @@
+<?php
+extract($this->viewData);
+$imagem_usuario = $imagem_usuario ? 'background-image: url(' . BASE_URL . 'uploads/' . $imagem_usuario . ')' : '';
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>                    
+                    <li><a href="<?= BASE_URL; ?>admin/usuarios">Usuários</a></li>                    
+                    <li><a href="<?= BASE_URL; ?>admin/usuarios/profile">Perfil</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <form method="post" name="editar_perfil" enctype="multipart/form-data">
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-header"><strong>Imagem</strong><small> do perfil</small></div>
+                    <div class="card-body card-block">
+                        <div class="card mb-3">
+                            <div class="image_preview" style="<?= $imagem_usuario ?>"></div>
+                            <div class="card-body">
+                                <p class="card-text">Escolha uma imagem para ser mostrada no perfil do usuário a ser cadastrado</p>
+                                <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                <button class="btn btn-info" id="choose_image">escolher imagem</button>
+                                <input type="file" accept="image" name="imagem_usuario" id="image_profile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="card">
+                    <div class="card-header"><strong>Dados</strong><small> pessoais</small></div>
+                    <div class="card-body card-block">
+                        <div class="form-group">
+                            <label class=" form-control-label">Nome</label>
+                            <input type="text" name="nome_usuario" value="<?= $nome_usuario ?>" placeholder="Digite seu nome" class="form-control">
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form-control-label">Sobrenome</label>
+                            <input type="text" name="sobrenome_usuario" value="<?= $sobrenome_usuario ?>" placeholder="Digite seu sobrenome" class="form-control">
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form-control-label">Email</label>
+                            <input type="email" name="email_usuario" value="<?= $email_usuario ?>" placeholder="Digite seu email" class="form-control">
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form-control-label">Senha</label>
+                            <input type="password" name="senha_usuario"  value="" placeholder="Digite sua senha" class="form-control">
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form-control-label">Confirmar senha</label>
+                            <input type="password" name="senhac" value="" placeholder="Confirme a senha digitada!" class="form-control">
+                        </div> 
+                        <div class="form-group">
+                            <label class=" form-control-label">Selecine o nível do usuário</label>
+                            <select class="custom-select" name="permissao_usuario">
+                                <?php
+                                $level = ['SuperAdmin', 'Administrador', 'Editor'];
+                                for ($i = 3; $i > 0; $i--) {
+                                    $s = $permissao_usuario == $i ? ' selected="selected"' : '';
+                                    echo '<option value="' . $i . '" ' . $s . '>' . $level[$i - 1] . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">
+                        <button type="submit" class="btn btn-success btn-large">Atualizar Perfil</button>
+                        <button id="perfil_delete" class="btn btn-danger btn-large">Excluir Perfil</button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="id_usuario" id="id_user" value="<?= $id_usuario; ?>">
+        </form>
+    </div>
+</div><!-- .animated -->
+</div><!-- .content -->
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_cadastro">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atualização de usuário</h5>
+                <button type="button" class="close btn_close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Salvando usuário...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_delete">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Excluir perfil de usuário</h5>
+                <button type="button" class="close btn_close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-warning" role="alert">
+                    <p>Tem certaza que deseja continuar?</p>
+                    <ul>
+                        <li>Você será deslogado.</li>
+                        <li>Seu perfil será permanentemente excluído.</li>
+                        <li>Você não poderá desfazer esta ação.</li>
+                    </ul>
+                </div>                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn_close" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="delete_user_confirm">Continuar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,227 @@
+<?php
+extract($this->viewData['produto']);
+
+use CoffeeCode\Cropper\Cropper;
+
+$cropper = new Cropper("cache/thumbs");
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>">Dashboard</a></li> 
+                    <li><a href="<?= BASE_URL; ?>admin/produtos">Produtos</a></li> 
+                    <li class="active">Atualizar</li> 
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="content mt-3">
+    <div class="animated fadeIn"> 
+        <div class="col-12">
+            <h4 class="product_title">Atualizar o produto: <?= $titulo_produto; ?></h4>
+        </div>
+        <div class="col-12">
+            <div class="debug"></div>
+        </div>
+        <form method="post" name="editar_produto" enctype="multipart/form-data">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header"><strong>Imagens</strong><small> do produto</small></div>
+                    <div class="card-body card-block">                        
+                        <div class="card mb-3">                            
+                            <div class="row">
+                                <div class="col-12 product_gallery">
+
+                                    <?php
+                                    $i = 0;
+                                    foreach ($this->viewData['imagens'] as $imagem):
+                                        $i++;
+                                        echo "<div class='col-lg-2' id=" . $imagem['imagem_id'] . "><div class='product_preview'>";
+                                        echo '<img src="' . BASE_URL . $cropper->make('uploads/' . $imagem['imagem_uri'], 500, 500) . '" alt="Imagem ' . $i . ' do produto" title="Imagem ' . $i . ' do produto">';
+                                        if ($imagem['imagem_main']):
+                                            echo '<span class="main_image rounded"><i class="fa fa-image"></i> Capa</span>';
+                                        else:
+                                            echo '<a href="#" id="' . $imagem['imagem_id'] . '" class="btn btn-info btn_image rounded"  title="Usar esta imagem como a capa"><i class="fa fa-image"></i></a>';
+                                        endif;
+                                        echo '<a href="#" id="' . $imagem['imagem_id'] . '" class="btn btn-danger rounded btn_delete" title="Excluir esta imagem"><i class="fa fa-trash"></i></a>';
+                                        echo "</div></div>";
+                                    endforeach;
+                                    ?>
+                                </div>                            
+                            </div>                            
+                            <div class="card-body">
+                                <p class="card-text">Você pode adicionar mais imagens, escolher uma capa ou excluir qualquer uma desssas imagens.</p>
+                                <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                <button class="btn btn-info" id="choose_image_products_add">Adcionar mais imagens</button>
+                                <input type="file" accept="images" name="imagem_produto[]" multiple="multiple" id="image_products_add">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">                    
+                    <div class="card-header"><strong>Dados</strong><small> principais</small></div>
+                    <div class="card-body card-block">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class=" form-control-label">Selecine a categoria</label>
+                                <select class="custom-select" name="categoria_produto">
+                                    <?php
+                                    foreach ($this->viewData['categorias'] as $cat):
+                                        $selected = $cat['id_categoria'] == $categoria_produto ? ' selected' : '';
+                                        echo '<option value="' . $cat['id_categoria'] . '" ' . $selected . '>' . $cat['titulo_categoria'] . '</option>';
+                                    endforeach;
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class=" form-control-label">Selecine o fornecedor</label>
+                                <select class="custom-select" name="fornecedor_produto"> 
+                                    <?php
+                                    foreach ($this->viewData['fornecedores'] as $fo):
+                                        $selected = $fo['id_fornecedor'] == $fornecedor_produto ? ' selected' : '';
+                                        echo '<option value="' . $fo['id_fornecedor'] . '" ' . $selected . '>' . $fo['nome_fantasia_fornecedor'] . '</option>';
+                                    endforeach;
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class=" form-control-label">Selecine a marca</label>
+                                <select class="custom-select" name="marca_produto">
+                                    <?php
+                                    foreach ($this->viewData['fabricantes'] as $fa):
+                                        $selected = $fa['id_marca'] == $marca_produto ? ' selected' : '';
+                                        echo '<option value="' . $fa['id_marca'] . '"' . $selected . '>' . $fa['titulo_marca'] . '</option>';
+                                    endforeach;
+                                    ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class=" form-control-label">Nome do produto</label>
+                            <input type="text" name="titulo_produto" value="<?= $titulo_produto; ?>" placeholder="Digite o nome do produto." class="form-control">
+                        </div> 
+                        <div class="form-group col-md-2">
+                            <label class=" form-control-label">Preço de custo do produto</label>
+                            <input type="text" name="preco_custo_produto" value="<?= number_format($preco_custo_produto, 2, ',', '.'); ?>" placeholder="00,00 R$" class="form-control money">
+                        </div> 
+                        <div class="form-group col-md-2">
+                            <label class=" form-control-label">Preço de venda do produto</label>
+                            <input type="text" name="preco_venda_produto" value="<?= number_format($preco_venda_produto, 2, ',', '.'); ?>" placeholder="00,00 R$" class="form-control money">
+                        </div>                         
+                        <div class="form-group col-md-2">
+                            <label class=" form-control-label">Desconto</label>
+                            <input type="text" name="desconto_produto" value="<?= number_format($desconto_produto, 2, ',', '.'); ?>" placeholder="00,00 R$" class="form-control money">
+                        </div>                         
+                        <div class="form-group col-md-12">
+                            <label class=" form-control-label">Descrição</label>
+                            <input type="text" name="descricao_produto" value="<?= $descricao_produto; ?>" placeholder="Faça uma breve descrição do produto." class="form-control">
+                        </div> 
+                        <div class="form-group col-12">
+                            <label class=" form-control-label">Detalhes</label>
+                            <textarea name="detalhes_produto" id="ck_editor"  placeholder="Escreva aqui os detalhes e informações que aparecerão na página principal do produto." class="form-control">
+                                <?= $detalhes_produto; ?>
+                            </textarea>
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Quantidade em estoque</label>
+                            <input type="text" name="quantidade_produto" value="<?= $quantidade_produto; ?>" placeholder="00" class="form-control">
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Quantidade  mínima em estoque (%)</label>
+                            <input type="text" name="qtd_min_produto" value="<?= $qtd_min_produto; ?>" placeholder="00,00%" class="form-control percent">
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <label class=" form-control-label">Status</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="ativod_produto1" <?= $ativo_produto ? 'checked' : '' ?>  name="ativo_produto" value="1" class="custom-control-input">
+                                <label class="custom-control-label" for="ativod_produto1">Disponível</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="ativod_produto2"  <?= !$ativo_produto ? 'checked' : '' ?>  name="ativo_produto" value="0" class="custom-control-input">
+                                <label class="custom-control-label" for="ativod_produto2">Indisponível</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Peso e medidas</strong> <small>para cálculo de frete</small></div>
+                    <div class="card-body card-block">
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Altura (cm)</label>
+                            <input type="text" name="altura_produto" value="<?= $altura_produto; ?>" placeholder="00 (cm)" class="form-control">
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Largura (cm)</label>
+                            <input type="text" name="largura_produto" value="<?= $largura_produto; ?>" placeholder="00 (cm)" class="form-control">
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Comprimento (cm)</label>
+                            <input type="text" name="comprimento_produto" value="<?= $comprimento_produto; ?>" placeholder="00 (cm)" class="form-control">
+                        </div> 
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Peso estimado (Kg)</label>
+                            <select class="custom-select" name="peso_produto">                                
+                                <option value="0,3" <?= $peso_produto == 0.3 ? ' selected' : ''; ?>>0,300 gramas</option>
+                                <?php
+                                for ($i = 1; $i <= 30; $i++):
+                                    $selected = $peso_produto == $i ? ' selected' : '';
+                                    echo '<option value="' . $i . '" ' . $selected . '>' . $i . 'kg</option>';
+                                endfor;
+                                ?>
+                            </select>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">
+                        <input type="hidden" name="id_produto" value="<?= $id_produto; ?>">
+                        <button type="submit" class="btn btn-success btn-large">Atualizar Produto</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!-- .animated -->
+</div><!-- .content -->
+<div class="modal fade" id="modal_editar_produto" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Atualização de Produto</h5>
+                <button type="button" class="close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info" role="alert">
+                    <i class="fa fa-spinner fa-spin fa-fw"></i> Aguarde, atualizando...
+                </div>                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger close_modal"  data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

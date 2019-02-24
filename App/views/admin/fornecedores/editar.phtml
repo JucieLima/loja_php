@@ -1,0 +1,159 @@
+<?php
+    extract($this->viewData);    
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/fornecedores">Fabricantes</a></li>
+                    <li class="active"><a href="<?= BASE_URL; ?>admin/fornecedores/editar/<?= $id_fornecedor;?>">Atualizar</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">    
+    <div class="animated fadeIn">        
+        <div class="row">
+            <form method="post" name="atualizar_fornecedores">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header"><strong>Fornecedor</strong><small> dados principais</small></div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                <label class=" form-control-label">Rasão Social</label>
+                                <input type="text" name="rasao_social_fornecedor" value="<?= $rasao_social_fornecedor;?>"  placeholder="Rasão social do fornecedor" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class=" form-control-label">Nome Fantasia</label>
+                                <input type="text" name="nome_fantasia_fornecedor" value="<?= $nome_fantasia_fornecedor;?>" placeholder="Nome fantasia do fornecedor" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class=" form-control-label">CPF/CNPJ</label>
+                                <input type="text" name="cpf_cnpj" value="<?= $cpf_cnpj;?>" placeholder="CPF/CNPJ" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header"><strong>Informaçõs</strong><small> de endereço</small></div>
+                        <div class="card-body card-block">
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label class=" form-control-label">CEP</label>
+                                    <input type="text" value="<?= $cep_fornecedor;?>" name="cep_fornecedor"  placeholder="CEP" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Logradouro</label>
+                                    <input type="text" value="<?= $logradouro_fornecedor;?>" name="logradouro_fornecedor"  placeholder="Exemplo: Avenida...." class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Número</label>
+                                    <input type="text" value="<?= $numero_fornecedor;?>" name="numero_fornecedor"  placeholder="Nº" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Complemento</label>
+                                    <input type="text" value="<?= $Complemento_fornecedor;?>" name="complemento_fornecedor"  placeholder="complemento" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Bairro</label>
+                                    <input type="text" value="<?= $bairro_fornecedor;?>" name="bairro_fornecedor"  placeholder="Bairro" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Cidade</label>
+                                    <input type="text" value="<?= $cidade_fornecedor;?>" name="cidade_fornecedor"  placeholder="Cidade" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Estado</label>
+                                    <input type="text" value="<?= $estado_fornecedor;?>" name="estado_fornecedor"  placeholder="Estado" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class=" form-control-label">País</label>
+                                    <input type="text" value="<?= $pais_fornecedor;?>" name="pais_fornecedor"  placeholder="País" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header"><strong>Observações</strong><small> </small></div>
+                        <div class="card-body card-block">
+                            <div class="form-group">
+                                <label class=" form-control-label">Observações</label>
+                                <textarea name="observacoes_fornecedor"  placeholder="Digite aqui as observações acerca do forncerdor, caso houver." class="form-control"><?= $observacoes_fornecedor;?></textarea>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header"><strong>Status</strong> do fornecedor</div>
+                        <div class="card-body card-block">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" <?= $ativo_fornecedor ? 'checked': '' ;?> name="ativo_fornecedor" value="1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline1">Fornecedor ativado</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" <?= !$ativo_fornecedor ? 'checked': '' ;?>  name="ativo_fornecedor" value="0" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline2">Fornecedor desativado</label>
+                            </div>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header"><strong>Enviar formulário</strong></div>
+                        <div class="card-body card-block">    
+                            <input type="hidden" name="id_fornecedor" value="<?= $id_fornecedor;?>">
+                            <button type="submit" class="btn btn-success btn-large">Atualizar Forncedor</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_fornecedores_edit">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cadastro de fornecedor</h5>
+                <button type="button" class="close btn_close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Cadastrando fornecedor...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close close_modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

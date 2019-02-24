@@ -1,0 +1,17 @@
+<?php
+
+foreach ($this->viewData['filhas'] as $filha):
+    $selected = $filha['id_categoria'] == $this->viewData['categoria']['mae_categoria'] ? ' selected="selected"' : '';
+    echo '<option value="' . $filha['id_categoria'] . '"' . $selected . '>';
+    for ($q = 0; $q < $this->viewData['level']; $q++):
+        echo '&raquo;';
+    endfor;    
+    echo $filha['titulo_categoria'] . '</option>';
+    if (count($filha['filhas']) > 0):
+        $this->viewData['mae'] = $filha['id_categoria'];
+        $this->viewData['filhas'] = $filha['filhas'];
+        $this->viewData['level'] = $this->viewData['level'] + 1;
+        include 'app/views/admin/categorias/filha.phtml';        
+    endif;
+endforeach;
+

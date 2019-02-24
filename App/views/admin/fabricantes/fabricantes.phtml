@@ -1,0 +1,83 @@
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/fabricantes">Fabricantes</a></li>
+                    <li class="active">Índice</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">        
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Lista de Marcas e Fabricantes</strong>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Título</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($this->viewData['brands'] as $brand):
+                                    ?>
+                                    <tr id="<?= $brand['id_marca']; ?>">
+                                        <th scope="row"><?= $brand['id_marca']; ?></th>
+                                        <td><?= $brand['titulo_marca']; ?></td>
+                                        <td>
+                                            <a href="<?= BASE_URL; ?>admin/fabricantes/editar/<?= $brand['id_marca']; ?>" title="editar" class="btn btn-success"><i class="fa fa-edit"></i> Editar</a>
+                                            <a href="#" title="excluir" class="btn btn-danger brand_delete" data-name="<?= $brand['titulo_marca']; ?>" id="<?= $brand['id_marca']; ?>"><i class="fa fa-trash"></i> Excluir</a>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                endforeach;
+                                ?>                                
+                            </tbody>
+                        </table>
+                        <?php
+                        $pager = new App\Helpers\Pager($this->viewData['pagina'], $this->viewData['paginas'], $this->viewData['limit'], $this->viewData['offset'], 'admin/fabricantes/pagina');
+                        echo $pager->showPager();
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_fabricantes_edit">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edição de Marcas e Fabricantes</h5>
+                <button type="button" class="close btn_close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Atualizando fabricante...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close close_modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

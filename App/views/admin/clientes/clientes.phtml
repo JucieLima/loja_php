@@ -1,0 +1,86 @@
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/Clientes">Clientes</a></li>
+                    <li class="active">Índice</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+<div class="content mt-3">
+    <div class="animated fadeIn">        
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="card-title">Clientes cadastrados no sistema</strong>
+                </div>
+                <div class="card-body  table-responsive">
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Último Acesso</th>
+                                <th scope="col">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            foreach ($this->viewData['clientes'] as $cliente):
+                                $status = $cliente['status_cliente'] ? 'ativo' : 'inativo';
+                                $ultimo_acesso = $cliente['ultima_visita_cliente'] ? date('d/m/Y H:i:s', strtotime($cliente['ultima_visita_cliente'])) : 'não informado';
+                                ?>
+                                <tr>
+                                    <th scope="row">ID</th>
+                                    <td><a href="<?= BASE_URL?>admin/clientes/editar/<?=$cliente['id_cliente'] ?>" title="editar cliente"><?= $cliente['nome_cliente'] ?> <?= $cliente['sobrenome_cliente'] ?></a></td>
+                                    <td><?= $cliente['email_cliente'] ?></td>
+                                    <td><?= $status ?></td>
+                                    <td><?= $ultimo_acesso ?></td>
+                                    <td><a href="<?= BASE_URL?>admin/clientes/editar/<?=$cliente['id_cliente'] ?>" title="editar cliente">Editar</a> Excluir</td>
+                                </tr>
+                                <?php
+                            endforeach;
+                            ?>
+                        </tbody>
+                    </table>
+                    <?php
+                    $pager = new App\Helpers\Pager($this->viewData['pagina'], $this->viewData['paginas'], $this->viewData['limit'], $this->viewData['offset'], 'admin/clientes/pagina');
+                    echo $pager->showPager();
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_usuarios_del">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Exclusão de usuário</h5>
+                <button type="button" class="close btn_close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Excluindo usuário...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

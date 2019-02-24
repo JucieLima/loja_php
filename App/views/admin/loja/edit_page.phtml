@@ -1,0 +1,110 @@
+<?php
+extract($this->viewData);
+//  'id' => int 1
+//  'nome' => string 'Contato' (length=7)
+//  'titulo' => string 'Entre em contato conosco' (length=24)
+//  'description' => string 'Envie-nos uma mensagem através do nosso formulário de contato. Assim que possível nos te respondemos. ' (length=105)
+//  'url' => string 'contato' (length=7)
+//  'image' => null
+//  'controller' => string 'contato' (length=7)
+//  'action' => string 'index' (length=5)
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/loja">Loja</a></li>
+                    <li class="active">Editar página</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <form method="post" name="edit_store_page" enctype="multipart/form-data">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header"><small>Imagem para</small><strong> redes sociais</strong></div>
+                    <div class="card-body card-block">
+                        <div class="card mb-3 image_page">
+                            <div class="image_preview"<?= $image ? ' style="background-image: url(' . BASE_URL . 'uploads/' . $image . ')"' : ''; ?>></div>
+                            <div class="card-body">
+                                <p class="card-text">Escolha uma imagem para ser compartilhada nas redes sociais da loja</p>
+                                <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                <button class="btn btn-info" id="choose_image">escolher imagem</button>
+                                <button class="btn btn-danger delete_image_page" id="<?= $id; ?>"><i class="fa fa-trash"></i></button>
+                                <input type="file" accept="image" name="image" id="image_profile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-lg-9">
+                <div class="card">
+                    <div class="card-header"><strong>Dados principais</strong><small> da loja</small></div>
+                    <div class="card-body card-block">
+                        <div class="col-12">                            
+                            <div class="form-group">
+                                <label class=" form-control-label">Nome da página</label>
+                                <input type="text" name="nome" value="<?= $nome ?>" placeholder="Digite um título para a loja" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class=" form-control-label">Título</label>
+                                <input type="text" name="titulo" value="<?= $titulo ?>" placeholder="Digite um título para a loja" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class=" form-control-label">Descrição</label>
+                                <input type="text" name="description" value="<?= $description ?>" placeholder="Digite uma descrição para a loja" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class=" form-control-label"><strong>Domínio</strong> URL</label>
+                                <input type="text" name="url" value="<?= $url ?>" readonly="" placeholder="Digite a URL da loja" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">
+                        <input type="hidden" name="id" value="<?= $id; ?>">
+                        <button type="submit" class="btn btn-success btn-large">Atualizar dados da página</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!-- .animated -->
+</div><!-- .content -->
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_edit_store_page">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atualizar página</h5>
+                <button type="button" class="close btn_close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info" role="alert">
+                    <i class="fa fa-spinner fa-spin fa-fw"></i> Aguarde, atualizando...
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close close_modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

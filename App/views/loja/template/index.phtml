@@ -1,0 +1,20 @@
+<?php
+
+use App\Helpers\Local;
+use App\Helpers\Seo;
+
+$local = new Local;
+$metaSeo = new Seo($local->getController(), $local->getAction());
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <?= $metaSeo->getSeoTags(); ?>
+    </head>
+    <body>
+        <?php
+        $this->getView($this->viewPath);
+        ?>
+    </body>
+</html>

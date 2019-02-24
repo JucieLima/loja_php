@@ -1,0 +1,108 @@
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/usuarios">Usuários</a></li>
+                    <li class="active"><a href="<?= BASE_URL;?>admin/usuarios/cadastro">Cadastrar</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="content mt-3">
+    <div class="animated fadeIn"> 
+<!--        <div class="col-12">
+            <div class="debug"></div>
+        </div>-->
+        <form method="post" name="cadastra_usuarios" enctype="multipart/form-data">
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-header"><strong>Imagem</strong><small> do perfil</small></div>
+                    <div class="card-body card-block">
+                        <div class="card mb-3">
+                            <div class="image_preview"></div>
+                            <div class="card-body">
+                                <p class="card-text">Escolha uma imagem para ser mostrada no perfil do usuário a ser cadastrado</p>
+                                <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                <button class="btn btn-info" id="choose_image">escolher imagem</button>
+                                <input type="file" accept="image" name="imagem_usuario" id="image_profile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="card">
+                    <div class="card-header"><strong>Dados</strong><small> pessoais</small></div>
+                    <div class="card-body card-block">
+                        <div class="form-group">
+                            <label class=" form-control-label">Nome</label>
+                            <input type="text" name="nome_usuario" placeholder="Digite seu nome" class="form-control">
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form-control-label">Sobrenome</label>
+                            <input type="text" name="sobrenome_usuario" placeholder="Digite seu sobrenome" class="form-control">
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form-control-label">Email</label>
+                            <input type="email" name="email_usuario" placeholder="Digite seu email" class="form-control">
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form-control-label">Senha</label>
+                            <input type="password" name="senha_usuario" placeholder="Digite sua senha" class="form-control">
+                        </div>                        
+                        <div class="form-group">
+                            <label class=" form-control-label">Confirmar senha</label>
+                            <input type="password" name="senhac" placeholder="Confirme a senha digitada!" class="form-control">
+                        </div> 
+                        <div class="form-group">
+                            <label class=" form-control-label">Selecine o nível do usuário</label>
+                            <select class="custom-select" name="permissao_usuario">                                
+                                <option value="3">Vendedor</option>
+                                <option value="2">Gerente</option>
+                                <option value="1">Administrador</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">
+                        <button type="submit" class="btn btn-success btn-large">Cadastrar Usuário</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!-- .animated -->
+</div><!-- .content -->
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_usuarios_cad">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cadastro de usuário</h5>
+                <button type="button" class="close btn_close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Salvando usuário...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

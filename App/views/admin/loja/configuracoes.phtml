@@ -1,0 +1,168 @@
+<?php
+extract($this->viewData['loja']);
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/loja">Loja</a></li>
+                    <li class="active">Configurações</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <form method="post" name="edit_store" enctype="multipart/form-data">            
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header"><strong>Dados principais</strong><small> da loja</small></div>
+                    <div class="card-body card-block">
+                        <div class="col-12">                            
+                            <div class="form-group">
+                                <label class=" form-control-label">Título</label>
+                                <input type="text" name="titulo" value="<?= $titulo ?>" placeholder="Digite um título para a loja" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class=" form-control-label">Descrição</label>
+                                <input type="text" name="descricao" value="<?= $descricao ?>" placeholder="Digite uma descrição para a loja" class="form-control">
+                            </div> 
+                            <div class="form-group">
+                                <label class=" form-control-label"><strong>Domínio</strong> URL</label>
+                                <input type="text" name="url_loja" value="<?= $url_loja ?>" placeholder="Digite a URL da loja" class="form-control">
+                            </div>                        
+                            <div class="form-group">
+                                <label class=" form-control-label">Email</label>
+                                <input type="text" name="email" value="<?= $email ?>" placeholder="Digite o email principal da loja" class="form-control">
+                            </div>                        
+                            <span>Status</span>
+                            <div class="form-group">                            
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio"  <?= $status_loja ? ' checked' : '' ?> name="status_loja" id="inlineRadio1" value="1">
+                                    <label class="form-check-label" for="inlineRadio1">On-line</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= !$status_loja ? ' checked' : '' ?> name="status_loja" id="inlineRadio2" value="0">
+                                    <label class="form-check-label" for="inlineRadio2">Off-line</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><strong>Endereço físico</strong><small> da loja</small></div>
+                    <div class="card-body card-block">
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">Telefone</label>
+                            <input type="text" name="telefone" value="<?= $telefone ?>"  placeholder="(00) 00000-0000" class="form-control phone_with_ddd">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label class=" form-control-label">CEP</label>
+                            <input type="text" name="cep" id="cep"  value="<?= $cep ?>" placeholder="00000-000" class="form-control cep">
+                        </div> 
+                        <div class="form-group col-md-6">
+                            <label class=" form-control-label">Logradouro</label>
+                            <input type="text" name="logradouro" value="<?= $logradouro ?>" id="rua" placeholder="Rua, praça, avenida..." class="form-control">
+                        </div>                        
+                        <div class="form-group col-md-2">
+                            <label class=" form-control-label">Número</label>
+                            <input type="text" name="numero" value="<?= $numero ?>" placeholder="Número" class="form-control">
+                        </div>                        
+                        <div class="form-group col-md-4">
+                            <label class=" form-control-label">Bairro</label>
+                            <input type="text" name="bairro" value="<?= $bairro ?>" id="bairro" placeholder="Bairro" class="form-control">
+                        </div>                        
+                        <div class="form-group col-md-4">
+                            <label class=" form-control-label">Cidade</label>
+                            <input type="text" name="cidade" value="<?= $cidade ?>" id="cidade" placeholder="Bairro" class="form-control">
+                        </div>  
+                        <div class="form-group col-md-2">
+                            <label class=" form-control-label">Estado</label>                            
+                            <select class="custom-select" name="estado" id="uf">
+                                <option value="...">Escolha...</option>
+                                <?php
+                                foreach ($this->viewData['estados'] as $e):
+                                    $select = $estado == $e['estado_sigla'] ? ' selected' : '';
+                                    echo '<option' . $select . ' value="' . $e['estado_sigla'] . '">' . $e['estado_nome'] . '</option>';
+                                endforeach;
+                                ?>                                    
+                            </select>
+                        </div>                          
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header"><strong>Logo</strong><small> da loja</small></div>
+                    <div class="card-body card-block">
+                        <div class="card mb-3">
+                            <div class="image_preview_logo" style="background-image: url(<?= BASE_URL; ?>uploads/<?= $logo; ?>);"></div>
+                            <div class="card-body">
+                                <p class="card-text">Escolha uma imagem para ser a logomarca da loja</p>
+                                <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                <button class="btn btn-info" id="choose_logo">escolher imagem</button>
+                                <input type="file" accept="image" name="logo" id="image_logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header"><small>Imagem para</small><strong> redes sociais</strong></div>
+                    <div class="card-body card-block">
+                        <div class="card mb-3">
+                            <div class="image_preview"  style="background-image: url(<?= BASE_URL; ?>uploads/<?= $imagem_padrao; ?>);"></div>
+                            <div class="card-body">
+                                <p class="card-text">Escolha uma imagem para ser compartilhada nas redes sociais da loja</p>
+                                <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                <button class="btn btn-info" id="choose_image">escolher imagem</button>
+                                <input type="file" accept="image" name="imagem_padrao" id="image_profile">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">
+                        <button type="submit" class="btn btn-success btn-large">Atualizar dados da loja</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><!-- .animated -->
+</div><!-- .content -->
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_edit_store">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atualizar dados da loja</h5>
+                <button type="button" class="close btn_close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info" role="alert">
+                    <i class="fa fa-spinner fa-spin fa-fw"></i> Aguarde, atualizando...
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close close_modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

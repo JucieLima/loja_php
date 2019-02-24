@@ -1,0 +1,138 @@
+<?php
+
+use App\Helpers\Check;
+use CoffeeCode\Cropper\Cropper;
+
+$cropper = new Cropper('cache\thumbs');
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/Produtos">Produtos</a></li>
+                    <li class="active">Índice</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">    
+    <div class="animated fadeIn">         
+        <div class="row">
+            <div class="col-12">
+                <nav class="products_nav">
+                    <div class="search_products">
+                        <form name="search_products" method="post">
+                            <input type="text" name="search_products" id="search_products" value="" placeholder="Pesquisar produtos" data-toggle="tooltip" data-placement="top" title="Digite o nome ou o código do produto que você deseja procurar">
+                            <button type="submit" class="btn btn-secondary">
+                                <i class="fa fa-search"></i> Pesquisar
+                            </button>
+                        </form>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ordenando produtos por: <?= $this->viewData['ordem']; ?>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="<?= BASE_URL; ?>admin/produtos/pagina/<?= $this->viewData['pagina']; ?>/default/asc">Data - Mais recente (padrão)</a>
+                            <a class="dropdown-item" href="<?= BASE_URL; ?>admin/produtos/pagina/<?= $this->viewData['pagina']; ?>/default/desc">Data - Mais antigo</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?= BASE_URL; ?>admin/produtos/pagina/<?= $this->viewData['pagina']; ?>/price/asc">Preço - Menor</a>
+                            <a class="dropdown-item" href="<?= BASE_URL; ?>admin/produtos/pagina/<?= $this->viewData['pagina']; ?>/price/desc">Preço - Maior</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?= BASE_URL; ?>admin/produtos/pagina/<?= $this->viewData['pagina']; ?>/status/desc">Status - Ativos</a>
+                            <a class="dropdown-item" href="<?= BASE_URL; ?>admin/produtos/pagina/<?= $this->viewData['pagina']; ?>/status/asc">Status - Inativos</a>
+                        </div>
+                    </div>                    
+                </nav>
+            </div>
+            <div class="col-12">                
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Produtos cadastrados no sistema</strong>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Código</th>
+                                    <th scope="col" class="text-left">Nome</th>
+                                    <th scope="col" class="text-center">Categoria</th>
+                                    <th scope="col" class="text-center">Marca</th>
+                                    <th scope="col" class="text-center">Valor</th>
+                                    <th scope="col" class="text-center">Satus</th>
+                                    <th scope="col" class="text-center">Imagem</th>
+                                    <th scope="col" class="text-center">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($this->viewData['produtos'] as $produto):
+                                    $valor = $produto['preco_venda_produto'] - $produto['desconto_produto'];
+                                    $cover = $this->viewData['imagem']->getCover($produto['id_produto']) ? $this->viewData['imagem']->getCover($produto['id_produto'])[0]['imagem_uri'] : '';
+                                    ?>
+                                    <tr id="<?= $produto['id_produto']; ?>">
+                                        <th scope="row"><?= str_pad($produto['id_produto'], 4, 0, STR_PAD_LEFT); ?></th>
+                                        <td class="text-left"><?= Check::Words($produto['titulo_produto'], 8); ?></td>
+                                        <td class="text-center"><?= $this->viewData['categoria']->getCat($produto['categoria_produto'])['titulo_categoria']; ?></td>
+                                        <td class="text-center"><?= $this->viewData['marca']->getBrand($produto['marca_produto'])['titulo_marca']; ?></td>
+                                        <td class="text-right"><?= number_format($valor, 2, ',', '.') ?> R$</td>
+                                        <td class="text-center"><?= $produto['ativo_produto'] ? 'ativo' : 'desativado' ?></td>
+                                        <td class="text-center"><img src="<?= BASE_URL . $cropper->make('uploads/' . $cover, 80, 80); ?>" title="imagem do produto"></td>
+                                        <td class="text-center">
+                                            <a href="<?= BASE_URL . 'produto/' . $produto['path_produto']; ?>" title="Visitar página do produto" target="_blank" class="btn btn-info">
+                                                <i class="fa fa-tv"> Visitar</i>
+                                            </a>
+                                            <a href="<?= BASE_URL . 'admin/produtos/editar/' . $produto['id_produto']; ?>" title="editar produto" class="btn btn-success">
+                                                <i class="fa fa-edit"> Editar</i>
+                                            </a>
+                                            <span id="<?= $produto['id_produto']; ?>" data-name="<?= Check::Words($produto['titulo_produto'], 8); ?>" title="excluir produto" class="btn btn-danger deletar_produto">
+                                                <i class="fa fa-trash"> Excluir</i>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                endforeach;
+                                ?>
+                            </tbody>
+                        </table>
+                        <?php
+                        $pager = new App\Helpers\Pager($this->viewData['pagina'], $this->viewData['paginas'], $this->viewData['limit'], $this->viewData['offset'], 'admin/produtos/pagina', $this->viewData['sort']);
+                        echo $pager->showPager();
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal_editar_produto" tabindex="-1" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Atualização de Produto</h5>
+                <button type="button" class="close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info" role="alert">
+                    <i class="fa fa-spinner fa-spin fa-fw"></i> Aguarde, atualizando...
+                </div>                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger close_modal"  data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
