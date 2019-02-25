@@ -40,7 +40,7 @@ $cropper = new Cropper('cache\thumbs');
                 </nav>
             </div>
             <div class="col-12">
-                <h4 class="product_title"><?= $this->viewData['total']; ?> resultados encontrados na busca por: "<?=urldecode($this->viewData['pesquisa']) ; ?>".</h4>
+                <h4 class="product_title"><?= $this->viewData['total']; ?> resultado(s) encontrado(s) na busca por: "<?=urldecode($this->viewData['pesquisa']) ; ?>".</h4>
             </div>
             <div class="col-12">                
                 <div class="card">
@@ -65,13 +65,13 @@ $cropper = new Cropper('cache\thumbs');
                                 <?php
                                 foreach ($this->viewData['produtos'] as $produto):
                                     $valor = $produto['preco_venda_produto'] - $produto['desconto_produto'];
-                                    $cover = $this->viewData['imagem']->getCover($produto['id_produto']) ? $this->viewData['imagem']->getCover($produto['id_produto'])[0]['imagem_uri'] : '';
+                                   $cover = $produto['imagem_uri'] ? $produto['imagem_uri'] : '';
                                     ?>
                                     <tr id="<?= $produto['id_produto']; ?>">
                                         <th scope="row"><?= str_pad($produto['id_produto'], 4, 0, STR_PAD_LEFT); ?></th>
                                         <td class="text-left"><?= Check::Words($produto['titulo_produto'], 8); ?></td>
-                                        <td class="text-center"><?= $this->viewData['categoria']->getCat($produto['categoria_produto'])['titulo_categoria']; ?></td>
-                                        <td class="text-center"><?= $this->viewData['marca']->getBrand($produto['marca_produto'])['titulo_marca']; ?></td>
+                                        <td class="text-center"><?= $produto['titulo_categoria']; ?></td>
+                                        <td class="text-center"><?= $produto['titulo_marca']; ?></td>
                                         <td class="text-right"><?= number_format($valor, 2, ',', '.') ?> R$</td>
                                         <td class="text-center"><?= $produto['ativo_produto'] ? 'ativo' : 'desativado' ?></td>
                                         <td class="text-center"><img src="<?= BASE_URL . $cropper->make('uploads/' . $cover, 80, 80); ?>" title="imagem do produto"></td>

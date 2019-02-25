@@ -60,7 +60,16 @@ class Produtos extends Model {
     public function getProdutos($limit, $offset, $orderBy = null, $ascending = null) {
         $order = $orderBy ? $orderBy : 'created_at';
         $asc = $ascending ? $ascending : 'ASC';
-        return self::limit($limit)->offset($offset)->orderBy($order, $asc)->get()->toArray();
+        return self::join('categorias', 'id_categoria', '=', 'categoria_produto')
+                ->join('marcas', 'id_marca', '=', 'marca_produto')
+                ->join('produto_imagens', 'id_produto', '=', 'imagem_produto')
+                ->where("imagem_main",1)
+                ->select('produtos.*','categorias.titulo_categoria', 'marcas.titulo_marca', 'produto_imagens.imagem_uri')
+                ->limit($limit)
+                ->offset($offset)
+                ->orderBy($order, $asc)
+                ->get()
+                ->toArray();
     }
 
     public function salvar(array $dados) {
@@ -101,8 +110,24 @@ class Produtos extends Model {
 
     public function searchProducts($value, $limit, $offset) {
         $codigo = (int) $value;
-        $result['page'] = self::where('titulo_produto', 'LIKE', '%' . $value . '%')->orWhere('id_produto', '=', $codigo)->limit($limit)->offset($offset)->orderBy('titulo_produto', 'ASC')->get()->toArray();
-        $result['total'] = self::where('titulo_produto', 'LIKE', '%' . $value . '%')->get()->toArray();
+        $result['page'] = self::
+                join('categorias', 'id_categoria', '=', 'categoria_produto')
+                ->join('marcas', 'id_marca', '=', 'marca_produto')
+                ->join('produto_imagens', 'id_produto', '=', 'imagem_produto')                
+                ->select('produtos.*','categorias.titulo_categoria', 'marcas.titulo_marca', 'produto_imagens.imagem_uri')
+                ->where("imagem_main",1)                
+                ->where('titulo_produto', 'LIKE', '%' . $value . '%')
+                ->orWhere('id_produto', '=', $codigo)
+                ->limit($limit)
+                ->offset($offset)
+                ->orderBy('titulo_produto', 'ASC')
+                ->get()
+                ->toArray();
+        $result['total'] = self::
+                where('titulo_produto', 'LIKE', '%' . $value . '%')
+                ->orWhere('id_produto', '=', $codigo)
+                ->get()
+                ->toArray();
         return $result;
     }
 

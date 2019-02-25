@@ -30,9 +30,6 @@ class ProdutosController extends Controller {
         $limit = 10;
         $this->viewData['produtos'] = $produtos->getProdutos($limit, $offset);
         $paginas = ceil(count($produtos::all()) / $limit);
-        $this->viewData['categoria'] = new Categorias;
-        $this->viewData['marca'] = new Fabricantes;
-        $this->viewData['imagem'] = new ProdutoImagens;
         $this->viewData['offset'] = $offset;
         $this->viewData['limit'] = $limit;
         $this->viewData['paginas'] = $paginas;
@@ -51,9 +48,6 @@ class ProdutosController extends Controller {
         $offset = ($p - 1) * $limit;
         $paginas = ceil(count($produtos::all()) / $limit);
         $this->viewData['produtos'] = $produtos->getProdutos($limit, $offset, $orderBy, $asc);
-        $this->viewData['categoria'] = new Categorias;
-        $this->viewData['marca'] = new Fabricantes;
-        $this->viewData['imagem'] = new ProdutoImagens;
         $this->viewData['offset'] = $offset;
         $this->viewData['limit'] = $limit;
         $this->viewData['paginas'] = $paginas;
@@ -73,9 +67,6 @@ class ProdutosController extends Controller {
         $this->viewData['produtos'] = $search['page'];
         $paginas = ceil(count($search['total']) / $limit);
         $this->viewData['total'] = count($search['total']);
-        $this->viewData['categoria'] = new Categorias;
-        $this->viewData['marca'] = new Fabricantes;
-        $this->viewData['imagem'] = new ProdutoImagens;
         $this->viewData['offset'] = $offset;
         $this->viewData['limit'] = $limit;
         $this->viewData['paginas'] = $paginas;
