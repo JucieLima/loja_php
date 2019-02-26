@@ -40,21 +40,16 @@ extract($this->viewData['categoria']);
                         </div> 
                         <div class="form-group">
                             <label  class=" form-control-label">Categoria mãe</label>
-                            <select class="custom-select" name="mae_categoria">
+                            <select class="custom-select" name="mae_categoria" id="select_category">
                                 <option value="" selected="selected">Categoria principal</option>
                                 <?php
-                                foreach ($this->viewData['categorias'] as $cat):
-                                    $selected = $cat['id_categoria'] == $mae_categoria ? ' selected="selected"' : '';
-                                    echo '<option value="' . $cat['id_categoria'] . '"' . $selected . '>' . $cat['titulo_categoria'] . '</option>';
-                                    if(count($cat['filhas']) > 0):
-                                        $this->viewData['mae'] = $cat['id_categoria'];
-                                        $this->viewData['filhas'] = $cat['filhas'];
-                                        $this->viewData['level'] = 1;
-                                        $this->getView('admin/categorias/filha');                                      
-                                    endif;
+                                $categorias = $this->viewData['categorias']->where('mae_categoria', null)->get()->toArray();
+                                foreach ($categorias as $cat):
+                                    echo '<option value="' . $cat['id_categoria'] . '">' . $cat['titulo_categoria'] . '</option>';
+                                    $this->viewData['categorias']->listTreeCatId($cat["id_categoria"]);
                                 endforeach;
                                 ?>
-                            </select>
+                            </select>                            
                             <span class="font-weight-light text-muted">Para criar uma subcategoria selecione uma categoria mãe</span>
                         </div>
                         <span>Status</span>
@@ -80,6 +75,7 @@ extract($this->viewData['categoria']);
                 </div>
             </div>
             <input type="hidden" name="id_categoria" value="<?= $id_categoria; ?>">
+            <input type="hidden" id="mae_categoria" value="<?= $mae_categoria; ?>">
         </form>
     </div>
 </div><!-- .animated -->
@@ -102,3 +98,9 @@ extract($this->viewData['categoria']);
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    var x = document.getElementById("mae_categoria").value;
+    if (x !== '') {
+        document.getElementById("select_category").value = x;
+    }
+</script>

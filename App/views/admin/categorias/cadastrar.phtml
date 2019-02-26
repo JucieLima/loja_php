@@ -12,7 +12,7 @@
                 <ol class="breadcrumb text-right">
                     <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
                     <li><a href="<?= BASE_URL; ?>admin/categorias">Categorias</a></li>
-                    <li class="active"><a href="<?= BASE_URL;?>admin/categorias/cadastro">Cadastrar</a></li>
+                    <li class="active"><a href="<?= BASE_URL; ?>admin/categorias/cadastro">Cadastrar</a></li>
                 </ol>
             </div>
         </div>
@@ -40,8 +40,10 @@
                             <select class="custom-select" name="mae_categoria">
                                 <option value="">Criar categoria principal</option>
                                 <?php
-                                foreach ($this->viewData as $cat):
+                                $categorias = $this->viewData->where('mae_categoria', null)->get()->toArray();
+                                foreach ($categorias as $cat):
                                     echo '<option value="' . $cat['id_categoria'] . '">' . $cat['titulo_categoria'] . '</option>';
+                                    $this->viewData->listTreeCatId($cat["id_categoria"]);
                                 endforeach;
                                 ?>
                             </select>

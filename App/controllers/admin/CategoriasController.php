@@ -33,9 +33,8 @@ class CategoriasController extends Controller {
         $this->getView('admin/categorias/categorias', 'admin/' . TEMPLATE);
     }
 
-    public function cadastro() {
-        $categorias = new Categorias;
-        $this->viewData = $categorias->getAll();
+    public function cadastro() { 
+        $this->viewData = new Categorias;
         $this->getView('admin/categorias/cadastrar', 'admin/' . TEMPLATE);
     }
 
@@ -55,7 +54,7 @@ class CategoriasController extends Controller {
         $cat = new Categorias;
         $this->viewData['categoria'] = $cat->getCat($idcat);
         if ($this->viewData['categoria']):
-            $this->viewData['categorias'] = $cat->getAll();
+            $this->viewData['categorias'] = new Categorias;
             $this->getView('admin/categorias/editar', 'admin/' . TEMPLATE);
         else:
             $this->getView('admin/404', 'admin/' . TEMPLATE);

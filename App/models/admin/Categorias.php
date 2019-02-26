@@ -127,10 +127,7 @@ class Categorias extends Model {
     }
 
     private function setData() {
-        if (!isset($this->dados['url_categoria'])):
-            $this->dados['url_categoria'] = Check::uri($this->dados['titulo_categoria']);
-        endif;
-
+        $this->setUri();
         if (empty($this->dados['mae_categoria'])):
             unset($this->dados['mae_categoria']);
         elseif (empty($this->dados['ativo_categoria'])):
@@ -138,24 +135,39 @@ class Categorias extends Model {
         endif;
     }
 
-    private function stillNeed($array) {
-        foreach ($array as $item):
-            if (!empty($item['mae_categoria'])):
-                return true;
+    private function setUri() {
+        $this->dados['url_categoria'] = Check::uri($this->dados['titulo_categoria']);
+        if (isset($this->dados['id_categoria'])):
+            $read = self::where("id_categoria", '<>', $this->dados['id_categoria'])->where("titulo_categoria", $this->dados['titulo_categoria'])->get()->toArray();
+            if ($read):
+                $this->dados['url_categoria'] = $this->dados['url_categoria'] . '-' . count($read);
             endif;
-        endforeach;
-        return false;
+        else:
+            $read = self::where("titulo_categoria", $this->dados['titulo_categoria'])->get()->toArray();
+            if ($read):
+                $this->dados['url_categoria'] = $this->dados['url_categoria'] . '-' . count($read);
+            endif;
+        endif;
     }
 
-    private function organize(&$array) {
-        foreach ($array as $id => $item):
-            if (isset($array[$item['mae_categoria']])):
-                $array[$item['mae_categoria']]['filhas'][$item['id_categoria']] = $item;
-                unset($array[$id]);
+    public function listTreeCatId(int $id, $level = null) {
+        $l = $level ?? 0;
+        $subs = $this->getCatsById($id);
+        if (count($subs) > 0) {
+            $l++;
+            foreach ($subs as $s) {
+                echo '<option value="' . $s['id_categoria'] . '">';
+                for ($q = 0; $q < $l; $q++):
+                    echo '&raquo;';
+                endfor;
+                echo $s['titulo_categoria'] . '</option>';
+                $this->listTreeCatId($s["id_categoria"], $l);
+            }
+        }       
+    }
 
-                break;
-            endif;
-        endforeach;
+    private function getCatsById(int $id) {
+        return self::where("mae_categoria", $id)->get()->toArray();
     }
 
     private function checkDaughters() {
