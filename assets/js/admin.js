@@ -13,28 +13,7 @@ $(function () {
     $('.money').mask('000.000.000.000.000,00', {reverse: true});
     $('.percent').mask('00,00', {reverse: true});
 
-    $('#choose_image').click(function (e) {
-        e.preventDefault();
-        $('#image_profile').click();
-    });
-
     $('[data-toggle="tooltip"]').tooltip();
-
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                $('.image_preview').css('background-image', 'url(' + e.target.result + ')');
-            };
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $('#image_profile').change(function () {
-        readURL(this);
-    });
-
-    /***CADASTRO DE NOVOS USUÁRIOS***/
 
     /** 
      * @param {string} msg
@@ -48,6 +27,27 @@ $(function () {
                 "<div class='alert alert-" + tipo + "' " +
                 "role='alert'>" + msg + "</div>"
                 ).fadeIn('slow');
+    }
+
+    /***CADASTRO DE NOVOS USUÁRIOS***/
+
+    $('#choose_image').click(function (e) {
+        e.preventDefault();
+        $('#image_profile').click();
+    });
+
+    $('#image_profile').change(function () {
+        readURL(this);
+    });
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.image_preview').css('background-image', 'url(' + e.target.result + ')');
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
     }
 
     $('form[name="cadastra_usuarios"]').submit(function (e) {
@@ -510,7 +510,7 @@ $(function () {
         }
     });
 
-    /** FORNCEDORES **/
+    /** FORNECEDORES **/
 
     $('#check_cnpj').on('click', function () {
         $('.label_cpf_cnpj').text("Número do CNPJ");
@@ -997,7 +997,7 @@ $(function () {
             contentType: false,
             processData: false,
             cache: false,
-            dataType: 'json',
+            dataType: "json",
             beforeSend: function () {
                 $('#modal_edit_store_page').modal("show");
             },
@@ -1031,6 +1031,139 @@ $(function () {
                 }).fadeTo(500, 1);
             });
         }
+    });
+
+    /** CUSTOMIZAÇÃO DE PÁGINAS **/
+    /**
+     * 
+     * @param {object} input
+     * @param {int} item
+     * @returns {html}
+     */
+
+    $('.choose_image_slider').click(function (e) {
+        e.preventDefault();
+        var itemid = $(this).attr('id');
+        $('#choose_input' + itemid).click();
+    });
+
+    $(".choose_input").on('change', function () {
+        var inputid = $(this).attr("id");
+        var itemid = inputid.substr(12, 1);
+        imagePreviewSlider(this, itemid);
+    });
+
+    function imagePreviewSlider(input, item) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#image_preview' + item).attr('src', e.target.result);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $('.choose_sticker_slider').click(function (e) {
+        e.preventDefault();
+        var itemid = $(this).attr('id');
+        $('#choose_sticker' + itemid).click();
+    });
+
+    $(".choose_sticker").on('change', function () {
+        var inputid = $(this).attr("id");
+        var itemid = inputid.substr(14, 1);
+        stickerPreviewSlider(this, itemid);
+    });
+
+    function stickerPreviewSlider(input, item) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#sticker_preview' + item).attr('src', e.target.result);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    /** ATUALIZAR SLIDER **/
+    $('form[name="update_slider"]').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: base_url + "customize/update_slider",
+            data: new FormData(this),
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            cache: false,
+            dataType: 'json',
+            beforeSend: function () {
+                $('#modal_update_home').modal("show");
+            },
+            success: function (r) {
+                $('#modal_update_home .close_modal').fadeIn("fast");
+                if (r.response === 'success') {
+                    showModal("Slider Atualizado com sucesso! Confira as modificações na página inicial.", "success", "modal_update_home");
+                } else {
+                    showModal(r.response, "warning", "modal_update_home");
+                }
+            },
+            error: function (e) {
+                $('.debug').html(e.responseText);
+                $('#modal_update_home .close_modal').fadeIn("fast");
+                console.log(e);
+            }
+        });
+    });
+
+    /** Trocar imagem do banner **/
+
+    $('#choose_banner').click(function (e) {
+        e.preventDefault();
+        $('#image_banner').click();
+    });
+
+    $('#image_banner').change(function () {
+        bannerPreview(this);
+    });
+
+    function bannerPreview(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.banner_preview').css('background-image', 'url(' + e.target.result + ')');
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    /** ATUALIZAR EXIBIÇÂO DE PRODUTOS E SIDEBAR **/
+    $('form[name="products_display"]').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: base_url + "customize/update_display",
+            type: 'POST',
+            dataType: 'json',
+            data: new FormData(this),
+            processData: false,
+            contentType: false,
+            cache: false,
+            beforeSend: function () {
+                $('#modal_update_home').modal("show");
+            },
+            success: function (r) {
+                $('#modal_update_home .close_modal').fadeIn("fast");
+                if (r.response === 'success') {
+                    showModal("A <strong>exibição dos produtos</strong> da sua loja e a <strong>barra lateral</strong> foram atualizadas om sucesso.", "success", "modal_update_home");
+                } else {
+                    showModal(r.response, "warning", "modal_update_home");
+                }
+            },
+            error: function (e) {
+                $('.debug').html(e.responseText);
+                $('#modal_update_home .close_modal').fadeIn("fast");
+                console.log(e);
+            }
+        });
     });
 
 });

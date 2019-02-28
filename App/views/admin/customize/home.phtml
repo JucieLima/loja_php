@@ -1,0 +1,228 @@
+<?php
+
+use CoffeeCode\Cropper\Cropper;
+
+$cropper = new Cropper('cache\thumbs');
+?>
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>Customização de Home</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="<?= BASE_URL; ?>admin/">Dashboard</a></li>
+                    <li><a href="<?= BASE_URL; ?>admin/customize/home">Customizar Páginas</a></li>
+                    <li class="active"><a href="<?= BASE_URL; ?>admin/customize/home">Home</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>  
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <form method="post" name="update_slider" enctype="multipart/form-data"> 
+            <?php
+            for ($i = 1; $i < 5; $i++):
+                $slider = $this->viewData['silder']->find($i);
+                ?>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header"><strong>Slider </strong> nº<?= $i; ?></div>
+                        <div class="card-body card-block">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Imagem</label>
+                                    <div class="card mb-3">
+                                        <div class="image_preview">
+                                            <img id="image_preview<?= $i; ?>" src="<?= BASE_URL . $cropper->make('uploads/' . $slider->slider_image, 484, 441); ?>" alt="Imagem <?= $i; ?> do slider" />
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Escolha a imagem nº <?= $i; ?> para o slider na página inicial.</p>
+                                            <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                            <button class="btn btn-info choose_image_slider" id="<?= $i; ?>">escolher imagem</button>
+                                            <input type="file" accept="image" name="slider_image<?= $i; ?>" class="choose_input" id="choose_input<?= $i; ?>">                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Sticker</label>
+                                    <div class="card mb-3">
+                                        <div class="image_preview image_preview_sticker">
+                                            <img id="sticker_preview<?= $i; ?>" class="rounded-circle" src="<?= BASE_URL . $cropper->make('uploads/' . $slider->slider_sticker, 350, 350); ?>" alt="Imagem <?= $i; ?> do slider" />
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">Escolha um adesivo para ser postado junto com a imagem do slider</p>
+                                            <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                            <button class="btn btn-info choose_sticker_slider" id="<?= $i; ?>">escolher imagem</button>
+                                            <input type="file" accept="image" name="slider_sticker<?= $i; ?>" class="choose_sticker" id="choose_sticker<?= $i; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class=" form-control-label">Título</label>
+                                    <input type="text" name="slider_title<?= $i; ?>" value="<?= $slider->slider_title; ?>" placeholder="Digite um título para o slider <?= $i; ?>" class="form-control">
+                                </div> 
+                                <div class="form-group">
+                                    <label class=" form-control-label">Descrição</label>
+                                    <input type="text" name="slider_description<?= $i; ?>" value="<?= $slider->slider_description; ?>" placeholder="Digite uma descrição para o slider <?= $i; ?>" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <?php
+            endfor;
+            ?>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">                        
+                        <button type="submit" class="btn btn-success btn-large">Atualizar Slider</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form method="post" name="products_display" enctype="multipart/form-data"> 
+            <?php
+            $display = $this->viewData['display']->find(1);
+            ?>
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Exibição</strong> de produtos e <strong>Sidebar</strong></div>
+                    <div class="card-body card-block">
+                        <div class="col-12">
+                            <span>Total de produtos em<strong> destaque</strong></span>
+                            <div class="form-group">                            
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="featured_products" <?= $display->featured_products == 6 ? ' checked' : ''; ?> id="featured_products1" value="6">
+                                    <label class="form-check-label" for="featured_products1">6</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="featured_products" <?= $display->featured_products == 9 ? ' checked' : ''; ?> id="featured_products2" value="9">
+                                    <label class="form-check-label" for="featured_products2">9</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="featured_products" <?= $display->featured_products == 12 ? ' checked' : ''; ?> id="featured_products3" value="12">
+                                    <label class="form-check-label" for="featured_products3">12</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <span><strong>Produtos Recomendados</strong></span>
+                            <div class="form-group">                            
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= $display->recommended_products ? ' checked' : ''; ?> name="recommended_products" id="recommended_products1" value="1">
+                                    <label class="form-check-label" for="recommended_products1">Exibir</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= !$display->recommended_products ? ' checked' : ''; ?> name="recommended_products" id="recommended_products2" value="0">
+                                    <label class="form-check-label" for="recommended_products2">Não exibir</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <span>Filtro de <strong>Categorias</strong></span>
+                            <div class="form-group">                            
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= $display->show_categories ? ' checked' : ''; ?> name="show_categories" id="show_categories1" value="1">
+                                    <label class="form-check-label" for="show_categories1">Exibir</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= !$display->show_categories ? ' checked' : ''; ?> name="show_categories" id="show_categories2" value="0">
+                                    <label class="form-check-label" for="show_categories2">Não exibir</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <span>Filtro de <strong>Marcas</strong></span>
+                            <div class="form-group">                            
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= $display->show_brands ? ' checked' : ''; ?> name="show_brands" id="show_brands1" value="1">
+                                    <label class="form-check-label" for="show_brands1">Exibir</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= !$display->show_brands ? ' checked' : ''; ?> name="show_brands" id="show_brands2" value="0">
+                                    <label class="form-check-label" for="show_brands2">Não exibir</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <span>Filtro de <strong>Faixa de preços</strong></span>
+                            <div class="form-group">                            
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= $display->show_price_range ? ' checked' : ''; ?> name="show_price_range" id="show_price_range1" value="1">
+                                    <label class="form-check-label" for="show_price_range1">Exibir</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= !$display->show_price_range ? ' checked' : ''; ?> name="show_price_range" id="show_price_range2" value="0">
+                                    <label class="form-check-label" for="show_price_range2">Não exibir</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <span><strong>Banner</strong></span>
+                            <div class="form-group">                            
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= $display->show_banner ? ' checked' : ''; ?> name="show_banner" id="show_banner1" value="1">
+                                    <label class="form-check-label" for="show_banner1">Exibir</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" <?= !$display->show_banner ? ' checked' : ''; ?> name="show_banner" id="show_banner2" value="0">
+                                    <label class="form-check-label" for="show_banner2">Não exibir</label>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="image_preview banner_preview"  <?= $display->banner_path ? ' style="background-image: url(' . BASE_URL . 'uploads/' . $display->banner_path . ')"' : ''; ?>></div>
+                                <div class="card-body">
+                                    <p class="card-text">Use imagens com as seguintes medidas: largura 350, altura 420, ou com a proporção de 5/6.</p>
+                                    <p class="card-text"><small class="text-muted">Aceito apenas: jpg e png</small></p>
+                                    <button class="btn btn-info" id="choose_banner">escolher imagem</button>
+                                    <input type="file" accept="image" name="banner_path" id="image_banner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><strong>Enviar formulário</strong></div>
+                    <div class="card-body card-block">
+                        <button type="submit" class="btn btn-success btn-large">Atualizar Exibição</button>
+                    </div>
+                </div>
+            </div>
+        </form>        
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" id="modal_update_home">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atualizar Home</h5>
+                <button type="button" class="close btn_close close_modal" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-spin fa-2x fa-fw"></i>Atualizando dados..</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn_close close_modal" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+$cropper->flush();

@@ -6,22 +6,47 @@
 }
 /******FORMULÁRIO DE CADASTRO E ATUALIZAÇÃO DE USUÁRIOS******/
 .image_preview{
+    position: relative;
     background-color: #e4e6e7;
     padding: 75% 0 0 0;
-    background-image: url('../../images/profile.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    overflow: hidden;
+}
+.banner_preview{
+    position: relative;
+    background-color: #e4e6e7;
+    padding: 121% 0 0 0;
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+.image_preview_sticker{
+    background-image: none;
+}
+.image_preview img{
+    min-width: 100%;
+    position: absolute;
+    top: 1px;
+    left: 0;   
+}
+.image_preview.image_preview_sticker img{
+    min-width: 50%;
+    width: 50%;
+    top: 25%;
+    left: 25%;
 }
 .image_preview_logo{
     background-color: #e4e6e7;
     padding: 75% 0 0 0;
-    background-image: url('../../images/produto.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
-#image_profile,#image_logo{
+#image_profile,#image_logo,.choose_input,.choose_sticker, #image_banner{
     display: none;    
 }
 .debug{

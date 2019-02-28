@@ -82,7 +82,7 @@ class ProdutoImagens extends Model {
         $delete = self::find($this->image);
         if ($delete):
             $this->result = $delete->imagem_produto;
-            if (file_exists('uploads/' . $delete->imagem_uri)):
+            if (file_exists('uploads/' . $delete->imagem_uri && !is_dir('uploads/' . $delete->imagem_uri))):
                 unlink('uploads/' . $delete->imagem_uri);
             endif;
             $delete->delete();

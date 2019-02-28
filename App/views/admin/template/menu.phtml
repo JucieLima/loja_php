@@ -61,7 +61,14 @@
                 <h3 class="menu-title">Loja</h3><!-- /.menu-title -->
                 <li class="menu-item">
                     <a href="<?= BASE_URL; ?>admin/loja"> <i class="menu-icon fa fa-gears"></i>Configurações</a>                                       
-                    <a href="<?= BASE_URL; ?>admin/loja/seo"> <i class="menu-icon fa fa-search"></i>SEO</a>                                       
+                    <a href="<?= BASE_URL; ?>admin/loja/seo"> <i class="menu-icon fa fa-search"></i>SEO</a>                                      
+                </li>
+                <li class="menu-item-has-children dropdown">                                   
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sliders"></i>Customizar Páginas</a> 
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-television"></i><a href="<?= BASE_URL; ?>admin/customize/home">Home</a></li>
+                        <li><i class="fa fa-television"></i><a href="<?= BASE_URL; ?>admin/customize/contato">Contato</a></li>
+                    </ul> 
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

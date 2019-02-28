@@ -163,7 +163,22 @@ class Categorias extends Model {
                 echo $s['titulo_categoria'] . '</option>';
                 $this->listTreeCatId($s["id_categoria"], $l);
             }
-        }       
+        }
+    }
+
+    public function listTreeMenuCatId(int $id, $level = null) {
+        $l = $level ?? 0;
+        $class = $l == 0 ? ' class="sub-menu"' : '';
+        $subs = $this->getCatsById($id);
+        if (count($subs) > 0) {
+            $l++;
+            echo '<ul role="menu"' . $class . '>';
+            foreach ($subs as $s) :
+                echo '<li><a href="' . BASE_URL . 'category/' . $s['url_categoria'] . '">' . $s['titulo_categoria'] . '</a></li>';
+                $this->listTreeMenuCatId($s["id_categoria"], $l);
+            endforeach;
+            echo '</ul>';
+        }
     }
 
     private function getCatsById(int $id) {
