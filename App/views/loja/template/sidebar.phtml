@@ -1,0 +1,76 @@
+<div class="col-sm-3">
+    <div class="left-sidebar">
+        <?php
+        if ($this->viewData['display']['show_categories']):
+            ?>
+            <h2>Departamentos</h2>
+            <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                <?php
+                $categorias = $this->viewData['categorias']->where('mae_categoria', null)->get()->toArray();
+                foreach ($categorias as $categoria):
+                    ?>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordian" href="#<?= $categoria['url_categoria']; ?>">
+                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+                                    <?= $categoria['titulo_categoria']; ?>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="<?= $categoria['url_categoria']; ?>" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <?php
+                                    $subs = $this->viewData['categorias']->listTreeSidebarCatId($categoria["id_categoria"]);
+                                    ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                endforeach;
+                ?>              
+            </div><!--/category-products-->
+            <?php
+        endif;
+        if ($this->viewData['display']['show_brands']):
+            ?>
+            <div class="brands_products"><!--brands_products-->
+                <h2>MARCAS</h2>
+                <div class="brands-name">
+                    <ul class="nav nav-pills nav-stacked">
+                        <?php
+                        foreach ($this->viewData['marcas'] as $marca):
+                            echo '<li><a href="' . BASE_URL . 'brand/' . $marca['id_marca'] . '">'
+                            . '<span class="pull-right">(' . $marca['total'] . ')</span>'
+                            . $marca['titulo_marca'] . '</a></li> ';
+                        endforeach;
+                        ?>   
+                    </ul>
+                </div>
+            </div><!--/brands_products-->
+            <?php
+        endif;
+        if ($this->viewData['display']['show_price_range']):
+            ?>
+            <div class="price-range"><!--price-range-->
+                <h2>Faixa de preços</h2>
+                <div class="well text-center">
+                    <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="<?= $this->viewData['range']['max']['value']; ?>" data-slider-step="5" data-slider-value="[<?= $this->viewData['range']['min']['value']; ?>,<?= $this->viewData['range']['max']['value']; ?>]" id="sl2" ><br />
+                    <b class="pull-left">R$ <?= number_format(0, 2, ',', '.'); ?></b> <b class="pull-right">R$ <?= number_format($this->viewData['range']['max']['value'], 2, ',', '.'); ?></b>
+                    <button type="button" class="btn btn-default get">pesquisar</button>
+                </div>
+            </div><!--/price-range-->
+            <?php
+        endif;
+        if ($this->viewData['display']['show_banner']):
+            ?>
+            <div class="shipping text-center"><!--shipping-->
+                <img src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $this->viewData['display']['banner_path'], 270, 329); ?>" alt="" />
+            </div><!--/shipping-->
+            <?php
+        endif;
+        ?>
+    </div>
+</div>

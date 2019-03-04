@@ -8,6 +8,7 @@ and open the template in the editor.
     Author     : jucie
 */
 
+/*** MENU PRINCIPAL ***/
 ul.sub-menu li a{
     border-bottom:  1px solid #ccc;
     width: 100%;
@@ -15,4 +16,126 @@ ul.sub-menu li a{
 }
 .navbar-nav li ul.sub-menu li .sub-menu-categories li{
     padding: 5px 0;
+}
+
+/*** EXIBIÇÂO DE PRODUTOS ***/
+.products-wrapper .product-image-wrapper{
+    min-height: 610px;
+}
+.productinfo h2,.overlay-content h2{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.productinfo h2 span{
+    font-size: .7em;
+    font-weight: 200;
+    color: #696763;
+}
+.productinfo p,.overlay-content p{
+    padding: 0 10px;
+}
+@media (max-width: 768px){
+    .products-wrapper{
+        width: 50%;
+        float: left;
+    }
+    .products-wrapper .product-image-wrapper{
+        min-height: 712px;
+    }
+}
+@media (max-width: 768px){
+    .products-wrapper{
+        width: 100%;
+    }
+    .products-wrapper .product-image-wrapper{
+        min-height: 712px;
+    }
+}
+
+/** GALERIA DE ZOOM **/
+.zoom-gallery{     
+    padding: 0 33px; 
+    position: relative;
+    margin-bottom: 10px;
+}
+.zoom-gallery-wrapper{    
+    width: 100%;
+    overflow: hidden;
+}
+.zoom-gallery .items img{
+    border: 1px solid #ededed;
+}
+.item-control-zoom i {
+    background: #FE980F;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+.item-control-zoom i:hover {
+    background: #ccccc6;
+}
+@media (max-width: 767px){
+    .zoom-gallery .items{
+        width: 1000%;
+    } 
+    .item-control-zoom{
+        position: absolute;
+        top: 50%;
+        margin-top: -17px;
+    }
+    .zoom-gallery .items img{
+        display: inline;
+        border: 1px solid #ededed;
+        margin-right: 5px;
+    }
+    .item-control-zoom.prev{
+        left: 0;
+    }
+    .item-control-zoom.next{
+        right: 0;
+    }
+}
+@media (min-width: 768px){
+    .zoom-gallery{    
+        padding: 190% 0 30px;        
+        margin: 17px 0;
+    }
+    .zoom-gallery-wrapper{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .zoom-gallery .items{    
+        position: absolute;
+        height: 1000%;
+        top: 0;
+        left: 0;
+    }
+    .zoom-gallery .items img{        
+        width: 60%;
+        margin: 3px 0 3px 40%;
+    }
+    .item-control-zoom{
+        position: absolute;
+        left: 70%;
+        margin-left: -17px;
+    }    
+    .item-control-zoom.prev{
+        top: -17px;
+    }
+    .item-control-zoom.next{
+        bottom: -17px;
+    }    
+}
+.item-control-zoom.desabled i{
+    background-color: #ccc;
+}
+.view-product img{
+    width: auto;
+    max-width: 100%;
+}
+.view-product  h3{
+    z-index: 1000
 }

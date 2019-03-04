@@ -2,9 +2,14 @@
 
 use App\Helpers\Local;
 use App\Helpers\Seo;
+use App\Models\Admin\Loja;
+use App\Models\Admin\Categorias;
 
 $local = new Local;
 $metaSeo = new Seo($local->getController(), $local->getAction());
+$loja = new Loja;
+$this->viewData['categorias'] = new Categorias;
+$this->viewData['loja'] = $loja->find(1)->toArray();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,31 +18,36 @@ $metaSeo = new Seo($local->getController(), $local->getAction());
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta name="author" content="">
         <?= $metaSeo->getSeoTags(); ?>
+
+        <link href="<?= BASE_URL; ?>assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?= BASE_URL; ?>lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="<?= BASE_URL; ?>assets/css/prettyPhoto.css" rel="stylesheet">
+        <link href="<?= BASE_URL; ?>assets/css/price-range.css" rel="stylesheet">
+        <link href="<?= BASE_URL; ?>assets/css/animate.css" rel="stylesheet">
+        <link href="<?= BASE_URL; ?>assets/css/main.css" rel="stylesheet">
+        <link href="<?= BASE_URL; ?>assets/css/responsive.css" rel="stylesheet">
+        <link href="<?= BASE_URL; ?>assets/css/store.css" rel="stylesheet">
         
-        <link href="<?= BASE_URL;?>assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?= BASE_URL;?>lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="<?= BASE_URL;?>assets/css/prettyPhoto.css" rel="stylesheet">
-        <link href="<?= BASE_URL;?>assets/css/price-range.css" rel="stylesheet">
-        <link href="<?= BASE_URL;?>assets/css/animate.css" rel="stylesheet">
-        <link href="<?= BASE_URL;?>assets/css/main.css" rel="stylesheet">
-        <link href="<?= BASE_URL;?>assets/css/responsive.css" rel="stylesheet">
-        <link href="<?= BASE_URL;?>assets/css/store.css" rel="stylesheet">
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
         <![endif]-->       
-        <link rel="shortcut icon" href="<?= BASE_URL;?>images/ico/favicon.png">
+        <link rel="shortcut icon" href="<?= BASE_URL; ?>images/ico/favicon.png">
     </head><!--/head-->
 
     <body>
         <?php
+        include_once 'app/views/loja/template/header.phtml';
         $this->getView($this->viewPath);
-        ?>
-        <script src="<?= BASE_URL;?>assets/js/jquery.js"></script>
-        <script src="<?= BASE_URL;?>assets/js/bootstrap.min.js"></script>
-        <script src="<?= BASE_URL;?>assets/js/jquery.scrollUp.min.js"></script>
-        <script src="<?= BASE_URL;?>assets/js/price-range.js"></script>
-        <script src="<?= BASE_URL;?>assets/js/jquery.prettyPhoto.js"></script>
-        <script src="<?= BASE_URL;?>assets/js/e-shopper.js"></script>
+        include_once 'app/views/loja/template/footer.phtml';
+        ?>        
+        <script src="<?= BASE_URL; ?>assets/js/jquery-1.8.3.min.js"></script>        
+        <script src="<?= BASE_URL; ?>assets/js/bootstrap.min.js"></script>
+        <script src="<?= BASE_URL; ?>assets/js/jquery.scrollUp.min.js"></script>
+        <script src="<?= BASE_URL; ?>assets/js/price-range.js"></script>
+        <script src="<?= BASE_URL; ?>assets/js/jquery.prettyPhoto.js"></script>
+        <script src="<?= BASE_URL; ?>assets/js/e-shopper.js"></script>  
+        <script src="<?= BASE_URL; ?>assets/js/jquery.elevatezoom.js"></script>
+        <script src="<?= BASE_URL; ?>assets/js/store.js"></script>
     </body>
 </html>

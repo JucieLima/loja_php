@@ -3,9 +3,10 @@
 namespace App\Controllers\Loja;
 
 use App\Core\Controller;
-use App\Models\Admin\Loja;
-use App\Models\Admin\Categorias;
 use App\Models\Admin\Slider;
+use App\Models\Admin\Display;
+use App\Models\Loja\Produtos;
+use CoffeeCode\Cropper\Cropper;
 
 /**
  * Description of HomeController
@@ -15,12 +16,17 @@ use App\Models\Admin\Slider;
 class HomeController extends Controller {
 
     public function index() {
-        $loja = new Loja;
         $slider = new Slider;
-        $this->viewData['loja'] = $loja->find(1)->toArray();
-        $this->viewData['categorias'] = new Categorias;
+        $display = new Display;
+        $produtos = new Produtos;        
         $this->viewData['slider'] = $slider->all()->toArray();
-        $this->getView('loja/home', 'loja/' . TEMPLATE);
+        $this->viewData['display'] = $display->find(1)->toArray();
+        $this->viewData['featured_products'] = $produtos->getProdutos($this->viewData['display'] ['featured_products'], 0);
+        $this->viewData['recommended'] = $produtos->getRecommended();
+        $this->viewData['marcas'] = $produtos->getListOfBrands();
+        $this->viewData['range'] = $produtos->getPriceRange();
+        $this->viewData['cropper'] = new Cropper('files/images');
+        $this->getView('loja/home', 'loja/' . TEMPLATE);        
     }
 
 }

@@ -174,10 +174,20 @@ class Categorias extends Model {
             $l++;
             echo '<ul role="menu"' . $class . '>';
             foreach ($subs as $s) :
-                echo '<li><a href="' . BASE_URL . 'category/' . $s['url_categoria'] . '">' . $s['titulo_categoria'] . '</a></li>';
+                echo '<li><a href="' . BASE_URL . 'categoria/' . $s['url_categoria'] . '">' . $s['titulo_categoria'] . '</a></li>';
                 $this->listTreeMenuCatId($s["id_categoria"], $l);
             endforeach;
             echo '</ul>';
+        }
+    }
+
+    public function listTreeSidebarCatId(int $id, $level = null) {
+        $subs = $this->getCatsById($id);
+        if (count($subs) > 0) {
+            foreach ($subs as $s) :
+                echo '<li><a href="' . BASE_URL . 'categoria/' . $s['url_categoria'] . '">' . $s['titulo_categoria'] . '</a></li>';
+                $this->listTreeSidebarCatId($s["id_categoria"]);
+            endforeach;
         }
     }
 
