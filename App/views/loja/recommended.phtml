@@ -21,9 +21,11 @@ if ($this->viewData['display']['recommended_products']):
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $re['imagem_uri'], 268, 300); ?>" alt="" />
-                                    <h2>R$ <?= $price; ?></h2>
-                                    <p><?= Check::Words($re['titulo_produto'], 10); ?></p>
+                                    <a href="<?= BASE_URL . 'produtos/item/' . $re['path_produto']; ?>" title="<?= Check::Words($re['titulo_produto'], 10); ?>">
+                                        <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $re['imagem_uri'], 268, 300, 't'); ?>" alt="" />
+                                        <h2>R$ <?= $price; ?></h2>
+                                        <p><?= Check::Words($re['titulo_produto'], 10); ?></p>
+                                    </a>
                                     <a href="<?= BASE_URL; ?>add-product" data-product="<?= $re['id_produto']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</a>
                                 </div>
 
@@ -46,4 +48,5 @@ if ($this->viewData['display']['recommended_products']):
         </div>
     </div><!--/recommended_items-->
     <?php
+
 endif;

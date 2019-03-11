@@ -28,8 +28,8 @@ use App\Helpers\Check;
                                     <button type="button" class="btn btn-default get">Saiba mais</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $item['slider_image'], 484, 441); ?>" class="girl img-responsive" alt="" />
-                                    <img src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $item['slider_sticker'], 172, 172); ?>"  class="pricing img-circle" alt="" />
+                                    <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $item['slider_image'], 484, 441); ?>" class="girl img-responsive" alt="" />
+                                    <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $item['slider_sticker'], 172, 172); ?>"  class="pricing img-circle" alt="" />
                                 </div>
                             </div>    
                             <?php
@@ -71,9 +71,9 @@ use App\Helpers\Check;
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <picture>
-                                            <source media="(max-width: 320px)" srcset="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $prod['imagem_uri'], 260, 380); ?>">
-                                            <source media="(max-width: 767px)" srcset="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $prod['imagem_uri'], 690, 1008); ?>">
-                                            <img src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $prod['imagem_uri'], 312, 456); ?>" alt="<?= $prod['titulo_produto']; ?>" />
+                                            <source media="(max-width: 320px)" srcset="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $prod['imagem_uri'], 260, 380); ?>">
+                                            <source media="(max-width: 767px)" srcset="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $prod['imagem_uri'], 690, 1008); ?>">
+                                            <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $prod['imagem_uri'], 312, 456); ?>" alt="<?= $prod['titulo_produto']; ?>" />
                                         </picture>
                                         <h2><span><?= $discount; ?></span> R$ <?= $price; ?></h2>
                                         <p><?= Check::Words($prod['titulo_produto'], 10); ?></p>
@@ -122,7 +122,7 @@ use App\Helpers\Check;
                                         <div class="product-image-wrapper">
                                             <div class="single-products">
                                                 <div class="productinfo text-center">
-                                                    <img src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $re['imagem_uri'], 268, 134); ?>" alt="" />
+                                                    <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $re['imagem_uri'], 268, 200, 't'); ?>" alt="" />
                                                     <h2>R$ <?= $price; ?></h2>
                                                     <p><?= Check::Words($re['titulo_produto'], 10); ?></p>
                                                     <a href="<?= BASE_URL; ?>add-product" data-product="<?= $re['id_produto']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</a>

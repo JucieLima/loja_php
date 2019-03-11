@@ -38,7 +38,14 @@
                         <ul class="nav navbar-nav">
                             <li><a href="<?= BASE_URL; ?>account"><i class="fa fa-user"></i> Minha Conta</a></li>
                             <li><a href="<?= BASE_URL; ?>wishlist"><i class="fa fa-star"></i> Lista de Desejos</a></li>
-                            <li><a href="<?= BASE_URL; ?>cart"><i class="fa fa-shopping-cart"></i> Carrinho</a></li>
+                            <?php
+                            $total_products = isset($_SESSION['cart']) ? $_SESSION['cart']['total'] : 0;
+                            ?>
+                            <li class="cart_total_products" data-products="<?=$total_products;?>">
+                                <a href="<?= BASE_URL; ?>cart">
+                                    <i class="fa fa-shopping-cart"></i> Carrinho <span><?=$total_products;?></span>
+                                </a>
+                            </li>
                             <li><a href="<?= BASE_URL; ?>login"><i class="fa fa-lock"></i> Login</a></li>
                         </ul>
                     </div>
@@ -85,3 +92,20 @@
         </div>
     </div><!--/header-bottom-->
 </header><!--/header-->
+<div class="modal fade" tabindex="-1" role="dialog" id="modal_add_product">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Item adicionado ao carrinho</h4>
+      </div>
+      <div class="modal-body">
+        <p>O que você deseja fazer?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Continuar comprando</button>
+        <a href="<?=BASE_URL?>cart" class="btn btn-primary" title="Finalizar compra">Finalizar compra</a>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

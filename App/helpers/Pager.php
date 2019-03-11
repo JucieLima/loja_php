@@ -53,7 +53,6 @@ class Pager {
             $next = $this->page >= $this->pages ? ' disabled' : '';
             $this->pagination = '<nav>';
             $this->pagination .= '<ul class="pagination justify-content-center">';
-            $this->pagination .= '<ul class="pagination justify-content-center">';
             $this->pagination .= '<li class="page-item ' . $previous . '">';
             $this->pagination .= '<a class="page-link"  tabindex="-1" aria-disabled="true" href="' . BASE_URL . $this->link . '/' . ($this->page - 1) . '/' . $this->params . '">';
             $this->pagination .= $this->prev;

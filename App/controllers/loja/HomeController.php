@@ -6,7 +6,7 @@ use App\Core\Controller;
 use App\Models\Admin\Slider;
 use App\Models\Admin\Display;
 use App\Models\Loja\Produtos;
-use CoffeeCode\Cropper\Cropper;
+use App\Helpers\ResizeImage;
 
 /**
  * Description of HomeController
@@ -25,7 +25,7 @@ class HomeController extends Controller {
         $this->viewData['recommended'] = $produtos->getRecommended();
         $this->viewData['marcas'] = $produtos->getListOfBrands();
         $this->viewData['range'] = $produtos->getPriceRange();
-        $this->viewData['cropper'] = new Cropper('files/images');
+        $this->viewData['cropper'] = new ResizeImage;
         $this->getView('loja/home', 'loja/' . TEMPLATE);        
     }
 

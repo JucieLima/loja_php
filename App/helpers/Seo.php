@@ -16,17 +16,18 @@ class Seo {
 
     private $controller;
     private $action;
+    private $params;
     private $data;
     private $tags;
     private $store;
 
     /** dados povoados * */
     private $seoTags;
-    private $seoData;
 
-    function __construct($controller, $action) {
+    function __construct($controller, $action, $params = null) {
         $this->controller = strip_tags(trim($controller));
         $this->action = strip_tags(trim($action));
+        $this->params = $params ? filter_var_array($params, FILTER_DEFAULT) : null;
         $loja = new Loja;
         $this->store = $loja->find(1)->toArray();
         $this->setSeo();
@@ -50,7 +51,7 @@ class Seo {
                         'image' => BASE_URL . 'uploads/' . $this->store['imagem_padrao']
                     ];
                     break;
-                case 'produto':
+                case 'produtos':
                     $this->dataProducts();
                     break;
                 case $this->controller == $page['controller'] && $this->action == $page['action']:
@@ -115,7 +116,7 @@ class Seo {
     private function dataProducts() {
         $product = new Produtos;
         $image = new ProdutoImagens;
-        $readProduct = $product->where("path_produto", $this->action)->get()->toArray();
+        $readProduct = $product->where("path_produto", $this->params[0])->get()->toArray();
         if ($readProduct):
             $cover = $image->getCover($readProduct[0]['id_produto']);
             $this->data = [

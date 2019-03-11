@@ -1,9 +1,6 @@
 <?php
 
 use App\Helpers\Check;
-use CoffeeCode\Cropper\Cropper;
-
-$cropper = new Cropper('cache\thumbs');
 ?>
 <div class="breadcrumbs">
     <div class="col-sm-4">
@@ -88,7 +85,7 @@ $cropper = new Cropper('cache\thumbs');
                                         <td class="text-center"><?= $produto['titulo_marca']; ?></td>
                                         <td class="text-right"><?= number_format($valor, 2, ',', '.') ?> R$</td>
                                         <td class="text-center"><?= $produto['ativo_produto'] ? 'ativo' : 'desativado' ?></td>
-                                        <td class="text-center"><img src="<?= BASE_URL . $cropper->make('uploads/' . $cover, 80, 80); ?>" title="imagem do produto"></td>
+                                        <td class="text-center"><img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $cover, 80, 80,'t'); ?>" title="imagem do produto"></td>
                                         <td class="text-center">
                                             <a href="<?= BASE_URL . 'produtos/item/' . $produto['path_produto']; ?>" title="Visitar página do produto" target="_blank" class="btn btn-info">
                                                 <i class="fa fa-tv"> Visitar</i>

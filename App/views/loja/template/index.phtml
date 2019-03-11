@@ -6,7 +6,7 @@ use App\Models\Admin\Loja;
 use App\Models\Admin\Categorias;
 
 $local = new Local;
-$metaSeo = new Seo($local->getController(), $local->getAction());
+$metaSeo = new Seo($local->getController(), $local->getAction(), $local->getParams());
 $loja = new Loja;
 $this->viewData['categorias'] = new Categorias;
 $this->viewData['loja'] = $loja->find(1)->toArray();
@@ -16,7 +16,8 @@ $this->viewData['loja'] = $loja->find(1)->toArray();
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
-        <meta name="author" content="">
+        <meta name="author" content="Juciê Lima">
+        <meta name="base-url" content="<?= BASE_URL; ?>">
         <?= $metaSeo->getSeoTags(); ?>
 
         <link href="<?= BASE_URL; ?>assets/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +28,7 @@ $this->viewData['loja'] = $loja->find(1)->toArray();
         <link href="<?= BASE_URL; ?>assets/css/main.css" rel="stylesheet">
         <link href="<?= BASE_URL; ?>assets/css/responsive.css" rel="stylesheet">
         <link href="<?= BASE_URL; ?>assets/css/store.css" rel="stylesheet">
-        
+
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -41,13 +42,14 @@ $this->viewData['loja'] = $loja->find(1)->toArray();
         $this->getView($this->viewPath);
         include_once 'app/views/loja/template/footer.phtml';
         ?>        
-        <script src="<?= BASE_URL; ?>assets/js/jquery-1.8.3.min.js"></script>        
+        <script src="<?= BASE_URL; ?>assets/js/jquery.js"></script>        
         <script src="<?= BASE_URL; ?>assets/js/bootstrap.min.js"></script>
         <script src="<?= BASE_URL; ?>assets/js/jquery.scrollUp.min.js"></script>
         <script src="<?= BASE_URL; ?>assets/js/price-range.js"></script>
         <script src="<?= BASE_URL; ?>assets/js/jquery.prettyPhoto.js"></script>
         <script src="<?= BASE_URL; ?>assets/js/e-shopper.js"></script>  
         <script src="<?= BASE_URL; ?>assets/js/jquery.elevatezoom.js"></script>
+        <script src="<?= BASE_URL; ?>assets/js/jquery.mask.min.js"></script>
         <script src="<?= BASE_URL; ?>assets/js/store.js"></script>
     </body>
 </html>

@@ -16,7 +16,6 @@ class Produtos extends Model {
     protected $primaryKey = 'id_produto';
     protected $guarded = ['id_produto', 'created_at', 'updated_at'];
     private $data;
-    private $files;
     private $result;
     private $error;
 
@@ -50,7 +49,13 @@ class Produtos extends Model {
 
     public function getProductByUri($url) {
         $this->data = filter_var($url, FILTER_SANITIZE_STRING);
-        $prod = self::where('path_produto', $this->data)->where("ativo_produto",1)->get()->toArray();
+        $prod = self::join('categorias', 'id_categoria', '=', 'categoria_produto')
+                ->join('marcas', 'id_marca', '=', 'marca_produto')
+                ->where('path_produto', $this->data)
+                ->where("ativo_produto", 1)
+                ->select('produtos.*', 'categorias.titulo_categoria', 'marcas.titulo_marca')
+                ->get()
+                ->toArray();
         if ($prod):
             $this->result = $prod;
             return $prod;
@@ -58,6 +63,19 @@ class Produtos extends Model {
             $this->error = "Produto não encontrado!";
             return false;
         endif;
+    }
+
+    public function getCategoryItens(int $id_category, int $id_produto) {
+        return self::join('produto_imagens', 'id_produto', '=', 'imagem_produto')
+                        ->select('id_produto', 'titulo_produto', 'preco_venda_produto', 'desconto_produto', 'ativo_produto', 'path_produto', 'sale_produto', 'imagem_uri')
+                        ->where('categoria_produto', $id_category)
+                        ->where('id_produto', '<>', $id_produto)
+                        ->where('ativo_produto', 1)
+                        ->where("imagem_main", 1)
+                        ->inRandomOrder()
+                        ->limit(12)
+                        ->get()
+                        ->toArray();
     }
 
     public function searchProducts($value, $limit, $offset): array {

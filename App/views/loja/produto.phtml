@@ -12,8 +12,11 @@ use App\Helpers\Check;
                             <div class="zoom-gallery-wrapper">
                                 <div class="items">
                                     <?php
+                                    $c = 0;
                                     foreach ($this->viewData['images'] as $image):
-                                        echo '<img src="' . BASE_URL . $this->viewData['cropper']->make('uploads/' . $image['imagem_uri'], 110, 110) . '" data-image="' . BASE_URL . $this->viewData['cropper']->make('uploads/' . $image['imagem_uri'], 660, 955) . '">';
+                                        $active = $c == 0 ? ' class="active"' : '';
+                                        $c++;
+                                        echo '<img ' . $active . ' src="' . BASE_URL . $this->viewData['cropper']->resize('uploads/' . $image['imagem_uri'], 110, 110) . '" data-image="' . BASE_URL . $this->viewData['cropper']->resize('uploads/' . $image['imagem_uri'], 660, 955) . '">';
                                     endforeach;
                                     ?>
                                 </div> 
@@ -27,57 +30,91 @@ use App\Helpers\Check;
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="view-product">
-                            <img  id="zoom_product" src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $this->viewData['images'][0]['imagem_uri'], 264, 382); ?>" data-zoom-image="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $this->viewData['images'][0]['imagem_uri'], 660, 955); ?>" alt="" />
+                            <img  id="zoom_product" src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $this->viewData['images'][0]['imagem_uri'], 264, 382); ?>" data-zoom-image="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $this->viewData['images'][0]['imagem_uri'], 660, 955); ?>" alt="" />
                             <h3>ZOOM</h3>
                         </div>
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-sm-6">
                         <div class="product-information"><!--/product-information-->
-                            <img src="<?= BASE_URL; ?>images/product-details/new.jpg" class="newarrival" alt="" />
-                            <h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-                            <p>Web ID: 1089772</p>
-                            <img src="<?= BASE_URL; ?>images/product-details/rating.png" alt="" />
-                            <span>
-                                <span>US $59</span>
-                                <label>Quantity:</label>
-                                <input type="text" value="3" />
-                                <button type="button" class="btn btn-fefault cart">
+                            <?php
+                            $new = $this->viewData['produto'][0]['created_at'] > date('Y-m-d H:i:s', strtotime("-30 days")) ? true : false;
+                            $price = number_format($this->viewData['produto'][0]['preco_venda_produto'] - $this->viewData['produto'][0]['desconto_produto'], 2, ',', '.');
+                            $discount = $this->viewData['produto'][0]['desconto_produto'] ? '<span class="price_from">de R$ ' . number_format($this->viewData['produto'][0]['preco_venda_produto'], 2, ',', '.') .
+                                    '</span><span><small>por</small> ' : '<span>';
+                            echo $new ? '<img src="' . BASE_URL . 'images/product-details/new.jpg" class="newarrival" alt="novo" />' : '';
+                            $estoque = $this->viewData['produto'][0]['quantidade_produto'] <= $this->viewData['produto'][0]['qtd_min_produto'] ? 'esgotado' : $this->viewData['produto'][0]['quantidade_produto'];
+                            ?>
+                            <h2><?= $this->viewData['produto'][0]['titulo_produto']; ?></h2>
+                            <p>Web ID: <?= str_pad($this->viewData['produto'][0]['id_produto'], 6, 0, STR_PAD_LEFT); ?></p>
+                            <?php
+                            $star_half = $this->viewData['rating'] - intval($this->viewData['rating']) > 0 ? '<i class="fa fa-star-half-empty"></i>' : '';
+                            $star_plus = $this->viewData['rating'] - intval($this->viewData['rating']) > 0 ? 1 : 0;
+                            $stars_full = str_repeat('<i class="fa fa-star"></i>', intval($this->viewData['rating']));
+                            $stars_empty = str_repeat('<i class="fa fa-star-o"></i>', 5 - (intval($this->viewData['rating'] + $star_plus)));
+
+                            if ($this->viewData['rating']):
+                                ?>                            
+                                <div class="rating-area">
+                                    <?= $stars_full . $star_half . $stars_empty; ?>
+                                    <span><?= number_format(round($this->viewData['rating'], 1), 1, ',', ''); ?></span>
+                                </div>
+                                <?php
+                            endif;
+                            ?>                            
+                            <span><?= $discount; ?> R$ <?= $price; ?></span>                            
+                            <form name="add-product" class="form-add-product">
+                                <label>Quantidade:</label>
+                                <button class="btn-quantity"  data-quantity="decrease"><i class="fa fa-minus"></i></button>
+                                <input class="quantity" type="text" name="quantity" disabled="" value="1" />
+                                <button class="btn-quantity btn-quantity-right" data-quantity="increase"><i class="fa fa-plus"></i></button>
+                                <input type="hidden" name="product_id" value="<?= $this->viewData['produto'][0]['id_produto']; ?>">
+                                <button type="submit" class="btn btn-fefault cart add-to-cart-button">
                                     <i class="fa fa-shopping-cart"></i>
-                                    Add to cart
+                                    Adicionar ao Carrinho
                                 </button>
-                            </span>
-                            <p><b>Availability:</b> In Stock</p>
-                            <p><b>Condition:</b> New</p>
-                            <p><b>Brand:</b> E-SHOPPER</p>
-                            <a href=""><img src="<?= BASE_URL; ?>images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+                            </form>
+                            <div class="product-data">
+                                <p><b>Estoque:</b> <?= $estoque; ?> unidades</p>
+                                <p><b>Marca:</b> <?= $this->viewData['produto'][0]['titulo_marca']; ?></p>
+                                <input type="text" name="cep" class="frete cep" placeholder="00000-000" /><button class="btn btn-shipping"><i class="fa fa-truck"></i> Calcular frete</button>
+                                <div class="alert alert-warning alert-dismissible alert-cep" role="alert"></div>
+                                <div class="shipping-data">
+                                    <p><b>Valor do frete:</b> <span class="shipping-value"></span></p>
+                                    <p><b>Prazo:</b> <span class="shipping-date"></span></p>
+                                </div>
+                                <div class="debug">
+                                    
+                                </div>
+                            </div>
                         </div><!--/product-information-->
                     </div>
                 </div><!--/product-details-->
-            </div>
+            </div>            
             <?php
-            if ($this->viewData['display']['recommended_products']):
+            if (count($this->viewData['category_itens']) > 0):
                 ?>
                 <div class="recommended_items"><!--recommended_items-->
-                    <h2 class="title text-center">Quem procura este item também se interessa por</h2>
-
-                    <div id="category-item-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="title-efect"><h2 class="title text-center">Quem procura este item também se interessa por</h2></div>                    
+                    <div id="category-item-carousel" class="carousel slide">
                         <div class="carousel-inner">
                             <?php
                             $c = 0;
-                            $size = count($this->viewData['recommended']);
-                            foreach ($this->viewData['recommended'] as $re):
+                            $size = count($this->viewData['category_itens']);
+                            foreach ($this->viewData['category_itens'] as $re):
                                 echo $c == 0 ? '<div class="item active">' : '';
                                 $c++;
                                 $price = number_format($re['preco_venda_produto'] - $re['desconto_produto'], 2, ',', '.');
                                 ?>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <div class="product-image-wrapper">
                                         <div class="single-products">
                                             <div class="productinfo text-center">
-                                                <img src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $re['imagem_uri'], 268, 134); ?>" alt="" />
-                                                <h2>R$ <?= $price; ?></h2>
+                                                <a href="<?= BASE_URL . 'produtos/item/' . $re['path_produto']; ?>" title="<?= Check::Words($re['titulo_produto'], 10); ?>">
+                                                    <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $re['imagem_uri'], 268, 200, 't'); ?>" alt="" />
+                                                    <h2>R$ <?= $price; ?></h2>
+                                                </a>
                                                 <p><?= Check::Words($re['titulo_produto'], 10); ?></p>
                                                 <a href="<?= BASE_URL; ?>add-product" data-product="<?= $re['id_produto']; ?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</a>
                                             </div>
@@ -86,12 +123,13 @@ use App\Helpers\Check;
                                     </div>
                                 </div>
                                 <?php
-                                echo $c % 3 == 0 ? '</div>' : $c == $size ? '</div>' : '';
-                                echo $c % 3 == 0 && $c < $size ? '<div class="item">' : '';
+                                echo $c % 4 == 0 ? '</div>' : $c == $size ? '</div>' : '';
+                                echo $c % 4 == 0 && $c < $size ? '<div class="item">' : '';
                             endforeach;
                             ?>
 
                         </div>
+
                         <a class="left recommended-item-control" href="prev#category-item-carousel" data-slide="prev">
                             <i class="fa fa-angle-left"></i>
                         </a>
@@ -100,6 +138,7 @@ use App\Helpers\Check;
                         </a>			
                     </div>
                 </div><!--/recommended_items-->
+
                 <?php
             endif;
             include_once 'app/views/loja/template/sidebar.phtml';
@@ -108,189 +147,76 @@ use App\Helpers\Check;
                 <div class="category-tab shop-details-tab"><!--category-tab-->
                     <div class="col-sm-12">
                         <ul class="nav nav-tabs">
-                            <li><a href="#details" data-toggle="tab">Details</a></li>
-                            <li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
-                            <li><a href="#tag" data-toggle="tab">Tag</a></li>
-                            <li class="active"><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
+                            <li class="active"><a href="#details" data-toggle="tab">Detalhes do produto</a></li>>
+                            <li><a href="#reviews" data-toggle="tab">Avaliações (<?= count($this->viewData['reviews']); ?>)</a></li>
                         </ul>
                     </div>
                     <div class="tab-content">
-                        <div class="tab-pane fade" id="details" >
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="tab-pane fade active in" id="details" >
+                            <h2><?= $this->viewData['produto'][0]['descricao_produto']; ?></h2>
+                            <?= $this->viewData['produto'][0]['detalhes_produto']; ?>
+                        </div>                        
 
-                        <div class="tab-pane fade" id="companyprofile" >
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="tag" >
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="<?= BASE_URL; ?>images/home/gallery4.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade active in" id="reviews" >
+                        <div class="tab-pane fade" id="reviews" >
                             <div class="col-sm-12">
-                                <ul>
-                                    <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
-                                    <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-                                    <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                <p><b>Write Your Review</b></p>
+                                <?php
+                                if (!$this->viewData['reviews']):
+                                    ?>
+                                    <div class="alert alert-warning">
+                                        Este produto ainda não obteve avaliações!
+                                    </div>
+                                    <?php
+                                else:
+                                    setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+                                    date_default_timezone_set('America/Recife');
+                                    foreach ($this->viewData['reviews'] as $review):
+                                        ?>
+                                        <ul>
+                                            <li><a href=""><i class="fa fa-user"></i><?= $review['nome_cliente'] . ' ' . $review['sobrenome_cliente']; ?></a></li>
+                                            <li><a href="">
+                                                    <i class="fa fa-clock-o"></i>
+                                                    <?= strftime('%H', strtotime($review['created_at'])); ?>h
+                                                    <?= strftime('%M', strtotime($review['created_at'])); ?>min
+                                                </a>
+                                            </li>
+                                            <li><a href=""><i class="fa fa-calendar-o"></i><?= strftime('%A, %d de %B de %Y', strtotime($review['created_at'])); ?></a></li>
+                                        </ul>
+                                        <p><?= $review['review_text']; ?></p>
+                                        <div class="rating-picked rating-vote">
+                                            <b>Avaliação: </b> 
+                                            <?php
+                                            for ($a = 0; $a < $review['review_rating']; $a++):
+                                                echo '<i class="fa fa-star selected"></i>';
+                                            endfor;
+                                            for ($a = 0; $a < (5 - $review['review_rating']); $a++):
+                                                echo '<i class="fa fa-star"></i>';
+                                            endfor;
+                                            ?>                                            
+                                        </div>
+                                        <hr>
+                                        <?php
+                                    endforeach;
+                                endif;
+                                ?>
+                                <p><b>Faça uma avaliação:</b></p>
 
-                                <form action="#">
-                                    <span>
-                                        <input type="text" placeholder="Your Name"/>
-                                        <input type="email" placeholder="Email Address"/>
-                                    </span>
+                                <form method="post" name="review_product">                                    
                                     <textarea name="" ></textarea>
-                                    <b>Rating: </b> <img src="<?= BASE_URL; ?>images/product-details/rating.png" alt="" />
+                                    <div class="rating-vote review-js">
+                                        <b>Avaliar: </b> 
+                                        <?php
+                                        for ($a = 1; $a < 6; $a++):
+                                            echo '<i class="fa fa-star" id="star' . $a . '"></i>';
+                                        endfor;
+                                        ?>
+                                    </div>
+                                    <input type="hidden" value="" name="rating_value">
                                     <button type="button" class="btn btn-default pull-right">
-                                        Submit
+                                        Enviar avaliação
                                     </button>
                                 </form>
                             </div>
-                        </div>z
+                        </div>
 
                     </div>
                 </div><!--/category-tab-->
@@ -303,5 +229,3 @@ use App\Helpers\Check;
         </div>
     </div>
 </section>
-<?php
-$this->viewData['cropper']->flush();

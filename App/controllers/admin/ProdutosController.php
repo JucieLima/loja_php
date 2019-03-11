@@ -8,6 +8,7 @@ use App\Models\Admin\Fornecedores;
 use App\Models\Admin\Fabricantes;
 use App\Models\Admin\Produtos;
 use App\Models\Admin\ProdutoImagens;
+use App\Helpers\ResizeImage;
 
 /**
  * Description of ProdutosController
@@ -36,6 +37,7 @@ class ProdutosController extends Controller {
         $this->viewData['pagina'] = 1;
         $this->viewData['sort'] = '';
         $this->viewData['ordem'] = 'padrão';
+        $this->viewData['cropper'] = new ResizeImage;
         $this->getView('admin/produtos/produtos', 'admin/' . TEMPLATE);
     }
 
@@ -54,6 +56,7 @@ class ProdutosController extends Controller {
         $this->viewData['pagina'] = $p;
         $this->viewData['sort'] = $sort . '/' . $ascending == '/' ? '' : $sort . '/' . $ascending;
         $this->viewData['ordem'] = ($sort == 'default' ? 'data de criação' : ($sort == 'price' ? 'preço' : ($sort == 'status' ? 'status' : 'padrão')));
+        $this->viewData['cropper'] = new ResizeImage;
         $this->getView('admin/produtos/produtos', 'admin/' . TEMPLATE);
     }
 
@@ -72,6 +75,7 @@ class ProdutosController extends Controller {
         $this->viewData['paginas'] = $paginas;
         $this->viewData['pagina'] = $p;
         $this->viewData['pesquisa'] = $pesquisa;
+        $this->viewData['cropper'] = new ResizeImage;
         $this->getView('admin/produtos/pesquisa', 'admin/' . TEMPLATE);
     }
 

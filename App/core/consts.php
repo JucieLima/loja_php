@@ -16,4 +16,4 @@ elseif (ENVIRONMENT == 'production'):
 endif;
 
 define('TEMPLATE', 'template/index');
-define('SITENAME', 'Admin - Loja do Juciê');
+define('SITENAME', 'Loja do Juciê');

@@ -36,7 +36,8 @@ class Controller {
         if (file_exists(__DIR__ . "/../views/{$this->templatePath}.phtml")):
             require_once __DIR__ . "/../views/{$this->templatePath}.phtml";
         else:
-            echo 'Error: template path not found!';
+            echo 'Error: template path not found! <br>';
+            echo __DIR__ . "/../views/{$this->templatePath}.phtml";
         endif;
     }
 

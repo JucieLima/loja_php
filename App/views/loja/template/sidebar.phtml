@@ -67,7 +67,7 @@
         if ($this->viewData['display']['show_banner']):
             ?>
             <div class="shipping text-center"><!--shipping-->
-                <img src="<?= BASE_URL . $this->viewData['cropper']->make('uploads/' . $this->viewData['display']['banner_path'], 270, 329); ?>" alt="" />
+                <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $this->viewData['display']['banner_path'], 270, 329); ?>" alt="" />
             </div><!--/shipping-->
             <?php
         endif;
