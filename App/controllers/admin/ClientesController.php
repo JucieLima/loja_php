@@ -5,7 +5,6 @@ namespace App\Controllers\Admin;
 use App\Core\Controller;
 use App\Models\Admin\Cliente;
 use App\Models\Admin\Estado;
-use App\Models\Admin\Paises;
 
 /**
  * Description of Usuarios

@@ -78,14 +78,16 @@ use App\Helpers\Check;
                             <div class="product-data">
                                 <p><b>Estoque:</b> <?= $estoque; ?> unidades</p>
                                 <p><b>Marca:</b> <?= $this->viewData['produto'][0]['titulo_marca']; ?></p>
-                                <input type="text" name="cep" class="frete cep" placeholder="00000-000" /><button class="btn btn-shipping"><i class="fa fa-truck"></i> Calcular frete</button>
+                                <input type="text" name="cep" class="frete cep" placeholder="00000-000" />
+                                <button class="btn btn-shipping">
+                                    <i class="fa fa-truck"></i>
+                                    <i class="fa fa-spinner fa-pulse fa-fw"></i>
+                                    Calcular frete
+                                </button>
                                 <div class="alert alert-warning alert-dismissible alert-cep" role="alert"></div>
                                 <div class="shipping-data">
                                     <p><b>Valor do frete:</b> <span class="shipping-value"></span></p>
                                     <p><b>Prazo:</b> <span class="shipping-date"></span></p>
-                                </div>
-                                <div class="debug">
-                                    
                                 </div>
                             </div>
                         </div><!--/product-information-->

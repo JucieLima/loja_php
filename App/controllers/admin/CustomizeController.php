@@ -5,6 +5,7 @@ namespace App\Controllers\Admin;
 use App\Core\Controller;
 use App\Models\Admin\Slider;
 use App\Models\Admin\Display;
+use App\Helpers\ResizeImage;
 
 /**
  * Description of CustomizeController
@@ -24,6 +25,7 @@ class CustomizeController extends Controller {
     public function home() {
         $this->viewData['silder'] = new Slider;
         $this->viewData['display'] = new Display;
+        $this->viewData['resize'] = new ResizeImage;
         $this->getView('admin/customize/home', 'admin/' . TEMPLATE);
     }
 

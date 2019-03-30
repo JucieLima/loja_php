@@ -48,7 +48,9 @@ $(function () {
             };
             reader.readAsDataURL(input.files[0]);
         }
-    }
+    }    
+    
+    showModal("Todos os campos devem ser preenchidos!", "warning", "modal_usuarios_cad");
 
     $('form[name="cadastra_usuarios"]').submit(function (e) {
         e.preventDefault();
@@ -60,28 +62,28 @@ $(function () {
             cache: false,
             processData: false,
             beforeSend: function () {
-                $("#modal_cadastro").modal("show");
+                $("#modal_usuarios_cad").modal("show");
             },
             success: function (r) {
                 $("#modal_cadastro .close_modal").fadeIn('slow');
                 if (r === 'errempty') {
-                    showModal("Todos os campos devem ser preenchidos!", "warning", "modal_cadastro");
+                    showModal("Todos os campos devem ser preenchidos!", "warning", "modal_usuarios_cad");
                 } else if (r === 'errimage') {
-                    showModal("É obrigátorio enviar uma imagem para o usuário!", "warning", "modal_cadastro");
+                    showModal("É obrigátorio enviar uma imagem para o usuário!", "warning", "modal_usuarios_cad");
                 } else if (r === 'errconfirm') {
                     showModal("As senhas não coincidem!", "warning", "modal_cadastro");
                 } else if (r === 'errpassword') {
-                    showModal("A senha deve ter no mínimo 6 caracteres e deve conter pelo menos uma letra e um algarismo!", "info");
+                    showModal("A senha deve ter no mínimo 6 caracteres e deve conter pelo menos uma letra e um algarismo!", "info", 'modal_usuarios_cad');
                 } else if (r === 'errmail') {
-                    showModal("Parece que o email que você informou não possui um formato válido!", "warning", "modal_cadastro");
+                    showModal("Parece que o email que você informou não possui um formato válido!", "warning", "modal_usuarios_cad");
                 } else if (r === 'errmailread') {
-                    showModal("O email que você está tentando usar já está cadastrado para outro usuário!", "warning", "modal_cadastro");
+                    showModal("O email que você está tentando usar já está cadastrado para outro usuário!", "warning", "modal_usuarios_cad");
                 } else if (r === 'errcreate') {
-                    showModal("Erro ao tentar cadastrar usuário no banco de dados!", "danger", "modal_cadastro");
+                    showModal("Erro ao tentar cadastrar usuário no banco de dados!", "danger", "modal_usuarios_cad");
                 } else if (r === 'errupload') {
-                    showModal("Erro ao realizar upload da imagem, tente um arquivo de tamanho menor! <br><br>Caso o erro persista fale com o administrador.", "danger", "modal_cadastro");
+                    showModal("Erro ao realizar upload da imagem, tente um arquivo de tamanho menor! <br><br>Caso o erro persista fale com o administrador.", "danger", "modal_usuarios_cad");
                 } else {
-                    showModal("Usuário cadastrado com sucesso! Aguarde, estamos redirecionando... <i class='fa fa-spinner fa-spin fa-fw'>", "success", "modal_cadastro");
+                    showModal("Usuário cadastrado com sucesso! Aguarde, estamos redirecionando... <i class='fa fa-spinner fa-spin fa-fw'>", "success", "modal_usuarios_cad");
                     setTimeout(function () {
                         window.location.assign(base_url + 'usuarios/editar/' + r);
                     }, 2000);
@@ -929,7 +931,6 @@ $(function () {
             $("#bairro").val("");
             $("#cidade").val("");
             $("#uf").val("");
-            $("#ibge").val("");
         }
     });
 

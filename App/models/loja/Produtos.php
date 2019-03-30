@@ -28,9 +28,13 @@ class Produtos extends Model {
     }
 
     public function getProduct(int $id) {
-        if (self::find($id)):
-            return self::find($id)->toArray();
-        endif;
+        return self::join('produto_imagens', 'id_produto', '=', 'imagem_produto')
+                        ->where("imagem_main", 1)
+                        ->where("id_produto", $id)
+                        ->select('produtos.*', 'produto_imagens.imagem_uri')
+                        ->inRandomOrder()
+                        ->get()
+                        ->toArray();
     }
 
     public function getProdutos($limit, $offset) {

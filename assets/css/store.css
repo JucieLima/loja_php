@@ -320,3 +320,83 @@ carousel-inner .item{
     float: none;
     margin: 0;
 }
+.product-data .loading_shipping{
+    float: none;
+}
+.chose_area .fa-fw, #form_checkout .fa-fw,.signup-form .fa-fw{
+    display: none;
+}
+
+/*FRETE E CUPOM DE DESCONTO*/
+.user_info .update{
+    margin-top: 27px;
+    margin-left:  0;
+}
+.user_info .single_field{
+    min-width: 150px;
+}
+.chose_area .shipping_data, .chose_area .cupom_data{
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+}
+.alert-discount{
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+}
+
+/** FORMULÁRIOS DE LOGIN E CADASTRO **/
+.alert-form{
+    display: none;
+}
+#form_checkout input{
+    background: #F0F0E9;
+    border-radius: 0;
+    border: none;
+    color: #666;
+    font-family: 'roboto';
+    font-weight: 300;
+    outline: medium none;
+    padding-left: 10px;
+}
+#form_checkout textarea{
+    min-height: 200px;
+}
+.send_checkout{
+    background-color: #fe980f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+#cart_items .cart_info .table.table-condensed.total-result span{
+    color: #555;
+}
+.frete-calc{
+    padding: 15px;
+}
+.cep_checkout{
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    background-color: #F0F0E9;
+    border-radius: 4px;
+}
+.frete-calc .fa-fw{
+    display: none;
+}
+.frete-calc .btn-default{
+    background-color: #fe980f;
+    color: #fff;
+}
+.frete-calc .shipping_data{
+    margin-top: 20px;
+}

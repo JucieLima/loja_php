@@ -28,7 +28,13 @@ $this->viewData['loja'] = $loja->find(1)->toArray();
         <link href="<?= BASE_URL; ?>assets/css/main.css" rel="stylesheet">
         <link href="<?= BASE_URL; ?>assets/css/responsive.css" rel="stylesheet">
         <link href="<?= BASE_URL; ?>assets/css/store.css" rel="stylesheet">
-
+        <?php
+        if (isset($this->viewData['styles'])):
+            foreach ($this->viewData['styles'] as $style):
+                echo '<link href="' . $style . '" rel="stylesheet">';
+            endforeach;
+        endif;
+        ?>
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
         <script src="js/respond.min.js"></script>
@@ -51,5 +57,12 @@ $this->viewData['loja'] = $loja->find(1)->toArray();
         <script src="<?= BASE_URL; ?>assets/js/jquery.elevatezoom.js"></script>
         <script src="<?= BASE_URL; ?>assets/js/jquery.mask.min.js"></script>
         <script src="<?= BASE_URL; ?>assets/js/store.js"></script>
+        <?php
+        if (isset($this->viewData['scripts'])):
+            foreach ($this->viewData['scripts'] as $script):
+                echo '<script src="'.$script.'"></script>';
+            endforeach;
+        endif;
+        ?>
     </body>
 </html>

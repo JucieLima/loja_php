@@ -1,0 +1,1129 @@
+
+26/03/2019 01:44:12 PagSeguro.Session[info]: Begin
+26/03/2019 01:44:12 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:44:13 PagSeguro.Session[info]: Session ID: e3e7c2b53b37455f8145dfece85f9818
+26/03/2019 01:44:50 PagSeguro.Session[info]: Begin
+26/03/2019 01:44:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:44:51 PagSeguro.Session[info]: Session ID: 60dbf6c82eb24654935b8e671ed945ed
+26/03/2019 01:45:37 PagSeguro.Session[info]: Begin
+26/03/2019 01:45:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:45:38 PagSeguro.Session[info]: Session ID: fe09cdaa62524ef28f6c712a2693cc8e
+26/03/2019 01:48:49 PagSeguro.Session[info]: Begin
+26/03/2019 01:48:49 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:48:49 PagSeguro.Session[info]: Session ID: 27c58be2501e4d6f901c955d7003cfcb
+26/03/2019 01:49:21 PagSeguro.Session[info]: Begin
+26/03/2019 01:49:21 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:49:22 PagSeguro.Session[info]: Session ID: 2bd38475b804459e8b1a6397e80c29b2
+26/03/2019 01:54:29 PagSeguro.Session[info]: Begin
+26/03/2019 01:54:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:54:30 PagSeguro.Session[info]: Session ID: 2543cac3f8334e169202e935ebd82801
+26/03/2019 01:55:28 PagSeguro.Session[info]: Begin
+26/03/2019 01:55:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:55:28 PagSeguro.Session[info]: Session ID: 4af1be251439408885e1a6ef834b4722
+26/03/2019 01:56:18 PagSeguro.Session[info]: Begin
+26/03/2019 01:56:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:56:19 PagSeguro.Session[info]: Session ID: e4f1fcf7ae634c40afcf4f1724685046
+26/03/2019 01:56:29 PagSeguro.Session[info]: Begin
+26/03/2019 01:56:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:56:29 PagSeguro.Session[info]: Session ID: 1b8df582219040ec9a241962a47e748b
+26/03/2019 01:57:28 PagSeguro.Session[info]: Begin
+26/03/2019 01:57:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 01:57:29 PagSeguro.Session[info]: Session ID: 5dd3aab5a0394f879153a64b3203c744
+26/03/2019 09:39:05 PagSeguro.Session[info]: Begin
+26/03/2019 09:39:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 09:39:06 PagSeguro.Session[info]: Session ID: c4c9d1e10f1044abaa441f5b7ba56a98
+26/03/2019 09:39:07 PagSeguro.Session[info]: Begin
+26/03/2019 09:39:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+26/03/2019 09:39:07 PagSeguro.Session[info]: Session ID: 9097c24907e242aa92e7f82edbc35a9b
+27/03/2019 00:22:36 PagSeguro.Session[info]: Begin
+27/03/2019 00:22:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 00:22:38 PagSeguro.Session[info]: Session ID: 94d5c2ac70db4adb89df18cc91059dce
+27/03/2019 15:36:56 PagSeguro.Session[info]: Begin
+27/03/2019 15:36:56 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 15:36:57 PagSeguro.Session[info]: Session ID: ab0503f586984445be3e6ca0b6626f11
+27/03/2019 15:47:46 PagSeguro.Session[info]: Begin
+27/03/2019 15:47:46 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 15:47:46 PagSeguro.Session[info]: Session ID: d02742272f4d4f47b6274d9fcd429007
+27/03/2019 17:12:40 PagSeguro.Session[info]: Begin
+27/03/2019 17:12:40 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:12:41 PagSeguro.Session[info]: Session ID: 7755ecbe8e9f4ae581f2bf8a84325084
+27/03/2019 17:16:12 PagSeguro.Session[info]: Begin
+27/03/2019 17:16:12 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:16:12 PagSeguro.Session[info]: Session ID: d3d55f86ffd446819933689b10879c6e
+27/03/2019 17:16:19 PagSeguro.Session[info]: Begin
+27/03/2019 17:16:19 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:16:20 PagSeguro.Session[info]: Session ID: f0efefcb2a8948be83a6b6576a3c05d9
+27/03/2019 17:25:44 PagSeguro.Session[info]: Begin
+27/03/2019 17:25:44 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:25:45 PagSeguro.Session[info]: Session ID: 24b1473733fa4b0d91aa32b01f7b6750
+27/03/2019 17:26:21 PagSeguro.Session[info]: Begin
+27/03/2019 17:26:21 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:26:21 PagSeguro.Session[info]: Session ID: 619f8c633dd841f3b29d1945eb563822
+27/03/2019 17:26:37 PagSeguro.Session[info]: Begin
+27/03/2019 17:26:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:26:38 PagSeguro.Session[info]: Session ID: b40b684e861540b9a01d5ef02aede334
+27/03/2019 17:27:09 PagSeguro.Session[info]: Begin
+27/03/2019 17:27:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:27:09 PagSeguro.Session[info]: Session ID: 28bf473ae54a4be09bfbc5330b666263
+27/03/2019 17:27:29 PagSeguro.Session[info]: Begin
+27/03/2019 17:27:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:27:30 PagSeguro.Session[info]: Session ID: dcfd76d8717b43f29ebf99475aec574d
+27/03/2019 17:27:33 PagSeguro.Session[info]: Begin
+27/03/2019 17:27:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:27:34 PagSeguro.Session[info]: Session ID: 1927e8ddbb3544ca9d7b6267b8f5485a
+27/03/2019 17:28:55 PagSeguro.Session[info]: Begin
+27/03/2019 17:28:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:28:55 PagSeguro.Session[info]: Session ID: 1d633951feb04266acc1b650a3762c72
+27/03/2019 17:29:01 PagSeguro.Session[info]: Begin
+27/03/2019 17:29:01 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:29:02 PagSeguro.Session[info]: Session ID: 37cd964807ce428d82203a9a37ce212e
+27/03/2019 17:29:09 PagSeguro.Session[info]: Begin
+27/03/2019 17:29:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:29:09 PagSeguro.Session[info]: Session ID: 329f555715c74e2c86d6a32f8e3a383d
+27/03/2019 17:29:51 PagSeguro.Session[info]: Begin
+27/03/2019 17:29:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:29:52 PagSeguro.Session[info]: Session ID: f48fe5c7cae646ae9af870ce53e99e8f
+27/03/2019 17:29:55 PagSeguro.Session[info]: Begin
+27/03/2019 17:29:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:29:55 PagSeguro.Session[info]: Session ID: 74757563df5d47599da48bc50f914248
+27/03/2019 17:38:33 PagSeguro.Session[info]: Begin
+27/03/2019 17:38:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:38:34 PagSeguro.Session[info]: Session ID: b2530ae2bb5b4f23ac8ac11608391b14
+27/03/2019 17:39:44 PagSeguro.Session[info]: Begin
+27/03/2019 17:39:44 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:39:45 PagSeguro.Session[info]: Session ID: 3a213bf11458464fae8ee3bc3bdbbdd2
+27/03/2019 17:40:37 PagSeguro.Session[info]: Begin
+27/03/2019 17:40:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 17:40:37 PagSeguro.Session[info]: Session ID: c715ea94bb754b36879ca910b3b5dbaa
+27/03/2019 17:59:59 PagSeguro.Session[info]: Begin
+27/03/2019 17:59:59 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:00:00 PagSeguro.Session[info]: Session ID: 4f8b3c78de3e4e6ca8be8edeff024aa8
+27/03/2019 18:03:08 PagSeguro.Session[info]: Begin
+27/03/2019 18:03:08 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:03:09 PagSeguro.Session[info]: Session ID: cfe1d15b77194437a5105fb2a7a7b0d8
+27/03/2019 18:03:13 PagSeguro.Session[info]: Begin
+27/03/2019 18:03:13 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:03:14 PagSeguro.Session[info]: Session ID: 0ea16ccd2227438bba7dc90a54560b99
+27/03/2019 18:04:40 PagSeguro.Session[info]: Begin
+27/03/2019 18:04:40 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:04:41 PagSeguro.Session[info]: Session ID: 94cffb9e3fa14000a23403f974f6f164
+27/03/2019 18:04:58 PagSeguro.Session[info]: Begin
+27/03/2019 18:04:58 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:04:59 PagSeguro.Session[info]: Session ID: 5fd90edf463a407c911b64218d3513cd
+27/03/2019 18:06:17 PagSeguro.Session[info]: Begin
+27/03/2019 18:06:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:06:17 PagSeguro.Session[info]: Session ID: d3f952f329084e59b0b7c5bf677dbf3a
+27/03/2019 18:07:24 PagSeguro.Session[info]: Begin
+27/03/2019 18:07:24 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:07:25 PagSeguro.Session[info]: Session ID: 203baaa16b0d41e0932d69c4d31cd4f3
+27/03/2019 18:11:43 PagSeguro.Session[info]: Begin
+27/03/2019 18:11:43 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:11:43 PagSeguro.Session[info]: Session ID: 88073f42fc5b4f71a5856a4788e12a0b
+27/03/2019 18:12:34 PagSeguro.Session[info]: Begin
+27/03/2019 18:12:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:12:35 PagSeguro.Session[info]: Session ID: ae25527dfd2c4c15afd066bf64a9bb13
+27/03/2019 18:13:07 PagSeguro.Session[info]: Begin
+27/03/2019 18:13:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:13:08 PagSeguro.Session[info]: Session ID: b8db8fbf9bb04fda8f9f33934c8f00cb
+27/03/2019 18:13:30 PagSeguro.Session[info]: Begin
+27/03/2019 18:13:30 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:13:31 PagSeguro.Session[info]: Session ID: 340126b2032e423f99473a8268dc47f5
+27/03/2019 18:16:59 PagSeguro.Session[info]: Begin
+27/03/2019 18:16:59 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:17:00 PagSeguro.Session[info]: Session ID: 612d632ff8cf4b1fb31ec88e4763f990
+27/03/2019 18:17:55 PagSeguro.Session[info]: Begin
+27/03/2019 18:17:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 18:17:56 PagSeguro.Session[info]: Session ID: f2570d39add24e71ac903f1e2b2b91f3
+27/03/2019 20:08:18 PagSeguro.Session[info]: Begin
+27/03/2019 20:08:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 20:08:19 PagSeguro.Session[info]: Session ID: 3075a9fd57b848ff83e842c57969613a
+27/03/2019 20:09:19 PagSeguro.Session[info]: Begin
+27/03/2019 20:09:19 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 20:09:20 PagSeguro.Session[info]: Session ID: 03fb99fec2b04de98a53956f84622077
+27/03/2019 20:11:51 PagSeguro.Session[info]: Begin
+27/03/2019 20:11:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 20:11:52 PagSeguro.Session[info]: Session ID: aeb7845b23b44b22ae43a4e58c4f922c
+27/03/2019 20:12:41 PagSeguro.Session[info]: Begin
+27/03/2019 20:12:41 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 20:12:41 PagSeguro.Session[info]: Session ID: 4ff5adf5853f418fb3a9e8a5976eb2d3
+27/03/2019 20:12:43 PagSeguro.Session[info]: Begin
+27/03/2019 20:12:43 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+27/03/2019 20:12:43 PagSeguro.Session[info]: Session ID: ab9ba5a5aaf14455ab594b897f316074
+28/03/2019 01:05:48 PagSeguro.Session[info]: Begin
+28/03/2019 01:05:48 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:05:49 PagSeguro.Session[info]: Session ID: 7b75ceb3573b4ec994a470d68fe4d2f8
+28/03/2019 01:10:54 PagSeguro.Session[info]: Begin
+28/03/2019 01:10:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:10:54 PagSeguro.Session[info]: Session ID: 7e97bb246467420994d8c564d7eea230
+28/03/2019 01:11:48 PagSeguro.Session[info]: Begin
+28/03/2019 01:11:48 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:11:49 PagSeguro.Session[info]: Session ID: 02a15f3c68fe418b8b1f200a6af8b41a
+28/03/2019 01:11:51 PagSeguro.Session[info]: Begin
+28/03/2019 01:11:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:11:52 PagSeguro.Session[info]: Session ID: 580b8ad6569c4fbfbf112b207f96299b
+28/03/2019 01:14:25 PagSeguro.Session[info]: Begin
+28/03/2019 01:14:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:14:25 PagSeguro.Session[info]: Session ID: f231733eb95545f7a33311cc9a40b5ac
+28/03/2019 01:16:09 PagSeguro.Session[info]: Begin
+28/03/2019 01:16:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:16:10 PagSeguro.Session[info]: Session ID: 98e1aeb270e04f8b9c68cfa5f6e79f67
+28/03/2019 01:17:00 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:00 PagSeguro.Session[info]: Session ID: 72bbbf03cade4a74a3f40374785ff6c9
+28/03/2019 01:17:15 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:15 PagSeguro.Session[info]: Session ID: 04e9f97fed8a4a83b946c2baaabd54ae
+28/03/2019 01:17:16 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:16 PagSeguro.Session[info]: Session ID: 26e98a8ee86e4be8b50607b2a653fa43
+28/03/2019 01:17:16 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:17 PagSeguro.Session[info]: Session ID: 74ef1c80ed0e43eb978467d2ba576cd5
+28/03/2019 01:17:17 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:17 PagSeguro.Session[info]: Session ID: 317b49f93cd04bd39da33ac16757c877
+28/03/2019 01:17:18 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:18 PagSeguro.Session[info]: Session ID: 614d18d24c2d44a7b370bb62a50e380b
+28/03/2019 01:17:18 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:19 PagSeguro.Session[info]: Session ID: aacfa4df24ba49f89604fe232575144e
+28/03/2019 01:17:19 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:19 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:19 PagSeguro.Session[info]: Session ID: fd858cc14dd74fe196e70baec0b43c14
+28/03/2019 01:17:19 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:19 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:20 PagSeguro.Session[info]: Session ID: 201325f6a15d43a3a334afbfe2dc4590
+28/03/2019 01:17:20 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:20 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:20 PagSeguro.Session[info]: Session ID: c92ff1e4a2b243e582b6e03e70217dda
+28/03/2019 01:17:21 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:21 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:21 PagSeguro.Session[info]: Session ID: 8eff0fc6e4534b138d36e8730a402a6e
+28/03/2019 01:17:22 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:22 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:23 PagSeguro.Session[info]: Session ID: 903dc131cefb46a1b7bcfa4187cab3e7
+28/03/2019 01:17:23 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:23 PagSeguro.Session[info]: Session ID: 9519596654a74f5bb283b54600077679
+28/03/2019 01:17:23 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:24 PagSeguro.Session[info]: Session ID: b59da79f65c34cedac2b8f9d886a8e5f
+28/03/2019 01:17:24 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:24 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:24 PagSeguro.Session[info]: Session ID: 12e5113b4abd427fb3242d11886e3e15
+28/03/2019 01:17:25 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:25 PagSeguro.Session[info]: Session ID: e529e97a7c3d4fce85ee8d3810cd1233
+28/03/2019 01:17:25 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:26 PagSeguro.Session[info]: Session ID: 0187c93bde9d448fba9fd3d377e9049d
+28/03/2019 01:17:26 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:26 PagSeguro.Session[info]: Session ID: 8b53ac9994d94efe98b36a51739e40dc
+28/03/2019 01:17:27 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:27 PagSeguro.Session[info]: Session ID: c4c9f8dbb84d48e6b5d4768eb5dc95e5
+28/03/2019 01:17:27 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:28 PagSeguro.Session[info]: Session ID: 99bb9cc446684652889b0dc50164e854
+28/03/2019 01:17:28 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:28 PagSeguro.Session[info]: Session ID: 7af58def53f54d529599675575138b47
+28/03/2019 01:17:34 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:34 PagSeguro.Session[info]: Session ID: 11ebeced0cc74721aed06adfb6525850
+28/03/2019 01:17:34 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:35 PagSeguro.Session[info]: Session ID: b7cb738f6cd6415f8252a72f3dd98b3f
+28/03/2019 01:17:35 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:35 PagSeguro.Session[info]: Session ID: 79f567f6ab654330b114a8bf4a651317
+28/03/2019 01:17:35 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:36 PagSeguro.Session[info]: Session ID: f73154ce4171437092120e34c63bffe0
+28/03/2019 01:17:36 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:37 PagSeguro.Session[info]: Session ID: cb1d0db04f6d4516b2ce8969ccd65495
+28/03/2019 01:17:37 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:37 PagSeguro.Session[info]: Session ID: 42a11ba31e94455682cdbe5eb9028726
+28/03/2019 01:17:37 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:38 PagSeguro.Session[info]: Session ID: 38d939cfd4274241b3154cdd7690cb89
+28/03/2019 01:17:38 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:38 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:38 PagSeguro.Session[info]: Session ID: 5dd568031e814320a749b4e862e508df
+28/03/2019 01:17:39 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:39 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:39 PagSeguro.Session[info]: Session ID: b8e1fe8b7fe446afab04bd1ef308b078
+28/03/2019 01:17:39 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:39 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:40 PagSeguro.Session[info]: Session ID: 32393d24532f481d90659ab58900d957
+28/03/2019 01:17:56 PagSeguro.Session[info]: Begin
+28/03/2019 01:17:56 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:17:57 PagSeguro.Session[info]: Session ID: 0a9f0b021c2a452aa339cc8a0734a7d5
+28/03/2019 01:19:38 PagSeguro.Session[info]: Begin
+28/03/2019 01:19:38 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:19:38 PagSeguro.Session[info]: Session ID: e3077832161a47b78400e5887470cd85
+28/03/2019 01:20:39 PagSeguro.Session[info]: Begin
+28/03/2019 01:20:39 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:20:39 PagSeguro.Session[info]: Session ID: 097fee97267a43e1ace3f42151820a7f
+28/03/2019 01:20:51 PagSeguro.Session[info]: Begin
+28/03/2019 01:20:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:20:51 PagSeguro.Session[info]: Session ID: e73bbbb917564af4a1ecd33a71e19002
+28/03/2019 01:23:45 PagSeguro.Session[info]: Begin
+28/03/2019 01:23:45 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:23:45 PagSeguro.Session[info]: Session ID: b39d21d1bf8243d290cc88dbf165b9c4
+28/03/2019 01:24:18 PagSeguro.Session[info]: Begin
+28/03/2019 01:24:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 01:24:18 PagSeguro.Session[info]: Session ID: 9ebbe252d31c4484bd8a90930aceea60
+28/03/2019 08:52:37 PagSeguro.Session[info]: Begin
+28/03/2019 08:52:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 08:52:38 PagSeguro.Session[info]: Session ID: 0b411ac94739483fad686857d286e31f
+28/03/2019 08:52:53 PagSeguro.Session[info]: Begin
+28/03/2019 08:52:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 08:52:53 PagSeguro.Session[info]: Session ID: ac691066fb2d47e7ac5c860b7540a725
+28/03/2019 08:53:37 PagSeguro.Session[info]: Begin
+28/03/2019 08:53:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 08:53:37 PagSeguro.Session[info]: Session ID: ea3fc7152c7145faa5222a8489f13c90
+28/03/2019 08:53:37 PagSeguro.Session[info]: Begin
+28/03/2019 08:53:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 08:53:38 PagSeguro.Session[info]: Session ID: 8ba95d6b74ab4b56af06563cbfb1a5d8
+28/03/2019 08:58:00 PagSeguro.Session[info]: Begin
+28/03/2019 08:58:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 08:58:01 PagSeguro.Session[info]: Session ID: 04017a5c19bf445caee150288ed10f58
+28/03/2019 09:01:52 PagSeguro.Session[info]: Begin
+28/03/2019 09:01:52 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:01:52 PagSeguro.Session[info]: Session ID: ce99a9025cd54305a0d1794aa9910136
+28/03/2019 09:03:12 PagSeguro.Session[info]: Begin
+28/03/2019 09:03:12 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:03:12 PagSeguro.Session[info]: Session ID: 402370fc98b24d57a8539850cfce8646
+28/03/2019 09:04:14 PagSeguro.Session[info]: Begin
+28/03/2019 09:04:14 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:04:15 PagSeguro.Session[info]: Session ID: 2091baa4e5034ee7a75b97f2aeb3a4c0
+28/03/2019 09:05:01 PagSeguro.Session[info]: Begin
+28/03/2019 09:05:01 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:05:01 PagSeguro.Session[info]: Session ID: d49b6314e95648fbba4b1770e2b4be0b
+28/03/2019 09:05:15 PagSeguro.Session[info]: Begin
+28/03/2019 09:05:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:05:15 PagSeguro.Session[info]: Session ID: d577a1ada00e46a9ac67adb30432a20b
+28/03/2019 09:05:19 PagSeguro.Session[info]: Begin
+28/03/2019 09:05:19 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:05:19 PagSeguro.Session[info]: Session ID: a8b7b5774af64597a6cd39c784601a92
+28/03/2019 09:17:43 PagSeguro.Session[info]: Begin
+28/03/2019 09:17:43 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:17:43 PagSeguro.Session[info]: Session ID: 3eb30ab41f684b948b1eb67cf9963daf
+28/03/2019 09:18:16 PagSeguro.Session[info]: Begin
+28/03/2019 09:18:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:18:16 PagSeguro.Session[info]: Session ID: e4bb72f16f77427a879a3537eb4177aa
+28/03/2019 09:21:47 PagSeguro.Session[info]: Begin
+28/03/2019 09:21:47 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:21:48 PagSeguro.Session[info]: Session ID: d757f9ac88794fc6a1c31914a9027251
+28/03/2019 09:28:55 PagSeguro.Session[info]: Begin
+28/03/2019 09:28:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:28:55 PagSeguro.Session[info]: Session ID: cef78155f5f447b19b3090c2ff5c1b66
+28/03/2019 09:29:00 PagSeguro.Session[info]: Begin
+28/03/2019 09:29:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:29:01 PagSeguro.Session[info]: Session ID: 0b91aedaaeb54248a75410eb60f94f33
+28/03/2019 09:30:03 PagSeguro.Session[info]: Begin
+28/03/2019 09:30:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:30:03 PagSeguro.Session[info]: Session ID: a707f095268844e098012da66b5b65a2
+28/03/2019 09:43:05 PagSeguro.Session[info]: Begin
+28/03/2019 09:43:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:43:06 PagSeguro.Session[info]: Session ID: 6e93cdeeafd24963a9288bdf113a49af
+28/03/2019 09:44:16 PagSeguro.Session[info]: Begin
+28/03/2019 09:44:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:44:17 PagSeguro.Session[info]: Session ID: 519935131f6c483da474d7d55f44e632
+28/03/2019 09:44:17 PagSeguro.Session[info]: Begin
+28/03/2019 09:44:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 09:44:18 PagSeguro.Session[info]: Session ID: 336b50a6458a4ab9a82d041dcbef8b31
+28/03/2019 10:08:59 PagSeguro.Session[info]: Begin
+28/03/2019 10:08:59 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:00 PagSeguro.Session[info]: Session ID: 7bff31180f494a95a1aa96ffb79371bd
+28/03/2019 10:09:33 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:33 PagSeguro.Session[info]: Session ID: 494daae647004595bb3bf6a75bf8170c
+28/03/2019 10:09:33 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:34 PagSeguro.Session[info]: Session ID: 665714d7b446472087819f2855182a95
+28/03/2019 10:09:34 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:34 PagSeguro.Session[info]: Session ID: 8d21d1b618674207a6b016426525494a
+28/03/2019 10:09:35 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:35 PagSeguro.Session[info]: Session ID: 21d360e357eb4cec9b63fe731469a30f
+28/03/2019 10:09:35 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:36 PagSeguro.Session[info]: Session ID: 95611b20fd5948fa937ed256a981d8a5
+28/03/2019 10:09:36 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:36 PagSeguro.Session[info]: Session ID: 3f29188e43ad4be68f865bf57f62afdd
+28/03/2019 10:09:36 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:37 PagSeguro.Session[info]: Session ID: 700f4861646a44e8b994d214b7b3d881
+28/03/2019 10:09:37 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:38 PagSeguro.Session[info]: Session ID: 6a33ce1312804671bf96e205252a192d
+28/03/2019 10:09:38 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:38 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:38 PagSeguro.Session[info]: Session ID: d019d2b5afbf4891b9caf336a31034ba
+28/03/2019 10:09:38 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:38 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:39 PagSeguro.Session[info]: Session ID: ed29ad17ca3f40479b3a1536af152f0f
+28/03/2019 10:09:40 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:40 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:40 PagSeguro.Session[info]: Session ID: e25f05d259cd451ca1d10d10cf0b74ab
+28/03/2019 10:09:41 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:41 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:41 PagSeguro.Session[info]: Session ID: ff69e1d613a94e6688bea7228354b2dd
+28/03/2019 10:09:41 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:41 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:42 PagSeguro.Session[info]: Session ID: c6ef182dcfda4af0851b80e0c59654eb
+28/03/2019 10:09:42 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:42 PagSeguro.Session[info]: Session ID: d38108d425c74040b3e1bb56ee00d37e
+28/03/2019 10:09:42 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:43 PagSeguro.Session[info]: Session ID: 01a3853783eb4beea47b64532eb62a16
+28/03/2019 10:09:43 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:43 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:44 PagSeguro.Session[info]: Session ID: 898daa0910be4a1d85e1d89a48d1411c
+28/03/2019 10:09:44 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:44 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:44 PagSeguro.Session[info]: Session ID: c925c2c833414a989e4b7050a5482dac
+28/03/2019 10:09:45 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:45 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:45 PagSeguro.Session[info]: Session ID: 8ba3226b6f0049d7bbf9473c8c63e88e
+28/03/2019 10:09:45 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:45 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:46 PagSeguro.Session[info]: Session ID: 55f195a6e2f848629380d25c075bad96
+28/03/2019 10:09:46 PagSeguro.Session[info]: Begin
+28/03/2019 10:09:46 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:09:46 PagSeguro.Session[info]: Session ID: 8057fe0d5d8c4bcabf9745842ad5e360
+28/03/2019 10:59:31 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:31 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:31 PagSeguro.Session[info]: Session ID: 71f3103ba97b406f8ee35507e712189f
+28/03/2019 10:59:32 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:32 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:32 PagSeguro.Session[info]: Session ID: af692e687d2b4b10b7cec05dfbe49974
+28/03/2019 10:59:32 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:32 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:33 PagSeguro.Session[info]: Session ID: 9a39aeb7450f4f5c893f880b9b62d321
+28/03/2019 10:59:33 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:33 PagSeguro.Session[info]: Session ID: 20715c2ab9274219b099b0366acb8123
+28/03/2019 10:59:33 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:34 PagSeguro.Session[info]: Session ID: 62a1923eaf66486aa2b292d96f7069f6
+28/03/2019 10:59:34 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:34 PagSeguro.Session[info]: Session ID: cc31be4ad7fc48759f178c8240399167
+28/03/2019 10:59:35 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:35 PagSeguro.Session[info]: Session ID: 46ab67d0d0454d09bfc21000820eeba6
+28/03/2019 10:59:35 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:36 PagSeguro.Session[info]: Session ID: 29b9b06caeb348aa9d776403c685b4a8
+28/03/2019 10:59:36 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:36 PagSeguro.Session[info]: Session ID: a93decb3a82448be8708e313ca5c8a77
+28/03/2019 10:59:36 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:37 PagSeguro.Session[info]: Session ID: 0ea9090c9de2441ebb85bffcc0155a6c
+28/03/2019 10:59:38 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:38 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:38 PagSeguro.Session[info]: Session ID: bb51d92de30640e1af3ca38260c05847
+28/03/2019 10:59:39 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:39 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:39 PagSeguro.Session[info]: Session ID: 291531a5e569464086dede2486ea18fc
+28/03/2019 10:59:39 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:39 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:40 PagSeguro.Session[info]: Session ID: 7bf92af206354d6fbbc2ca37d2175f66
+28/03/2019 10:59:40 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:40 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:40 PagSeguro.Session[info]: Session ID: 2fe92cdd891f4eadbcc3405f77b99e7b
+28/03/2019 10:59:40 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:40 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:41 PagSeguro.Session[info]: Session ID: 8fad2b5f47d64684b784f222f6667829
+28/03/2019 10:59:41 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:41 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:42 PagSeguro.Session[info]: Session ID: dc95dbf5beac44f4ad9302dd8a697add
+28/03/2019 10:59:42 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:42 PagSeguro.Session[info]: Session ID: ca8750ef14db4e13aa9d4a76f306deb9
+28/03/2019 10:59:42 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:43 PagSeguro.Session[info]: Session ID: 15f7aad1b4c1439ea8e27067a6e30bfd
+28/03/2019 10:59:43 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:43 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:43 PagSeguro.Session[info]: Session ID: 0855d3d7cddc43879418a0fa14575525
+28/03/2019 10:59:44 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:44 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:44 PagSeguro.Session[info]: Session ID: d1bf2aaaa70345389b108a66537ea4df
+28/03/2019 10:59:49 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:49 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:50 PagSeguro.Session[info]: Session ID: 076126a164b641009aad97a5981e9d04
+28/03/2019 10:59:50 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:51 PagSeguro.Session[info]: Session ID: 7eede080626d49379d810ddc9b8d2b3e
+28/03/2019 10:59:51 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:51 PagSeguro.Session[info]: Session ID: 6145ca73ca91470e80855a68b103ab68
+28/03/2019 10:59:51 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:52 PagSeguro.Session[info]: Session ID: fd3fe48cda364f7384a26c80227195db
+28/03/2019 10:59:52 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:52 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:52 PagSeguro.Session[info]: Session ID: d52fca1174df4ef9bce2ef217e8501b8
+28/03/2019 10:59:53 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:53 PagSeguro.Session[info]: Session ID: 5733107644c94a5f848ed1de548bb186
+28/03/2019 10:59:53 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:54 PagSeguro.Session[info]: Session ID: 080ffdd4f2e04a21b5efaec79746eb73
+28/03/2019 10:59:54 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:54 PagSeguro.Session[info]: Session ID: d7c9042e1f1c4b2da2cccf615926cab9
+28/03/2019 10:59:54 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:55 PagSeguro.Session[info]: Session ID: e649065dbe9447908d61cb1c69f9221f
+28/03/2019 10:59:55 PagSeguro.Session[info]: Begin
+28/03/2019 10:59:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 10:59:56 PagSeguro.Session[info]: Session ID: e5ad6a8f804b44a99f3ebb0832277e51
+28/03/2019 11:00:04 PagSeguro.Session[info]: Begin
+28/03/2019 11:00:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:00:05 PagSeguro.Session[info]: Session ID: 0bd3e13c5e00480c847d64633f8acca7
+28/03/2019 11:00:31 PagSeguro.Session[info]: Begin
+28/03/2019 11:00:31 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:00:32 PagSeguro.Session[info]: Session ID: 2795637d9b4144ac83690ff406aa3c7b
+28/03/2019 11:01:00 PagSeguro.Session[info]: Begin
+28/03/2019 11:01:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:01:00 PagSeguro.Session[info]: Session ID: a8655b41ac43490084455f59943ae346
+28/03/2019 11:01:28 PagSeguro.Session[info]: Begin
+28/03/2019 11:01:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:01:28 PagSeguro.Session[info]: Session ID: 3a27e1e492994b0f848d87ecc1245325
+28/03/2019 11:02:05 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:06 PagSeguro.Session[info]: Session ID: fdebdd8db64d4c8eb402c4e343f911f8
+28/03/2019 11:02:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:07 PagSeguro.Session[info]: Session ID: e381c43042c14ec18fa960b84758682a
+28/03/2019 11:02:07 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:07 PagSeguro.Session[info]: Session ID: 4be96cd079a345fe87ec7a45f9b3bd79
+28/03/2019 11:02:07 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:08 PagSeguro.Session[info]: Session ID: 65e5fc6b29514508b59894f43fab8f9e
+28/03/2019 11:02:08 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:08 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:09 PagSeguro.Session[info]: Session ID: 977bd50820e84b5da50eb502a927a8b0
+28/03/2019 11:02:09 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:09 PagSeguro.Session[info]: Session ID: 0a250e7bf52e4c6295298d3ca5812919
+28/03/2019 11:02:09 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:10 PagSeguro.Session[info]: Session ID: 7d9584b17ee948a0b1761252e65c9d53
+28/03/2019 11:02:10 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:10 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:10 PagSeguro.Session[info]: Session ID: 498d5ae22a00421e894b522e31002953
+28/03/2019 11:02:11 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:11 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:11 PagSeguro.Session[info]: Session ID: 73ad35a4f1b64b31a2e62247751e5789
+28/03/2019 11:02:11 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:11 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:12 PagSeguro.Session[info]: Session ID: 58873417c9b9454fa8ee8310e040156b
+28/03/2019 11:02:12 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:12 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:13 PagSeguro.Session[info]: Session ID: fe71b5df1ae949eeae413d6ae7be2d1b
+28/03/2019 11:02:13 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:13 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:14 PagSeguro.Session[info]: Session ID: 7b65e742aa3b4919a84a9e8d42ac9563
+28/03/2019 11:02:14 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:14 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:14 PagSeguro.Session[info]: Session ID: bcb15b36ee0646b295c7679a1f83cea4
+28/03/2019 11:02:14 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:14 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:15 PagSeguro.Session[info]: Session ID: 4b99f0920a384f8a8f7178100e6a4bf9
+28/03/2019 11:02:15 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:15 PagSeguro.Session[info]: Session ID: f98ba46a7e6342d1a906c67488473cbf
+28/03/2019 11:02:16 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:16 PagSeguro.Session[info]: Session ID: 3597c661e5be4184ac27c3730a1fdd06
+28/03/2019 11:02:16 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:17 PagSeguro.Session[info]: Session ID: 3dc942fc336b434e9c1b8a295d3e86dd
+28/03/2019 11:02:17 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:17 PagSeguro.Session[info]: Session ID: 8247e07688aa49a6963d3827d21bcb49
+28/03/2019 11:02:18 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:18 PagSeguro.Session[info]: Session ID: a4094d11c2564cc39410c98641c0aaa6
+28/03/2019 11:02:18 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:19 PagSeguro.Session[info]: Session ID: 27ffcebb1df74997b34f545966cf5353
+28/03/2019 11:02:24 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:24 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:24 PagSeguro.Session[info]: Session ID: 9c69e1e0293b4e08b47d385c9d901167
+28/03/2019 11:02:24 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:24 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:25 PagSeguro.Session[info]: Session ID: 23cb662dfbd0493e8d1e2a99ee833ccd
+28/03/2019 11:02:25 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:25 PagSeguro.Session[info]: Session ID: dc872264426b41f9b1d0edf75c1a1152
+28/03/2019 11:02:26 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:26 PagSeguro.Session[info]: Session ID: d99d44524cfc480d871d268a6e8c65ce
+28/03/2019 11:02:26 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:27 PagSeguro.Session[info]: Session ID: a07f0c18362b45e096a0054b729c9796
+28/03/2019 11:02:27 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:27 PagSeguro.Session[info]: Session ID: cafb00b30cd1437eb0ccf98a6c87b990
+28/03/2019 11:02:28 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:28 PagSeguro.Session[info]: Session ID: 535bcaa8cef44d22b1425bebf6f0a12f
+28/03/2019 11:02:28 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:29 PagSeguro.Session[info]: Session ID: 9265e2b273fd436c907a294ee4965d1a
+28/03/2019 11:02:29 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:29 PagSeguro.Session[info]: Session ID: b895130667b9429a9d618593499fd6de
+28/03/2019 11:02:29 PagSeguro.Session[info]: Begin
+28/03/2019 11:02:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:02:30 PagSeguro.Session[info]: Session ID: 7451ea459cbc4efa8ef126f141d0a02d
+28/03/2019 11:03:00 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:01 PagSeguro.Session[info]: Session ID: 2949c3fbeb82472e8b60e7077c479c5b
+28/03/2019 11:03:01 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:01 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:02 PagSeguro.Session[info]: Session ID: c6c5285cca7045cb9524efd12d00ee83
+28/03/2019 11:03:02 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:02 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:02 PagSeguro.Session[info]: Session ID: 43531878c64e43c48f5840fb8dbaa647
+28/03/2019 11:03:02 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:02 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:03 PagSeguro.Session[info]: Session ID: 6591d41418c647edbbd80d33b6ec50ad
+28/03/2019 11:03:03 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:04 PagSeguro.Session[info]: Session ID: 15b3ac54eb44412d8db13524e4256bb0
+28/03/2019 11:03:04 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:04 PagSeguro.Session[info]: Session ID: d407beba05f54b5e98155b7c7cb358cf
+28/03/2019 11:03:04 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:05 PagSeguro.Session[info]: Session ID: 689b36b43c6e4681a3a3705249795369
+28/03/2019 11:03:05 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:06 PagSeguro.Session[info]: Session ID: eb5718e8b5c04541b1f1ea492d2b7d0e
+28/03/2019 11:03:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:06 PagSeguro.Session[info]: Session ID: fc6966840fa94823b2ea1ce228a3bdfb
+28/03/2019 11:03:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:07 PagSeguro.Session[info]: Session ID: 795d3e00ac7d457a88f7e2cecee10b71
+28/03/2019 11:03:13 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:13 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:13 PagSeguro.Session[info]: Session ID: f4f5d8ff4ce145af9472a4809dafbe4c
+28/03/2019 11:03:14 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:14 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:14 PagSeguro.Session[info]: Session ID: dbcf34c92d564a608dfb4ea904615049
+28/03/2019 11:03:14 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:14 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:15 PagSeguro.Session[info]: Session ID: bd3b817a45654750934fed6c8064d990
+28/03/2019 11:03:15 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:15 PagSeguro.Session[info]: Session ID: e81d5439af6e4737b00f20186b6c9ed1
+28/03/2019 11:03:15 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:16 PagSeguro.Session[info]: Session ID: 49d97624e29741719075e68639c2ba2c
+28/03/2019 11:03:16 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:17 PagSeguro.Session[info]: Session ID: b14bc5ec572d4e63afab845f7a7f0038
+28/03/2019 11:03:17 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:17 PagSeguro.Session[info]: Session ID: 819f90cb7d9e4085a30d030da6a3788f
+28/03/2019 11:03:17 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:18 PagSeguro.Session[info]: Session ID: f365d893dcda41dea1df8c3e371bdcf6
+28/03/2019 11:03:18 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:18 PagSeguro.Session[info]: Session ID: 715b3979083b4f7aa18cb1e4e4135743
+28/03/2019 11:03:19 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:19 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:19 PagSeguro.Session[info]: Session ID: 06fb6efcedb8418f949f36cabf16f8db
+28/03/2019 11:03:33 PagSeguro.Session[info]: Begin
+28/03/2019 11:03:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:03:33 PagSeguro.Session[info]: Session ID: ff7d6dda3554406aaeb971734740b4e0
+28/03/2019 11:11:13 PagSeguro.Session[info]: Begin
+28/03/2019 11:11:13 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:11:13 PagSeguro.Session[info]: Session ID: aea96041240e4bb285aade0c08a52c6a
+28/03/2019 11:11:17 PagSeguro.Session[info]: Begin
+28/03/2019 11:11:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:11:17 PagSeguro.Session[info]: Session ID: 4fe3c254d0284acd9af16cf9601be11c
+28/03/2019 11:11:21 PagSeguro.Session[info]: Begin
+28/03/2019 11:11:21 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:11:22 PagSeguro.Session[info]: Session ID: 7f0b4d530e2f4f86a6495583e5764d9b
+28/03/2019 11:11:45 PagSeguro.Session[info]: Begin
+28/03/2019 11:11:45 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:11:45 PagSeguro.Session[info]: Session ID: 29c103013c88485681cd207202a406a2
+28/03/2019 11:12:02 PagSeguro.Session[info]: Begin
+28/03/2019 11:12:02 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:12:02 PagSeguro.Session[info]: Session ID: a2c9ee832e9f43938580d997984b71fb
+28/03/2019 11:12:03 PagSeguro.Session[info]: Begin
+28/03/2019 11:12:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:12:03 PagSeguro.Session[info]: Session ID: 6f6b4913c23e41a7b53fc7393a5f2ac1
+28/03/2019 11:12:32 PagSeguro.Session[info]: Begin
+28/03/2019 11:12:32 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:12:33 PagSeguro.Session[info]: Session ID: 145b33ab858341288ced4b73b153225d
+28/03/2019 11:15:52 PagSeguro.Session[info]: Begin
+28/03/2019 11:15:52 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:15:52 PagSeguro.Session[info]: Session ID: 77a5173918394ce3a05db28cd77cc5eb
+28/03/2019 11:16:12 PagSeguro.Session[info]: Begin
+28/03/2019 11:16:12 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:16:13 PagSeguro.Session[info]: Session ID: f4695039e0ff4004abba4178cc46b2cd
+28/03/2019 11:18:23 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:24 PagSeguro.Session[info]: Session ID: 991db77849c7433d9d0b8c588cffab54
+28/03/2019 11:18:24 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:24 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:25 PagSeguro.Session[info]: Session ID: c7dbf627601941f3b20446c602afac26
+28/03/2019 11:18:25 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:25 PagSeguro.Session[info]: Session ID: 392b3ef6196f42f2bbc016aa8844448f
+28/03/2019 11:18:26 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:26 PagSeguro.Session[info]: Session ID: d3b5c57aaf054445bd435e36e3eee4fa
+28/03/2019 11:18:26 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:27 PagSeguro.Session[info]: Session ID: cdc3a2f02a244476a152a7d83d9fb89f
+28/03/2019 11:18:27 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:27 PagSeguro.Session[info]: Session ID: 19b96d58691c49c083e9a8a8b12ccee4
+28/03/2019 11:18:28 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:28 PagSeguro.Session[info]: Session ID: 7e1794fbf232406398bb4bdf43329f08
+28/03/2019 11:18:28 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:29 PagSeguro.Session[info]: Session ID: aa03eb682dbd4c24ae55c21da1eeaa66
+28/03/2019 11:18:29 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:29 PagSeguro.Session[info]: Session ID: fba3b4932ac34d00a7b319a516cb97ac
+28/03/2019 11:18:30 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:30 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:30 PagSeguro.Session[info]: Session ID: 0b5d86f48cf74c71aaaffa85c19e04ae
+28/03/2019 11:18:31 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:31 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:31 PagSeguro.Session[info]: Session ID: 15e1d6bb4472411cafd464a8a982e438
+28/03/2019 11:18:31 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:31 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:32 PagSeguro.Session[info]: Session ID: 44d9caf4cfda4bc89e43668b94c7c939
+28/03/2019 11:18:32 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:32 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:32 PagSeguro.Session[info]: Session ID: 343f76d72d52400d929fc112bc552237
+28/03/2019 11:18:33 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:33 PagSeguro.Session[info]: Session ID: de59c17234dc425882fccf2051786d64
+28/03/2019 11:18:33 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:34 PagSeguro.Session[info]: Session ID: cc0be87cf64a431f86d4a132dec49971
+28/03/2019 11:18:34 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:34 PagSeguro.Session[info]: Session ID: 33e1861377b249afac75e1a6af38fc89
+28/03/2019 11:18:34 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:35 PagSeguro.Session[info]: Session ID: 443faf3727294b119ca942da1159039e
+28/03/2019 11:18:35 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:35 PagSeguro.Session[info]: Session ID: 01ed233dd798431795bcf524e04df2a5
+28/03/2019 11:18:36 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:36 PagSeguro.Session[info]: Session ID: 54b9518c550b4877a1eba1b6239d7305
+28/03/2019 11:18:36 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:37 PagSeguro.Session[info]: Session ID: c5950ccb6d6a45a3bef6cdb39a2dcf29
+28/03/2019 11:18:42 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:42 PagSeguro.Session[info]: Session ID: b2b5a7a070c74354821ff8ef67f43980
+28/03/2019 11:18:42 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:42 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:43 PagSeguro.Session[info]: Session ID: 37e3e468b44a4c2e964b3e00967fe87c
+28/03/2019 11:18:43 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:43 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:43 PagSeguro.Session[info]: Session ID: f54b920b9f37458293db6e771927322e
+28/03/2019 11:18:44 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:44 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:44 PagSeguro.Session[info]: Session ID: a51d3828745b4ea0a51acae2825040fc
+28/03/2019 11:18:44 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:44 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:45 PagSeguro.Session[info]: Session ID: 1c4bb59a93f64aa8917b2b5a55ea9a15
+28/03/2019 11:18:45 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:45 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:45 PagSeguro.Session[info]: Session ID: 943f9d0745974600a41ba0df3241ad62
+28/03/2019 11:18:46 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:46 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:46 PagSeguro.Session[info]: Session ID: 9095d4d6538d43b6886144638529d228
+28/03/2019 11:18:46 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:46 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:47 PagSeguro.Session[info]: Session ID: 3bbf8ccf25994483a35e3b20d98ec9bd
+28/03/2019 11:18:47 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:47 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:47 PagSeguro.Session[info]: Session ID: aacd21e955d941b8be0ae0cf23f34bbc
+28/03/2019 11:18:47 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:47 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:48 PagSeguro.Session[info]: Session ID: 23f7316a89a24d3184e7a2957854d268
+28/03/2019 11:18:54 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:54 PagSeguro.Session[info]: Session ID: f62d11956b4b4405958efc4c9e3ea019
+28/03/2019 11:18:54 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:55 PagSeguro.Session[info]: Session ID: 25bd5997f0a6489fa6c6ac8039060bc3
+28/03/2019 11:18:55 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:56 PagSeguro.Session[info]: Session ID: 17056022b5b04d0586abbf7cb07ddfc8
+28/03/2019 11:18:56 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:56 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:57 PagSeguro.Session[info]: Session ID: fb6df6f600854ece8e540e54e4b787ba
+28/03/2019 11:18:57 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:57 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:57 PagSeguro.Session[info]: Session ID: 3eb146751b9b4c6aa990776859ffa575
+28/03/2019 11:18:57 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:57 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:58 PagSeguro.Session[info]: Session ID: d92155863ad04fd884a75b22b394b32c
+28/03/2019 11:18:58 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:58 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:18:59 PagSeguro.Session[info]: Session ID: 7e85a401af5544768eb14012dc371f86
+28/03/2019 11:18:59 PagSeguro.Session[info]: Begin
+28/03/2019 11:18:59 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:00 PagSeguro.Session[info]: Session ID: 82a50868b47149fab1dc12cfc9f3c7cc
+28/03/2019 11:19:00 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:00 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:01 PagSeguro.Session[info]: Session ID: c33bf7c94f7c4ad5907894c7bc98a308
+28/03/2019 11:19:01 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:01 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:02 PagSeguro.Session[info]: Session ID: 05878c72236d426b882e1ba87dd57f54
+28/03/2019 11:19:32 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:32 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:32 PagSeguro.Session[info]: Session ID: 147bcb3a83bd43a184608848b256389e
+28/03/2019 11:19:33 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:33 PagSeguro.Session[info]: Session ID: 945d7378c61f4008a33d2f96e95db1e8
+28/03/2019 11:19:33 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:33 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:34 PagSeguro.Session[info]: Session ID: b21325e702864ff8ae5450c1db7b9846
+28/03/2019 11:19:34 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:34 PagSeguro.Session[info]: Session ID: d1ef0cfa3502498ea6ba0bb9841e53e3
+28/03/2019 11:19:34 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:34 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:35 PagSeguro.Session[info]: Session ID: a1d7aececa1546b6aea81e79eb31d4b4
+28/03/2019 11:19:35 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:35 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:35 PagSeguro.Session[info]: Session ID: a5533eb7bf0b4b86b900b4e6f4dab230
+28/03/2019 11:19:36 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:36 PagSeguro.Session[info]: Session ID: 2e4989889e79484abc89715e516bbedc
+28/03/2019 11:19:36 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:36 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:37 PagSeguro.Session[info]: Session ID: abebf6c6fc874a42969c823e05b88ccf
+28/03/2019 11:19:37 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:37 PagSeguro.Session[info]: Session ID: 77e72360c329468bbae13fa3d3a0fcc5
+28/03/2019 11:19:37 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:37 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:38 PagSeguro.Session[info]: Session ID: 4fff29694d9a4275b882086e9167d1b3
+28/03/2019 11:19:48 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:48 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:49 PagSeguro.Session[info]: Session ID: a9f9b638d76148d5bc5a5be0140c0666
+28/03/2019 11:19:49 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:49 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:49 PagSeguro.Session[info]: Session ID: c765c623a3134caf9db659bc7c7e537d
+28/03/2019 11:19:50 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:50 PagSeguro.Session[info]: Session ID: 361fe2cd1b9848c0a2254927ad334eed
+28/03/2019 11:19:50 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:51 PagSeguro.Session[info]: Session ID: 722b9edd1b294b0db375285bb0379430
+28/03/2019 11:19:51 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:51 PagSeguro.Session[info]: Session ID: 1897269ae68440859d0601ba03469623
+28/03/2019 11:19:51 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:52 PagSeguro.Session[info]: Session ID: 2c6f42574b8343ff9d65f1fc9adca86a
+28/03/2019 11:19:52 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:52 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:53 PagSeguro.Session[info]: Session ID: dd0bd0ccb1a9414c9bf09d4cebfcf2f9
+28/03/2019 11:19:53 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:53 PagSeguro.Session[info]: Session ID: 882f05f8cac34414bfceadb287e1dd1e
+28/03/2019 11:19:53 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:54 PagSeguro.Session[info]: Session ID: 88bb3b6c7b8f49a992a2e3f2ce41b28c
+28/03/2019 11:19:54 PagSeguro.Session[info]: Begin
+28/03/2019 11:19:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:19:54 PagSeguro.Session[info]: Session ID: 77f3495acb584c499ef85f00ffedfa46
+28/03/2019 11:20:04 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:04 PagSeguro.Session[info]: Session ID: b2db771495314ac8928b8ae34071aec1
+28/03/2019 11:20:04 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:05 PagSeguro.Session[info]: Session ID: b96d08764c39456fb8ec89b7c4f17818
+28/03/2019 11:20:05 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:05 PagSeguro.Session[info]: Session ID: 39074f7dd26f48449b3bb212e1d7d7ae
+28/03/2019 11:20:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:06 PagSeguro.Session[info]: Session ID: 6143b56e3d744e01bded73caf2bbe422
+28/03/2019 11:20:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:07 PagSeguro.Session[info]: Session ID: dbcb8ee970494d9cbebce747751a9ae9
+28/03/2019 11:20:07 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:07 PagSeguro.Session[info]: Session ID: ef59f51c215946d3adc359a9c1094fcf
+28/03/2019 11:20:08 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:08 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:08 PagSeguro.Session[info]: Session ID: 0ff1e1a25a274f499732569c3d6805f5
+28/03/2019 11:20:08 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:08 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:09 PagSeguro.Session[info]: Session ID: 10d7142e7e2545d6aa2724c83bc16dc5
+28/03/2019 11:20:09 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:09 PagSeguro.Session[info]: Session ID: 5d1d90f4a48444dcab0a6d3eb1e09a3e
+28/03/2019 11:20:10 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:10 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:10 PagSeguro.Session[info]: Session ID: 1c91a465b51f4ed39164a9e00ff484b8
+28/03/2019 11:20:49 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:49 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:50 PagSeguro.Session[info]: Session ID: 31af87337ee34a318ef86bde6ce8a2a4
+28/03/2019 11:20:50 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:51 PagSeguro.Session[info]: Session ID: 98f30c54f3d9408ca378308dd96d567e
+28/03/2019 11:20:51 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:51 PagSeguro.Session[info]: Session ID: 3167f68be9c74c60abb6e9d5ea4cfa80
+28/03/2019 11:20:51 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:51 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:52 PagSeguro.Session[info]: Session ID: dfa103f613d444bc8f06e079e1c93772
+28/03/2019 11:20:52 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:52 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:52 PagSeguro.Session[info]: Session ID: 41df70e500d1464d98bb910416640603
+28/03/2019 11:20:53 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:53 PagSeguro.Session[info]: Session ID: 5657d0023eb9448aa535ef858c7c08ed
+28/03/2019 11:20:53 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:54 PagSeguro.Session[info]: Session ID: be0df3728eb04d3aa39c4e1ea175dd7c
+28/03/2019 11:20:54 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:55 PagSeguro.Session[info]: Session ID: 0255a490b7464573beb180b14f7aafa8
+28/03/2019 11:20:55 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:55 PagSeguro.Session[info]: Session ID: 72a1f16cf10440d1968b053b3790a2b5
+28/03/2019 11:20:55 PagSeguro.Session[info]: Begin
+28/03/2019 11:20:55 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:20:56 PagSeguro.Session[info]: Session ID: c6d1eb544cb449f5b9929b27e17c08c4
+28/03/2019 11:21:53 PagSeguro.Session[info]: Begin
+28/03/2019 11:21:53 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:21:53 PagSeguro.Session[info]: Session ID: 197f902870b246e699c26d45ed77de99
+28/03/2019 11:22:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:07 PagSeguro.Session[info]: Session ID: 3165c5bef4404194a0d55d1247081654
+28/03/2019 11:22:07 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:07 PagSeguro.Session[info]: Session ID: 4dd71ddafa7748fe9e925259acc03ef2
+28/03/2019 11:22:07 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:08 PagSeguro.Session[info]: Session ID: c0db245c971e43d18b8f87038dced439
+28/03/2019 11:22:08 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:08 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:09 PagSeguro.Session[info]: Session ID: cd670eed71134b4c863f9f61d0d7de00
+28/03/2019 11:22:09 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:09 PagSeguro.Session[info]: Session ID: 9701afdd488a4af38d0d90047d8028f4
+28/03/2019 11:22:09 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:10 PagSeguro.Session[info]: Session ID: 96df926e45ca4c52b5f43a6a30bd4464
+28/03/2019 11:22:10 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:10 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:10 PagSeguro.Session[info]: Session ID: 4ce96bedeb8d4a41b2f6fb756179273a
+28/03/2019 11:22:11 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:11 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:11 PagSeguro.Session[info]: Session ID: b6217adf046941e0984492b043b879f8
+28/03/2019 11:22:11 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:11 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:12 PagSeguro.Session[info]: Session ID: a4c721a0a6fc4c07b3f572e17f041625
+28/03/2019 11:22:12 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:12 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:12 PagSeguro.Session[info]: Session ID: 609bc9dbee7a486c9fe8c7b2cb0f15ac
+28/03/2019 11:22:13 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:13 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:14 PagSeguro.Session[info]: Session ID: ad6758d1634c423e866788cb86364ffe
+28/03/2019 11:22:14 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:14 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:14 PagSeguro.Session[info]: Session ID: f04f2bb8ac7f42eaa9cf9138fb59a107
+28/03/2019 11:22:14 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:14 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:15 PagSeguro.Session[info]: Session ID: 80ab411b680448258ff478dfb2fff4ce
+28/03/2019 11:22:15 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:15 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:16 PagSeguro.Session[info]: Session ID: 2663c1d995784a47b5e2a9c4ef112299
+28/03/2019 11:22:16 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:16 PagSeguro.Session[info]: Session ID: 77f3eb1854f94e23945e28405f1c4579
+28/03/2019 11:22:16 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:17 PagSeguro.Session[info]: Session ID: 0e5d0133e2414fe1842549e299127612
+28/03/2019 11:22:17 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:17 PagSeguro.Session[info]: Session ID: f5a7af93dec746a58af7e2839d01f84e
+28/03/2019 11:22:18 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:18 PagSeguro.Session[info]: Session ID: c4a3967af06f4036a2633448c93c8356
+28/03/2019 11:22:18 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:18 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:19 PagSeguro.Session[info]: Session ID: fd392c8ee43c441c926df0e9f1b4d3c6
+28/03/2019 11:22:19 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:19 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:19 PagSeguro.Session[info]: Session ID: 98b5b04822134a229e650c2b3b64aa53
+28/03/2019 11:22:25 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:25 PagSeguro.Session[info]: Session ID: 6013d85c57d945f9ba8a4a30f870ae30
+28/03/2019 11:22:25 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:25 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:26 PagSeguro.Session[info]: Session ID: 3451ab736e59471c8c62465ae781adbd
+28/03/2019 11:22:26 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:26 PagSeguro.Session[info]: Session ID: 50330a0243a242f1a33726c826dea925
+28/03/2019 11:22:26 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:27 PagSeguro.Session[info]: Session ID: b9f71747163d4600b1e6a014e65a9764
+28/03/2019 11:22:27 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:27 PagSeguro.Session[info]: Session ID: ae1feeecb92040c3adf838709491e528
+28/03/2019 11:22:28 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:28 PagSeguro.Session[info]: Session ID: a1f1a4d4af95451ca0fbc033a65863b3
+28/03/2019 11:22:28 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:28 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:29 PagSeguro.Session[info]: Session ID: d7abf0d0608744cb886c813999524956
+28/03/2019 11:22:29 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:29 PagSeguro.Session[info]: Session ID: af2f481fe3374b45acbde959b6e4ec0a
+28/03/2019 11:22:29 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:30 PagSeguro.Session[info]: Session ID: 16f7076bde2c4c809a3a31bbc95923f6
+28/03/2019 11:22:30 PagSeguro.Session[info]: Begin
+28/03/2019 11:22:30 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:22:30 PagSeguro.Session[info]: Session ID: 41a1376c7da64bbbac74ef1749ab8356
+28/03/2019 11:23:01 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:01 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:01 PagSeguro.Session[info]: Session ID: a99bdbd3e8564b36b11aa105a17014b4
+28/03/2019 11:23:02 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:02 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:02 PagSeguro.Session[info]: Session ID: a40d3b4caed54f849a6af4698fe033a9
+28/03/2019 11:23:02 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:02 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:03 PagSeguro.Session[info]: Session ID: 694d8dcb320c46e98b7d19b604ecf736
+28/03/2019 11:23:03 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:03 PagSeguro.Session[info]: Session ID: 68b5980ad065495a846b38d8564df13b
+28/03/2019 11:23:04 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:04 PagSeguro.Session[info]: Session ID: c89ffbd5276643ab97d4f71525aade43
+28/03/2019 11:23:04 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:04 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:05 PagSeguro.Session[info]: Session ID: 266304f20dc741a8bbd7888358a07885
+28/03/2019 11:23:05 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:05 PagSeguro.Session[info]: Session ID: 0ca1f6548b3a46af90da4e0a186b68c3
+28/03/2019 11:23:05 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:05 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:06 PagSeguro.Session[info]: Session ID: a2b5e9c719dc49b68e3ca0ea2b2ad778
+28/03/2019 11:23:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:06 PagSeguro.Session[info]: Session ID: 413d67672f7845c799910b1a5e15aba6
+28/03/2019 11:23:07 PagSeguro.Session[info]: Begin
+28/03/2019 11:23:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:23:07 PagSeguro.Session[info]: Session ID: 25c7eaaa8ea94ddbb0e19ce643672e9d
+28/03/2019 11:26:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:26:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:26:07 PagSeguro.Session[info]: Session ID: 4c854e295d014fdba44dc3eece10574e
+28/03/2019 11:38:27 PagSeguro.Session[info]: Begin
+28/03/2019 11:38:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:38:28 PagSeguro.Session[info]: Session ID: da1b8c00f3224bb393418681b719f7cd
+28/03/2019 11:39:19 PagSeguro.Session[info]: Begin
+28/03/2019 11:39:19 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:39:19 PagSeguro.Session[info]: Session ID: c14be38662a6494682f1bf3591f674c8
+28/03/2019 11:39:23 PagSeguro.Session[info]: Begin
+28/03/2019 11:39:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:39:23 PagSeguro.Session[info]: Session ID: d2ed7778e8734b8893b5992212d3e2de
+28/03/2019 11:39:27 PagSeguro.Session[info]: Begin
+28/03/2019 11:39:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:39:28 PagSeguro.Session[info]: Session ID: 95edb4d73d1a40bbb0f6eb17a3505fe3
+28/03/2019 11:40:03 PagSeguro.Session[info]: Begin
+28/03/2019 11:40:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:40:03 PagSeguro.Session[info]: Session ID: 0cc3a085f69f47bcb315cee3022073a2
+28/03/2019 11:40:06 PagSeguro.Session[info]: Begin
+28/03/2019 11:40:06 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:40:07 PagSeguro.Session[info]: Session ID: ba775a5b16234ac5a7c311caba816590
+28/03/2019 11:40:50 PagSeguro.Session[info]: Begin
+28/03/2019 11:40:50 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:40:51 PagSeguro.Session[info]: Session ID: 061ff01fb76846e99bd06bfac3902b0b
+28/03/2019 11:40:54 PagSeguro.Session[info]: Begin
+28/03/2019 11:40:54 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:40:54 PagSeguro.Session[info]: Session ID: f37dfde5da414f2581d4828ec7d44f9a
+28/03/2019 11:41:09 PagSeguro.Session[info]: Begin
+28/03/2019 11:41:09 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:41:09 PagSeguro.Session[info]: Session ID: c31d7711490845cbbe73b5b37a75fa72
+28/03/2019 11:41:12 PagSeguro.Session[info]: Begin
+28/03/2019 11:41:12 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:41:12 PagSeguro.Session[info]: Session ID: f4b72a7ba12f41e0b14d7c11c9aa013e
+28/03/2019 11:41:27 PagSeguro.Session[info]: Begin
+28/03/2019 11:41:27 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:41:27 PagSeguro.Session[info]: Session ID: ad99721ab67948a0b1fc1b4482d05306
+28/03/2019 11:41:59 PagSeguro.Session[info]: Begin
+28/03/2019 11:41:59 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:41:59 PagSeguro.Session[info]: Session ID: 5cf552258c7b4879bde156ad4605f012
+28/03/2019 11:44:23 PagSeguro.Session[info]: Begin
+28/03/2019 11:44:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:44:23 PagSeguro.Session[info]: Session ID: b115274af64549ef8ae8573d690dab2b
+28/03/2019 11:44:48 PagSeguro.Session[info]: Begin
+28/03/2019 11:44:48 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:44:49 PagSeguro.Session[info]: Session ID: 62576fedc1f14912b624d052f4d54285
+28/03/2019 11:48:57 PagSeguro.Session[info]: Begin
+28/03/2019 11:48:58 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:48:58 PagSeguro.Session[info]: Session ID: dd979d665f0f42edae25f21fc850b46c
+28/03/2019 11:49:23 PagSeguro.Session[info]: Begin
+28/03/2019 11:49:23 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:49:23 PagSeguro.Session[info]: Session ID: bcf371cce74b476a8e73fb2e767ba3e9
+28/03/2019 11:50:16 PagSeguro.Session[info]: Begin
+28/03/2019 11:50:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:50:17 PagSeguro.Session[info]: Session ID: 13bd77f2b34f4f298262cfd146020c28
+28/03/2019 11:50:17 PagSeguro.Session[info]: Begin
+28/03/2019 11:50:17 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:50:17 PagSeguro.Session[info]: Session ID: 1fff1b7b40be40549c44bb9510ea7fb0
+28/03/2019 11:52:58 PagSeguro.Session[info]: Begin
+28/03/2019 11:52:58 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:52:59 PagSeguro.Session[info]: Session ID: c9f7871c1e1d43e19280fc33235e7bd7
+28/03/2019 11:53:45 PagSeguro.Session[info]: Begin
+28/03/2019 11:53:45 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:53:45 PagSeguro.Session[info]: Session ID: 5bd7ebadccae4fc191ac51bf4e0b246b
+28/03/2019 11:54:03 PagSeguro.Session[info]: Begin
+28/03/2019 11:54:03 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:54:04 PagSeguro.Session[info]: Session ID: 92f51e4a9bec47ff95a72bbc93c796b9
+28/03/2019 11:54:07 PagSeguro.Session[info]: Begin
+28/03/2019 11:54:07 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:54:08 PagSeguro.Session[info]: Session ID: 287744c16abf482d9895026f80ca98d9
+28/03/2019 11:54:16 PagSeguro.Session[info]: Begin
+28/03/2019 11:54:16 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:54:16 PagSeguro.Session[info]: Session ID: 66e9db24560a468586efa08a41f76f59
+28/03/2019 11:54:29 PagSeguro.Session[info]: Begin
+28/03/2019 11:54:29 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:54:29 PagSeguro.Session[info]: Session ID: d567f939a7304368b3f3b2d1d150f519
+28/03/2019 11:55:56 PagSeguro.Session[info]: Begin
+28/03/2019 11:55:56 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:55:56 PagSeguro.Session[info]: Session ID: 282f3907cd2744d18441bab17af33cab
+28/03/2019 11:56:26 PagSeguro.Session[info]: Begin
+28/03/2019 11:56:26 PagSeguro.Session[info]: POST: https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=juciegeraldo%40hotmail.com&token=A7846B0FDE214140B1C3CDACD4BD133D
+28/03/2019 11:56:27 PagSeguro.Session[info]: Session ID: 0bcd9cbccd444f7ea2f4aac8c988fad0

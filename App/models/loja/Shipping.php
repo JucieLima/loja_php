@@ -49,13 +49,24 @@ class Shipping {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $r = curl_exec($ch);
         $xml = simplexml_load_string($r);
-        if ($xml->cServico->Erro == 0):
+        if (isset($xml->cServico) && $xml->cServico->Erro == 0):
             $s = $xml->cServico->PrazoEntrega == 1 ? '' : 's';
-            $_SESSION['shipping']['valor'] = 'R$ ' . ((float) $xml->cServico->Valor * $this->split);
+            $valor = floatval(str_replace(',', '.', str_replace('.', '', $xml->cServico->Valor)));
+            $_SESSION['shipping']['valor'] = 'R$ ' . number_format($valor * $this->split, 2, ',', '.');
+            $_SESSION['shipping']['cost'] = $valor * $this->split;
             $_SESSION['shipping']['prazo'] = ((string) $xml->cServico->PrazoEntrega ) . ' dia' . $s;
+            $_SESSION['shipping']['cep'] = $cepDestino;
             $_SESSION['shipping']['error'] = false;
         else:
-            $this->getError($xml->cServico->Erro);
+            $_SESSION['shipping']['valor'] = 'R$ ' . number_format(0 * $this->split, 2, ',', '.');
+            $_SESSION['shipping']['cost'] = 0 * $this->split;
+            $_SESSION['shipping']['prazo'] = '0 dias';
+            $_SESSION['shipping']['cep'] = '';
+            if (isset($xml->cServico)):
+                $this->getError($xml->cServico->Erro);
+            else:
+                $this->error = 'Erro ao contatar serviço dos correios, favor tente mais tarde!';
+            endif;
         endif;
         return $_SESSION['shipping'];
     }

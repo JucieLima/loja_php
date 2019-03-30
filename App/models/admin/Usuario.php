@@ -10,11 +10,12 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @author jucie
  */
-class Usuario extends Model {
-
-    protected $table = 'usuarios';
+class Usuario extends Model
+{
+    protected $table      = 'usuarios';
     protected $primaryKey = 'id_usuario';
-    protected $guarded = ['nome_suario', 'sobrenome_suario', 'email_suario', 'senha_suario', 'permissao_suario', 'imagem_suario'];
+    protected $guarded    = ['nome_suario', 'sobrenome_suario', 'email_suario', 'senha_suario',
+        'permissao_suario', 'imagem_suario'];
     private $dados;
     private $error;
     private $result;
@@ -22,32 +23,37 @@ class Usuario extends Model {
     const CREATED_AT = 'registro_usuario';
     const UPDATED_AT = 'ultimo_acesso_usuario';
 
-    public function getError() {
+    public function getError()
+    {
         return $this->error;
     }
 
-    public function getResult() {
+    public function getResult()
+    {
         return $this->result;
     }
 
-    public function getUsers($limit, $offset) {
+    public function getUsers($limit, $offset)
+    {
         return self::limit($limit)->offset($offset)->orderBy('id_usuario', 'ASC')->get()->toArray();
     }
 
-    public function getUser($id) {
+    public function getUser($id)
+    {
         if (self::find($id)):
             return self::find($id)->toArray();
         endif;
     }
 
-    public function salvar(array $dados) {
+    public function salvar(array $dados)
+    {
         $this->dados = $dados;
         if ($this->validarDados()):
             unset($this->dados['senhac']);
-            $this->dados['registro_usuario'] = date('Y-m-d H:i:s');
-            $this->dados['senha_usuario'] = md5($this->dados['senha_usuario']);
-            $upload = new Upload();
-            $upload->image($_FILES['imagem_usuario'], $this->dados['nome_usuario'] . ' ' . $this->dados['sobrenome_usuario']);
+            $this->dados['senha_usuario']  = md5($this->dados['senha_usuario']);
+            $upload                        = new Upload();
+            $upload->image($_FILES['imagem_usuario'],
+                $this->dados['nome_usuario'].' '.$this->dados['sobrenome_usuario']);
             $this->dados['imagem_usuario'] = $upload->getResult();
             if ($upload->getResult()):
                 $this->exeSave();
@@ -61,7 +67,8 @@ class Usuario extends Model {
         endif;
     }
 
-    public function updateUser($dados) {
+    public function updateUser($dados)
+    {
         $this->dados = $dados;
         if ($this->validaUpdate()):
             $this->updateImage();
@@ -77,7 +84,8 @@ class Usuario extends Model {
         endif;
     }
 
-    public function excluir($id) {
+    public function excluir($id)
+    {
         if ($this->checkAdmin($id)):
             $this->error = 'erradmin';
         elseif ($id == $_SESSION['userlogin']['id_usuario']):
@@ -92,7 +100,8 @@ class Usuario extends Model {
         endif;
     }
 
-    public function excluirPerfil($id) {
+    public function excluirPerfil($id)
+    {
         if (self::find($id)):
             $this->error = 'erruser';
         elseif ($this->checkAdmin($id)):
@@ -107,7 +116,8 @@ class Usuario extends Model {
         endif;
     }
 
-    private function validarDados() {
+    private function validarDados()
+    {
         $return = false;
         if (empty($_FILES['imagem_usuario']['name'])):
             $this->error = 'errimage';
@@ -115,7 +125,8 @@ class Usuario extends Model {
             $this->error = 'errempty';
         elseif ($this->dados['senha_usuario'] !== $this->dados['senhac']):
             $this->error = 'errconfirm';
-        elseif (!preg_match('/^((?=(?:.*?[a-zA-Z]){1,})(?=(?:.*?[0-9]){1,})).{6,16}$/', $this->dados['senha_usuario'])):
+        elseif (!preg_match('/^((?=(?:.*?[a-zA-Z]){1,})(?=(?:.*?[0-9]){1,})).{6,16}$/',
+                $this->dados['senha_usuario'])):
             $this->error = 'errpassword';
         elseif (!filter_var($this->dados['email_usuario'], FILTER_VALIDATE_EMAIL)):
             $this->error = 'errmail';
@@ -127,7 +138,8 @@ class Usuario extends Model {
         return $return;
     }
 
-    private function validaUpdate() {
+    private function validaUpdate()
+    {
         $retorno = false;
         if (empty($this->dados['senha_usuario'])):
             unset($this->dados['senha_usuario'], $this->dados['senhac']);
@@ -135,11 +147,13 @@ class Usuario extends Model {
 
         if (isset($this->dados['senhac']) && empty($this->dados['senhac'])):
             $this->error = 'errosenhac';
-        elseif (isset($this->dados['senha_usuario']) && isset($this->dados['senhac']) && $this->dados['senha_usuario'] != $this->dados['senhac']):
+        elseif (isset($this->dados['senha_usuario']) && isset($this->dados['senhac'])
+            && $this->dados['senha_usuario'] != $this->dados['senhac']):
             $this->error = 'errsenhaconfirm';
         elseif (in_array('', $this->dados)):
             $this->error = 'errempty';
-        elseif (isset($this->dados['senha_usuario']) && !preg_match('/^((?=(?:.*?[a-z]){1,})(?=(?:.*?[0-9]){1,})).{6,16}$/', $this->dados['senha_usuario'])):
+        elseif (isset($this->dados['senha_usuario']) && !preg_match('/^((?=(?:.*?[a-z]){1,})(?=(?:.*?[0-9]){1,})).{6,16}$/',
+                $this->dados['senha_usuario'])):
             $this->error = 'errsenha';
         elseif (!filter_var($this->dados['email_usuario'], FILTER_VALIDATE_EMAIL)):
             $this->error = 'errmail';
@@ -160,7 +174,8 @@ class Usuario extends Model {
         return $retorno;
     }
 
-    private function exeSave() {
+    private function exeSave()
+    {
         $save = self::create($this->dados);
         if ($save):
             $this->result = $save->toArray();
@@ -170,9 +185,10 @@ class Usuario extends Model {
         endif;
     }
 
-    private function checkEmail() {
+    private function checkEmail()
+    {
         $email = ['email_usuario' => $this->dados['email_usuario']];
-        $find = self::find($email)->toArray();
+        $find  = self::find($email)->toArray();
         if ($find):
             return true;
         else:
@@ -180,8 +196,10 @@ class Usuario extends Model {
         endif;
     }
 
-    private function checkMailUpdate() {
-        $find = self::whereRaw("email_usuario = ? AND id_usuario != ?", array($this->dados['email_usuario'], $this->dados['id_usuario']))->get()->toArray();
+    private function checkMailUpdate()
+    {
+        $find = self::whereRaw("email_usuario = ? AND id_usuario != ?",
+                array($this->dados['email_usuario'], $this->dados['id_usuario']))->get()->toArray();
         if ($find):
             return true;
         else:
@@ -189,18 +207,22 @@ class Usuario extends Model {
         endif;
     }
 
-    private function updateImage() {
+    private function updateImage()
+    {
         if (!empty($_FILES['imagem_usuario'])):
             $upload = new Upload();
-            $upload->image($_FILES['imagem_usuario'], $this->dados['nome_usuario'] . ' ' . $this->dados['sobrenome_usuario']);
+            $upload->image($_FILES['imagem_usuario'],
+                $this->dados['nome_usuario'].' '.$this->dados['sobrenome_usuario']);
             if ($upload->getResult()):
                 $this->dados['imagem_usuario'] = $upload->getResult();
             endif;
         endif;
     }
 
-    private function checkAdmin($id) {
-        $admin = self::whereRaw("id_usuario = ? AND permissao_usuario = ?", [$id, 1])->get()->toArray();
+    private function checkAdmin($id)
+    {
+        $admin = self::whereRaw("id_usuario = ? AND permissao_usuario = ?",
+                [$id, 1])->get()->toArray();
         if (!$admin):
             return false;
         else:
@@ -212,12 +234,12 @@ class Usuario extends Model {
         endif;
     }
 
-    private function exeDelete($id) {
+    private function exeDelete($id)
+    {
         $delete = self::find($id);
         if ($delete):
             $delete->delete();
             return true;
         endif;
     }
-
 }

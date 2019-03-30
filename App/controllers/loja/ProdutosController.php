@@ -29,10 +29,11 @@ class ProdutosController extends Controller {
             $this->viewData['marcas'] = $produtos->getListOfBrands();
             $this->viewData['range'] = $produtos->getPriceRange();
             $this->viewData['recommended'] = $produtos->getRecommended();
-            $this->viewData['category_itens'] = $produtos->getCategoryItens($this->viewData['produto'][0]['categoria_produto'],$this->viewData['produto'][0]['id_produto']);
+            $this->viewData['category_itens'] = $produtos->getCategoryItens($this->viewData['produto'][0]['categoria_produto'], $this->viewData['produto'][0]['id_produto']);
             $this->viewData['cropper'] = new ResizeImage;
             $this->viewData['reviews'] = $reviews->getReviews($this->viewData['produto'][0]['id_produto']);
             $this->viewData['rating'] = $reviews->getRating($this->viewData['produto'][0]['id_produto']);
+            $this->viewData['scripts'] = [BASE_URL . 'assets/js/product.js'];
             $this->getView('loja/produto', 'loja/' . TEMPLATE);
         else:
             header('Location: ' . BASE_URL . '/404');

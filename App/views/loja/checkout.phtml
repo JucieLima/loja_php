@@ -1,0 +1,230 @@
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a href="<?= BASE_URL; ?>">Home</a></li>
+                <li class="active">Check out</li>
+            </ol>
+        </div><!--/breadcrums-->
+
+        <div class="step-one">
+            <h2 class="heading">Passo 1</h2>
+        </div>     
+        <div class="debug"></div>
+        <div class="shopper-informations">
+            <div class="row">
+                <form name="checkout_form" id="form_checkout" method="post">
+                    <div class="col-lg-4">
+                        <h2>Informações do cliente:</h2>
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" class="form-control" name="nome_cliente" value="<?= $this->viewData['client']['nome_cliente']; ?>" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label>Sobrenome</label>
+                            <input type="text" name="sobrenome_cliente" value="<?= $this->viewData['client']['sobrenome_cliente']; ?>" class="form-control" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email_cliente" value="<?= $this->viewData['client']['email_cliente']; ?>" class="form-control" placeholder="Email">
+                        </div>
+                        <?php
+                        if (isset($_SESSION['client']) && $_SESSION['client']['create'] == true):
+                            ?>
+                            <div class="form-group">
+                                <label>Senha</label>
+                                <input type="password" name="senha_cliente" value="<?= $this->viewData['client']['senha_cliente']; ?>" class="form-control" placeholder="Senha">
+                            </div> 
+                            <?php
+                        else:
+                            ?>
+                            <input type="hidden" name="id_cliente" value="<?= $this->viewData['client']['id_cliente']; ?>">
+                        <?php
+                        endif;
+                        ?>
+                        <div class="form-group">
+                            <label>CPF</label>
+                            <input type="text" name="cpf_cliente" value="<?= $this->viewData['client']['cpf_cliente']; ?>" class="form-control cpf" placeholder="CPF">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone</label>
+                            <input type="text" name="telefone_cliente" value="<?= $this->viewData['client']['telefone_cliente']; ?>" class="form-control phone_with_ddd" placeholder="telefone">
+                        </div>
+                        <label>Sexo</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="sexo_cliente" id="optionsRadios1" value="0" <?= $this->viewData['client']['sexo_cliente'] == 0 ? ' checked' : ''; ?>>
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="sexo_cliente" id="optionsRadios2" value="1" <?= $this->viewData['client']['sexo_cliente'] == 1 ? ' checked' : ''; ?>>
+                                Feminino
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>Endereço de entrega:</h2>
+                        <div class="form-group">
+                            <label>CEP</label>
+                            <input type="text" name="cep_cliente" id="cep" value="<?= $this->viewData['client']['cep_cliente']; ?>" class="form-control cep" placeholder="CEP">
+                        </div>
+                        <div class="form-group">
+                            <label>Logradouro</label>
+                            <input type="text" name="logradouro_cliente" id="rua" value="<?= $this->viewData['client']['logradouro_cliente']; ?>" class="form-control" placeholder="Rua, Avenida, etc...">
+                        </div>
+                        <div class="form-group">
+                            <label>Nº</label>
+                            <input type="text" name="numero_cliente" value="<?= $this->viewData['client']['numero_cliente']; ?>" class="form-control" placeholder="Número">
+                        </div>
+                        <div class="form-group">
+                            <label>Bairro</label>
+                            <input type="text" name="bairro_cliente" id="bairro" value="<?= $this->viewData['client']['bairro_cliente']; ?>" class="form-control" placeholder="Bairro">
+                        </div>
+                        <div class="form-group">
+                            <label>Cidade</label>
+                            <input type="text" name="cidade_cliente" id="cidade" value="<?= $this->viewData['client']['cidade_cliente']; ?>" class="form-control" placeholder="CEP">
+                        </div>
+                        <div class="form-group">
+                            <label>Estado</label>                            
+                            <select class="custom-select" id="uf" name="estado_cliente" id="inputGroupSelect01">
+                                <option>Escolha...</option>
+                                <?php
+                                foreach ($this->viewData['estados'] as $estado):
+                                    $select = $this->viewData['client']['estado_cliente'] == $estado['estado_sigla'] ? ' selected' : '';
+                                    echo '<option' . $select . ' value="' . $estado['estado_sigla'] . '">' . $estado['estado_nome'] . '</option>';
+                                endforeach;
+                                ?>                                    
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2>&nbsp;</h2>                        
+                        <div class="form-group">
+                            <label>Complemento</label>
+                            <input type="text" name="complemento_cliente" value="<?= $this->viewData['client']['complemento_cliente']; ?>" class="form-control" placeholder="Complemento">
+                        </div>
+                        <div class="form-group">
+                            <label>Observações</label>
+                            <textarea name="observacao_venda" placeholder="Informações adicionais"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <button type="submit" class="send_checkout"><i class="fa fa-money"></i> efetuar pagamento  <i class="fa fa-spinner fa-pulse fa-fw"></i></button>
+                    </div>
+                </form>                
+            </div>
+        </div>
+        <div class="review-payment">
+            <h2>Resumo do Pedido</h2>
+        </div>
+
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Item</td>
+                        <td class="description"></td>
+                        <td class="price">Preço</td>
+                        <td class="quantity">Quantidade </td>
+                        <td class="total">Total</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    foreach ($this->viewData['list'] as $list):
+                        ?>
+                        <tr id="<?= $list['id']; ?>" data-item-price="<?= $list['price']; ?>">
+                            <td class="cart_product">
+                                <a href="<?= BASE_URL . 'produtos/item/' . $list['path']; ?>" title="<?= $list['titulo']; ?>">
+                                    <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $list['image'], 90, 90, 't'); ?>" alt="<?= $list['titulo']; ?>">
+                                </a>
+                            </td>
+                            <td class="cart_description">
+                                <h4><a href="<?= BASE_URL . 'produtos/item/' . $list['path']; ?>" title="<?= $list['titulo']; ?>"><?= $list['titulo']; ?></a></h4>
+                                <p>Web ID: <?= str_pad($list['id'], 6, 0, STR_PAD_LEFT); ?></p>
+                            </td>
+                            <td class="cart_price">
+                                <p>R$ <?= number_format($list['price'], '2', ',', '.'); ?></p>
+                            </td>
+                            <td class="cart_quantity">
+                                <div class="cart_quantity_button">
+                                    <button class="cart_quantity_up" data-item="<?= $list['id']; ?>"> + </button>
+                                    <input class="cart_quantity_input" id="<?= $list['id']; ?>" type="text" name="quantity" value="<?= $list['quantity']; ?>" autocomplete="off" size="2">
+                                    <button class="cart_quantity_down" data-item="<?= $list['id']; ?>"> - </button>
+                                </div>
+                            </td>
+                            <td class="cart_total">
+                                <p class="cart_total_price">R$ <?= number_format($list['total_roduct'], '2', ',', '.'); ?></p>
+                            </td>
+                            <td class="cart_delete">
+                                <button class="cart_quantity_delete" data-item="<?= $list['id']; ?>"><i class="fa fa-times"></i></button>
+                            </td>
+                        </tr>
+                        <?php
+                        $this->viewData['sub_total'] += $list['total_roduct'];
+                        $this->viewData['discount'] = $this->viewData['discount_coupon'] * $this->viewData['sub_total'];
+                    endforeach;
+                    $this->viewData['total'] = $this->viewData['sub_total'] - $this->viewData['discount'] + $this->viewData['frete'];
+                    ?>
+                    <tr>
+                        <td colspan="4">
+                            <div class="frete-calc shipping-info">
+                                <input type="text" name="cep_code" class="cep cep_checkout" value="<?= isset($_SESSION['shipping']['cep']) ? $_SESSION['shipping']['cep'] : ''; ?>">
+                                <button class="btn btn-default">
+                                    <i class="fa fa-truck"></i>
+                                    <i class="fa fa-spinner fa-pulse fa-fw"></i>
+                                    Atualizar valor do frete
+                                </button>
+                                <div class="alert alert-warning alert-dismissible alert-cep" role="alert"></div>
+                                <div class="shipping_data">
+                                    <p><strong>Frete:</strong> <span class="shipping-value"><?= isset($_SESSION['shipping']['valor']) ? $_SESSION['shipping']['valor'] : ''; ?></span></p>
+                                    <p><strong>Prazo:</strong> <span class="shipping-date"><?= isset($_SESSION['shipping']['prazo']) ? $_SESSION['shipping']['prazo'] : ''; ?></span></p>
+                                </div>
+
+                            </div>
+                        </td>
+                        <td colspan="2"  style="min-width: 250px; padding-right: 15px;">
+                            <table class="table table-condensed total-result">                                
+                                <tr>
+                                    <td>Sub Total</td>
+                                    <td align="right" id="sub_total" data-value="<?= $this->viewData['sub_total']; ?>"><span>R$ <?= number_format($this->viewData['sub_total'], 2, ',', '.'); ?> <strong>+</strong></span></td>
+                                </tr> 
+                                <tr>
+                                    <td>Frete </td>
+                                    <td align="right" id="shipping_cost" data-value="<?= $this->viewData['frete']; ?>"><span>R$ <?= number_format($this->viewData['frete'], 2, ',', '.'); ?> <strong>+</strong></span></td>
+                                </tr>
+                                <tr class="shipping-cost">
+                                    <td>Cupom de desconto</td>
+                                    <td align="right" id="discount_coupon" data-value="<?= $this->viewData['discount']; ?>"><span>R$ <?= number_format($this->viewData['discount'], 2, ',', '.'); ?> <strong>-</strong></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td align="right" id="total_cost" data-value="<?= $this->viewData['total']; ?>"><span><span>R$ <?= number_format($this->viewData['total'], 2, ',', '.'); ?> <strong>+</strong></span></td>
+                                </tr>                                
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>            
+        </div>        
+    </div>
+</section> <!--/#cart_items-->
+<div class="modal fade" tabindex="-1"  data-keyboard="false" data-backdrop="static" role="dialog" id="modal_sale">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Realizando venda</h4>
+            </div>
+            <div class="modal-body">
+                <p><i class="fa fa-spinner fa-pulse fa-fw fa-2x"></i> Aguarde, estamos trabalhando para deixar tudo certo para você...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

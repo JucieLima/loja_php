@@ -1,0 +1,150 @@
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a href="<?= BASE_URL; ?>">Home</a></li>
+                <li class="active">Carrionho de Compras</li>
+            </ol>
+        </div>
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Item</td>
+                        <td class="description"></td>
+                        <td class="price">Preço</td>
+                        <td class="quantity">Quantidade </td>
+                        <td class="total">Total</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if (!isset($_SESSION['cart']) || count($this->viewData['list']) == 0):
+                        ?>
+                        <tr>
+                            <td colspan="6">
+                                <div class="alert alert-warning alert-dismissible">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    Você ainda não possui produtos no seu carrinho!
+                                </div>
+                            </td>
+                        </tr>
+                        <?php
+                    else:
+                        foreach ($this->viewData['list'] as $list):
+                            ?>
+                            <tr id="<?= $list['id'];?>" data-item-price="<?=$list['price'];?>">
+                                <td class="cart_product">
+                                    <a href="<?= BASE_URL . 'produtos/item/' . $list['path']; ?>" title="<?= $list['titulo']; ?>">
+                                        <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $list['image'], 90, 90, 't'); ?>" alt="<?= $list['titulo']; ?>">
+                                    </a>
+                                </td>
+                                <td class="cart_description">
+                                    <h4><a href="<?= BASE_URL . 'produtos/item/' . $list['path']; ?>" title="<?= $list['titulo']; ?>"><?= $list['titulo']; ?></a></h4>
+                                    <p>Web ID: <?= str_pad($list['id'], 6, 0, STR_PAD_LEFT); ?></p>
+                                </td>
+                                <td class="cart_price">
+                                    <p>R$ <?= number_format($list['price'], '2', ',', '.'); ?></p>
+                                </td>
+                                <td class="cart_quantity">
+                                    <div class="cart_quantity_button">
+                                        <button class="cart_quantity_up" data-item="<?= $list['id'];?>"> + </button>
+                                        <input class="cart_quantity_input" id="<?= $list['id'];?>" type="text" name="quantity" value="<?= $list['quantity']; ?>" autocomplete="off" size="2">
+                                        <button class="cart_quantity_down" data-item="<?= $list['id'];?>"> - </button>
+                                    </div>
+                                </td>
+                                <td class="cart_total">
+                                    <p class="cart_total_price">R$ <?= number_format($list['total_roduct'], '2', ',', '.'); ?></p>
+                                </td>
+                                <td class="cart_delete">
+                                    <button class="cart_quantity_delete" data-item="<?= $list['id'];?>"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <?php
+                            $this->viewData['sub_total'] += $list['total_roduct'];
+                        endforeach;
+                    endif;
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section> <!--/#cart_items-->
+
+<section id="do_action">
+    <div class="container">
+        <div class="heading">
+            <h3>Frete e Cupom de desconto</h3>
+            <p>Possui um Cupom de desconto ou Vale-troca? Utilize-o na página de pagamento e aproveite!</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="chose_area">                                      
+                    <ul class="user_info shipping-info">                        
+                        <li class="single_field">
+                            <label>CEP:</label>
+                            <input type="text" name="cep_code" class="cep" value="<?= isset($_SESSION['shipping']['cep']) ? $_SESSION['shipping']['cep'] : ''; ?>">                            
+                        </li>
+                        <li>
+                            <a class="btn btn-default update" href="">
+                                Calcular <i class="fa fa-spinner fa-pulse fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="shipping_data" <?= $this->viewData['display_s']; ?>>
+                            <p><strong>Frete:</strong> <span class="shipping-value"><?= isset($_SESSION['shipping']['valor']) ? $_SESSION['shipping']['valor'] : ''; ?></span></p>
+                            <p><strong>Prazo:</strong> <span class="shipping-date"><?= isset($_SESSION['shipping']['prazo']) ? $_SESSION['shipping']['prazo'] : ''; ?></span></p>
+                        </li>
+                        <li>
+                            <div class="alert alert-warning alert-dismissible alert-cep" role="alert"></div>
+                        </li>
+                    </ul>                    
+                    <ul class="user_info">
+                        <li class="single_field">
+                            <label>Cupom de desconto:</label>
+                            <input type="text" name="cupom_code" id="coupon_code" value="<?= isset($_SESSION['coupon']['coupon_code']) ? $_SESSION['coupon']['coupon_code'] : ''; ?>">
+                        </li>
+                        <li>
+                            <a class="btn btn-default update add_discount" href="">
+                                Aplicar <i class="fa fa-spinner fa-pulse fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="cupom_data" <?= $this->viewData['display_c']; ?>>
+                            <p>
+                                <strong>Cupom:</strong> 
+                                <span class="coupon_title"><?= isset($_SESSION['coupon']['coupon_title']) ? $_SESSION['coupon']['coupon_title'] : ''; ?></span>
+                            </p>
+                            <p>
+                                <strong>Desconto:</strong> 
+                                <span class="coupon_discount"><?= isset($_SESSION['coupon']['discount_text']) ? $_SESSION['coupon']['discount_text'] : ''; ?></span>
+                            </p>                            
+                        </li>
+                        <li class="alert-discount">
+                            <div class="alert alert-warning"></div>    
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="total_area">
+                    <ul>
+                        <?php
+                        $this->viewData['discount'] = ($this->viewData['sub_total'] * $_SESSION['coupon']['coupon_discount']);
+                        $this->viewData['total'] = $this->viewData['sub_total'] - $this->viewData['discount'] + $this->viewData['frete'];
+
+                        if (isset($_SESSION['coupon']) && $_SESSION['coupon']['error'] == false):
+                            $this->viewData['discount_coupon'] = number_format($this->viewData['discount'], 2, ',', '.');
+                            $this->viewData['display_c'] = 'style="display: block"';
+                        endif;
+                        ?>
+                        <li id="sub_total" data-value="<?= $this->viewData['sub_total']; ?>">Sub Total <span>R$ <?= number_format($this->viewData['sub_total'], 2, ',', '.'); ?> <strong>+</strong></span></li>
+                        <li id="shipping_cost" <?= $this->viewData['display_s']; ?> data-value="<?= $this->viewData['frete']; ?>">Frete <span>R$ <?= $this->viewData['frete_value']; ?> <strong>+</strong></span></li>
+                        <li id="discount_coupon" <?= $this->viewData['display_c']; ?> data-value="<?= $this->viewData['discount']; ?>">Cupom <span>R$ <?= $this->viewData['discount_coupon']; ?> <strong>-</strong></span></li>
+                        <li id="total_cost" data-value="<?= $this->viewData['total']; ?>">Total <span>R$ <?= number_format($this->viewData['total'], 2, ',', '.'); ?> <strong>+</strong></span></li>
+                    </ul>
+                    <a class="btn btn-default update" href="<?= BASE_URL?>checkout">Finalizar compra</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/#do_action-->
