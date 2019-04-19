@@ -29,9 +29,10 @@ class Checkout {
         $this->viewData['sub_total'] = 0;
         $this->viewData['discount'] = 0;
         $this->viewData['frete'] = 0;
+        $this->viewData['coupon_discount'] = 0;
 
         if (isset($_SESSION['coupon']) && $_SESSION['coupon']['error'] == false):
-            $this->viewData['discount_coupon'] = $_SESSION['coupon']['coupon_discount'];
+            $this->viewData['coupon_discount'] = $_SESSION['coupon']['coupon_discount'];
             $this->viewData['display_c'] = 'style="display: block"';
         endif;
 

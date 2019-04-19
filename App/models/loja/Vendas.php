@@ -32,10 +32,25 @@ class Vendas extends Model {
         return $this->error;
     }
 
+    public function getSale($id) {
+        return self::join('clientes', 'cliente_venda', '=', 'id_cliente')
+                        ->select('vendas.*', 'clientes.email_cliente', 'clientes.nome_cliente',
+                                'clientes.sobrenome_cliente', 'clientes.cpf_cliente')
+                        ->where('id_venda', $id)->get()->toArray();
+    }
+
     public function startForSale($data) {
         $this->data = $data;
         if ($this->checkCep() && $this->checkForm()):
             return $this->makeSale();
+        endif;
+    }
+
+    public function setPaid($id, $status) {
+        $find = self::find($id);
+        if ($find):
+            $find->status = $status;
+            $find->save();
         endif;
     }
 
@@ -95,13 +110,13 @@ class Vendas extends Model {
 
     private function makeSale() {
         $cart = new Cart;
-        $desconto = (float) $_SESSION['coupon']['coupon_discount'];
+        $desconto = isset($_SESSION['coupon']) ? (float) $_SESSION['coupon']['coupon_discount'] : 0;
         $this->sale['cliente_venda'] = $this->result;
         $this->sale['qtd_itens_venda'] = $_SESSION['cart']['total'];
         $this->sale['valor_venda'] = ($cart->getTotalCart() + $_SESSION['shipping']['cost']) - ($cart->getTotalCart() * $desconto);
         $this->sale['frete_venda'] = $_SESSION['shipping']['cost'];
-        $this->sale['desconto_venda'] = $cart->getTotalCart() * $desconto;
-        $this->sale['status'] = 0;
+        $this->sale['desconto_venda'] = $desconto;
+        $this->sale['status'] = 1;
         $this->sale['logradouro_venda'] = $this->data['logradouro_cliente'];
         $this->sale['numero_venda'] = $this->data['numero_cliente'];
         $this->sale['bairro_venda'] = $this->data['bairro_cliente'];

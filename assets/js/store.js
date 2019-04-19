@@ -1,4 +1,8 @@
 $(function () {
+    
+//    if (location.protocol != 'https:'){
+//        location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+//    }
 
     base_url = $('meta[name="base-url"]').attr("content");
 
@@ -105,6 +109,7 @@ $(function () {
     });
 
     /** CARRINHO DE COMPRAS **/
+    //Aplicar desconto
     $('.add_discount').click(function (e) {
         e.preventDefault();
         var code = $('#coupon_code').val();
@@ -118,15 +123,18 @@ $(function () {
             },
             success: function (r) {
                 if (r.error === false) {
-                    discountCouponUpdate(r.discount_value);
+                    discountCouponUpdate(r.coupon_discount);
                     $('.cupom_data .coupon_title').text(r.coupon_title);
                     $('.cupom_data .coupon_discount').text(r.discount_text);
                     $('.cupom_data').fadeIn("slow");
+                    $('.alert-discount').hide();
+                    $('.alert-discount .alert').hide();
                 } else {
                     $('.cupom_data').hide();
-                    $('.alert-discount').html("<button type='button' class='close'>" +
+                    $('.alert-discount .alert').html("<button type='button' class='close'>" +
                             "<span aria-hidden='true'>&times;</span></button>" + r.error);
                     $('.alert-discount').fadeIn("slow");
+                    $('.alert-discount .alert').fadeIn("slow");
                 }
             },
             complete: function () {
@@ -166,7 +174,7 @@ $(function () {
     function addItmePrice(price, quantity, id) {
         var subtotal = parseFloat($('#sub_total').attr("data-value"));
         var frete = parseFloat($('#shipping_cost').attr("data-value"));
-        var cupom = parseFloat($('#discount_coupon').attr("data-value"));
+        var cupom = parseFloat($('#coupon_discount').attr("data-value"));
         var total = parseFloat($('#total_cost').attr("data-value"));
         var total_products = parseInt($(".cart_total_products").attr("data-products"));
 
@@ -189,8 +197,8 @@ $(function () {
         $('tr[id="' + id + '"] .cart_total_price').text(formatter.format(total_item));
         $('#sub_total span').html(formatter.format(subtotal) + " <strong>+</strong>");
         $('#sub_total').attr("data-value", subtotal);
-        $('#discount_coupon span').html(formatter.format(cupom) + " <strong>-</strong>");
-        $('#discount_coupon').attr("data-value", cupom);
+        $('#coupon_discount span').html(formatter.format(cupom) + " <strong>-</strong>");
+        $('#coupon_discount').attr("data-value", cupom);
         $('#total_cost span').html(formatter.format(total) + " <strong>+</strong>");
         $('#total_cost').attr("data-value", total);
     }
@@ -198,7 +206,7 @@ $(function () {
     function decreaseItmePrice(price, quantity, id) {
         var subtotal = parseFloat($('#sub_total').attr("data-value"));
         var frete = parseFloat($('#shipping_cost').attr("data-value"));
-        var cupom = parseFloat($('#discount_coupon').attr("data-value"));
+        var cupom = parseFloat($('#coupon_discount').attr("data-value"));
         var total = parseFloat($('#total_cost').attr("data-value"));
         var total_products = parseInt($(".cart_total_products").attr("data-products"));
 
@@ -221,8 +229,8 @@ $(function () {
         $('tr[id="' + id + '"] .cart_total_price').text(formatter.format(total_item));
         $('#sub_total span').html(formatter.format(subtotal) + " <strong>+</strong>");
         $('#sub_total').attr("data-value", subtotal);
-        $('#discount_coupon span').html(formatter.format(cupom) + " <strong>-</strong>");
-        $('#discount_coupon').attr("data-value", cupom);
+        $('#coupon_discount span').html(formatter.format(cupom) + " <strong>-</strong>");
+        $('#coupon_discount').attr("data-value", cupom);
         $('#total_cost span').html(formatter.format(total) + " <strong>+</strong>");
         $('#total_cost').attr("data-value", total);
     }
@@ -279,7 +287,7 @@ $(function () {
     });
 
     function shippingCostUpdate(shipping) {
-        var coupon = parseFloat($('#discount_coupon').attr("data-value"));
+        var coupon = parseFloat($('#coupon_discount').attr("data-value"));
         var sub_total = parseFloat($('#sub_total').attr("data-value"));
         var total_cost = shipping + sub_total - coupon;
 
@@ -307,9 +315,9 @@ $(function () {
             minimumFractionDigits: 2
         });
 
-        $('#discount_coupon span').html(formatter.format(discount * sub_total) + " <strong>-</strong>");
-        $('#discount_coupon').attr("data-value", discount);
-        $('#discount_coupon').fadeIn("fast");
+        $('#coupon_discount span').html(formatter.format(discount * sub_total) + " <strong>-</strong>");
+        $('#coupon_discount').attr("data-value", discount * sub_total);
+        $('#coupon_discount').fadeIn("fast");
         $('#total_cost span').html(formatter.format(total_cost) + " <strong>+</strong>");
         $('#total_cost').attr("data-value", total_cost);
     }
@@ -337,7 +345,7 @@ $(function () {
 
         var shipping = parseFloat($('#shipping_cost').attr("data-value"));
         var sub_total = parseFloat($('#sub_total').attr("data-value"));
-        var discount = parseFloat($('#discount_coupon').attr("data-value"));
+        var discount = parseFloat($('#coupon_discount').attr("data-value"));
         var total_products = parseInt($(".cart_total_products").attr("data-products"));
         var cupom = discount / sub_total;
 
@@ -357,8 +365,8 @@ $(function () {
         $(".cart_total_products span").text(total_products);
         $('#sub_total span').html(formatter.format(sub_total) + " <strong>+</strong>");
         $('#sub_total').attr("data-value", sub_total);
-        $('#discount_coupon span').html(formatter.format(discount) + " <strong>-</strong>");
-        $('#discount_coupon').attr("data-value", discount);
+        $('#coupon_discount span').html(formatter.format(discount) + " <strong>-</strong>");
+        $('#coupon_discount').attr("data-value", discount);
         $('#total_cost span').html(formatter.format(total_cost) + " <strong>+</strong>");
         $('#total_cost').attr("data-value", total_cost);
     }

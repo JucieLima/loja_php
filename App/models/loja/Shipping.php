@@ -62,6 +62,7 @@ class Shipping {
             $_SESSION['shipping']['cost'] = 0 * $this->split;
             $_SESSION['shipping']['prazo'] = '0 dias';
             $_SESSION['shipping']['cep'] = '';
+            $_SESSION['shipping']['error'] = true;
             if (isset($xml->cServico)):
                 $this->getError($xml->cServico->Erro);
             else:

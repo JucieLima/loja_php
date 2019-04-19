@@ -24,10 +24,11 @@ class CartController extends Controller {
         $this->viewData['display_s'] = 'style="display: none"';
         $this->viewData['sub_total'] = 0;
         $this->viewData['discount'] = 0;
+        $this->viewData['coupon_discount'] = 0;
         $this->viewData['frete'] = 0;
 
         if (isset($_SESSION['coupon']) && $_SESSION['coupon']['error'] == false):            
-            $this->viewData['discount_coupon'] = $_SESSION['coupon']['coupon_discount'];
+            $this->viewData['coupon_discount'] = $_SESSION['coupon']['coupon_discount'];
             $this->viewData['display_c'] = 'style="display: block"';
         endif;
 
@@ -71,7 +72,7 @@ class CartController extends Controller {
     }
 
     public function add_coupon() {
-        $code = filter_input(INPUT_POST, 'code', FILTER_DEFAULT);
+        $code = filter_input(INPUT_POST, 'code', FILTER_SANITIZE_STRING);
         $coupon = new Coupons;
         $discount = $coupon->getDiscount($code);
         echo json_encode($discount);

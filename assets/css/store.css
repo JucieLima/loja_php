@@ -371,6 +371,7 @@ carousel-inner .item{
     margin-top: 10px;
     font-size: 1em;
     text-transform: uppercase;
+    border-radius: 4px;
 }
 #cart_items .cart_info .table.table-condensed.total-result span{
     color: #555;
@@ -399,4 +400,120 @@ carousel-inner .item{
 }
 .frete-calc .shipping_data{
     margin-top: 20px;
+}
+
+/*Pàgina de pagamentos*/
+.account_summary{
+    margin-bottom: 50px;
+}
+.account_summary h2{
+    margin-top: 0;
+    color: #fe980f;
+    font-weight: 200;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 1.8em;
+}
+.payment-wrapper .nav a{
+    color: #696763;
+}
+.alert-payment{
+    display: none;
+}
+.payment-wrapper{
+    margin-bottom: 50px;
+}
+.payment-form{
+    margin-top: 20px;
+}
+.form_submit{
+    background-color: #FE980F;
+    color: #fff;
+    border-color: #FE980F;
+}
+.form_submit:hover{
+    color: #696763;
+}
+.value_header, .description_header{
+    background-color: #FE980F;
+    color: #fff;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+.description_header{
+    margin-left: 15px;
+    width: calc(66.66666666666666% - 15px);  
+    text-align: left;
+}
+.value_header{
+    margin-right: 15px;
+    width: calc(33.33333333333333% - 15px);
+    text-align: right;    
+}
+.description_item{
+    background-color: #fff;
+    padding: 6px 10px 0;
+    margin-left: 15px;
+    width: calc(66.66666666666666% - 15px);
+    text-align: left;
+    display: inline-block;
+    color: #666;
+}
+.description_item.divider{
+    margin-left: 15px;
+    width: calc(66.66666666666666% - 15px);
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+    margin-top: 6px;
+}
+.value_item.divider{
+    margin-right: 15px;
+    width: calc(33.33333333333333% - 15px);
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #eee;
+    padding: 0;
+    margin-top: 6px;
+}
+.value_item{
+    background-color: #fff;
+    padding: 6px 10px 0;
+    margin-right: 15px;
+    width: calc(33.33333333333333% - 15px);
+    text-align: right;
+    font-weight: bold;
+    color: #666;
+}
+.description_item span{
+    width: 100%;
+    font-size: 0.9em;
+    display: block;
+    font-weight: 400; 
+    color: #999;
+}
+.pagmsg{
+    display: none;
+}
+
+/*** PÁGINA DE AGRADECIMENTO **/
+.thank_you_wrapper{
+    margin: 30px 0 80px;
+    background-color: #efefef;
+    padding: 20px 30px;
+    color: #666;
+    font-size: 1.5em;
+    text-align: center;
+}
+.thank_you_wrapper h1{
+    font-weight: 200;
+    font-size: 2.5em;
+    color: #FE980F;
+    margin-bottom: 30px;
+}
+.company_name{
+    color: #999;
+    font-weight: bold;
 }

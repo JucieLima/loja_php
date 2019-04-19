@@ -165,7 +165,7 @@
                         </tr>
                         <?php
                         $this->viewData['sub_total'] += $list['total_roduct'];
-                        $this->viewData['discount'] = $this->viewData['discount_coupon'] * $this->viewData['sub_total'];
+                        $this->viewData['discount'] = $this->viewData['coupon_discount'] * $this->viewData['sub_total'];
                     endforeach;
                     $this->viewData['total'] = $this->viewData['sub_total'] - $this->viewData['discount'] + $this->viewData['frete'];
                     ?>
@@ -198,7 +198,7 @@
                                 </tr>
                                 <tr class="shipping-cost">
                                     <td>Cupom de desconto</td>
-                                    <td align="right" id="discount_coupon" data-value="<?= $this->viewData['discount']; ?>"><span>R$ <?= number_format($this->viewData['discount'], 2, ',', '.'); ?> <strong>-</strong></span></td>
+                                    <td align="right" id="coupon_discount" data-value="<?= $this->viewData['discount']; ?>"><span>R$ <?= number_format($this->viewData['discount'], 2, ',', '.'); ?> <strong>-</strong></span></td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>

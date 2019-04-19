@@ -21,7 +21,7 @@ $(function () {
                 if (r.result === true) {
                     $('#modal_sale .modal-body').html('<div class="alert alert-success">Obrigado por aguardar! Estamos redirecionando você para a página de pagamento!</div>');
                     setTimeout(function () {
-                        location.href = base_url + "payment/" + r.sale;
+                        location.href = base_url + "payment/order/" + r.sale;
                     }, 1000);
                 } else {
                     $('#modal_sale .modal-body').html('<div class="alert alert-warning">' + r.error + '</div>');
@@ -32,6 +32,7 @@ $(function () {
                 $('#modal_sale .fa-fw').fadeOut("fast");
             },
             error: function (r) {
+//                $('.debug').html(r.responseText);
                 console.log(r);
             }
         });

@@ -34,7 +34,7 @@
                     else:
                         foreach ($this->viewData['list'] as $list):
                             ?>
-                            <tr id="<?= $list['id'];?>" data-item-price="<?=$list['price'];?>">
+                            <tr id="<?= $list['id']; ?>" data-item-price="<?= $list['price']; ?>">
                                 <td class="cart_product">
                                     <a href="<?= BASE_URL . 'produtos/item/' . $list['path']; ?>" title="<?= $list['titulo']; ?>">
                                         <img src="<?= BASE_URL . $this->viewData['cropper']->resize('uploads/' . $list['image'], 90, 90, 't'); ?>" alt="<?= $list['titulo']; ?>">
@@ -49,16 +49,16 @@
                                 </td>
                                 <td class="cart_quantity">
                                     <div class="cart_quantity_button">
-                                        <button class="cart_quantity_up" data-item="<?= $list['id'];?>"> + </button>
-                                        <input class="cart_quantity_input" id="<?= $list['id'];?>" type="text" name="quantity" value="<?= $list['quantity']; ?>" autocomplete="off" size="2">
-                                        <button class="cart_quantity_down" data-item="<?= $list['id'];?>"> - </button>
+                                        <button class="cart_quantity_up" data-item="<?= $list['id']; ?>"> + </button>
+                                        <input class="cart_quantity_input" id="<?= $list['id']; ?>" type="text" name="quantity" value="<?= $list['quantity']; ?>" autocomplete="off" size="2">
+                                        <button class="cart_quantity_down" data-item="<?= $list['id']; ?>"> - </button>
                                     </div>
                                 </td>
                                 <td class="cart_total">
                                     <p class="cart_total_price">R$ <?= number_format($list['total_roduct'], '2', ',', '.'); ?></p>
                                 </td>
                                 <td class="cart_delete">
-                                    <button class="cart_quantity_delete" data-item="<?= $list['id'];?>"><i class="fa fa-times"></i></button>
+                                    <button class="cart_quantity_delete" data-item="<?= $list['id']; ?>"><i class="fa fa-times"></i></button>
                                 </td>
                             </tr>
                             <?php
@@ -129,20 +129,19 @@
                 <div class="total_area">
                     <ul>
                         <?php
-                        $this->viewData['discount'] = ($this->viewData['sub_total'] * $_SESSION['coupon']['coupon_discount']);
-                        $this->viewData['total'] = $this->viewData['sub_total'] - $this->viewData['discount'] + $this->viewData['frete'];
-
+                        $this->viewData['total'] = $this->viewData['sub_total'] - ($this->viewData['sub_total'] * $this->viewData['coupon_discount']) + $this->viewData['frete'];
                         if (isset($_SESSION['coupon']) && $_SESSION['coupon']['error'] == false):
-                            $this->viewData['discount_coupon'] = number_format($this->viewData['discount'], 2, ',', '.');
+                            $this->viewData['discount'] = ($this->viewData['sub_total'] * $_SESSION['coupon']['coupon_discount']);
+                            $this->viewData['coupon_discount'] = number_format($this->viewData['discount'], 2, ',', '.');
                             $this->viewData['display_c'] = 'style="display: block"';
                         endif;
                         ?>
                         <li id="sub_total" data-value="<?= $this->viewData['sub_total']; ?>">Sub Total <span>R$ <?= number_format($this->viewData['sub_total'], 2, ',', '.'); ?> <strong>+</strong></span></li>
                         <li id="shipping_cost" <?= $this->viewData['display_s']; ?> data-value="<?= $this->viewData['frete']; ?>">Frete <span>R$ <?= $this->viewData['frete_value']; ?> <strong>+</strong></span></li>
-                        <li id="discount_coupon" <?= $this->viewData['display_c']; ?> data-value="<?= $this->viewData['discount']; ?>">Cupom <span>R$ <?= $this->viewData['discount_coupon']; ?> <strong>-</strong></span></li>
+                        <li id="coupon_discount" <?= $this->viewData['display_c']; ?> data-value="<?= $this->viewData['discount']; ?>">Cupom <span>R$ <?= $this->viewData['coupon_discount']; ?> <strong>-</strong></span></li>
                         <li id="total_cost" data-value="<?= $this->viewData['total']; ?>">Total <span>R$ <?= number_format($this->viewData['total'], 2, ',', '.'); ?> <strong>+</strong></span></li>
                     </ul>
-                    <a class="btn btn-default update" href="<?= BASE_URL?>checkout">Finalizar compra</a>
+                    <a class="btn btn-default update" href="<?= BASE_URL ?>checkout">Finalizar compra</a>
                 </div>
             </div>
         </div>

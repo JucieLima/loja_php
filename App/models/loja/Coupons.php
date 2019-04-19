@@ -35,7 +35,6 @@ class Coupons extends Model {
         if ($this->result):
             $this->result['error'] = false;;
             $this->result['discount_text'] = ($this->result['coupon_discount'] * 100) . '% OFF';
-            $this->result['discount_value'] = $this->result['coupon_discount'];
             $_SESSION['coupon'] = $this->result;
         else:
             $this->result['error'] = 'Código inválido!';

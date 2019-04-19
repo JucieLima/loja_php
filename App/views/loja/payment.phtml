@@ -1,0 +1,116 @@
+<section id="payment-section" data-session="<?= $this->viewData['sessionCode']->getResult(); ?>">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 payment-wrapper">
+                <div class="pagmsg">
+                    
+                </div>
+                <div class="debug"></div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#cartao" aria-controls="cartao" role="tab" data-toggle="tab">Pagar com cartão</a></li>
+                    <li role="presentation"><a href="#boleto" aria-controls="boleto" role="tab" data-toggle="tab">Pagar com Boleto</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="cartao">                        
+                        <div class="payment-form"><!--login form-->
+                            <div class="alert alert-payment alert-warning"></div>
+                            <form method="post" name="payment_form">
+                                <div class="row">
+                                    <div class="form-group col-md-8">
+                                        <label for="card">Número do cartão</label>
+                                        <input type="text" class="form-control" id="card" name="card_number" placeholder="0000 0000 0000 0000">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cvv">Código de verificação</label>
+                                        <input type="text" class="form-control" id="cvv" name="cvv_number" placeholder="000">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <span>Validade do cartão:</span>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="expiration_month">Mês</label>
+                                        <select class="form-control" id="expiration_month" name="expiration_month">
+                                            <?php
+                                            for ($m = 1; $m <= 12; $m++):
+                                                echo '<option value="'.$m.'">'.($m
+                                                < 10 ? '0'.$m : $m).'</option>';
+                                            endfor;
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="expiration_month">Ano</label>   
+                                        <select class="form-control" id="expiration_year" name="expiration_year">
+                                            <?php
+                                            $year = intval(date('Y'));
+                                            for ($y = $year; $y <= $year + 20; $y++):
+                                                echo '<option value="'.$y.'">'.$y.'</option>';
+                                            endfor;
+                                            ?>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <label for="cardholder_name">Titular do cartão</label>
+                                        <input type="text" class="form-control" id="cardholder_name" name="cardholder_name" placeholder="Nome do titular">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cpf_number">CPF</label>
+                                        <input type="text" class="form-control" id="cpf_number" name="cpf_number" placeholder="CPF do titular">
+                                    </div>
+                                    <div class="form-group col-md-6 hide installments">
+                                        <label for="installments">Parcelas</label> 
+                                        <select class="form-control" name="installments" id="installments"></select>
+                                    </div>                                    
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-default form_submit">Confirmar Pagamento</button>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="id_venda" value="<?= $this->viewData['sale']['id_venda']; ?>" id="id_venda">
+                                <input type="hidden" name="valor_venda" value="<?= $this->viewData['sale']['valor_venda']; ?>" id="valor_venda">
+                            </form>
+                        </div><!--/login form-->
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="boleto">...</div>
+                </div>
+            </div>
+            <div class="col-md-4 account_summary">
+                <h2>Resumo da compra</h2>
+                <div class="row">
+                    <div class="description_header col-sm-8">Descrição</div><div class="value_header col-sm-4">Total</div>
+                    <?php
+                    $subtotal = 0;
+                    foreach ($this->viewData['itens'] as $item):
+                        ?>
+                        <div class="description_item col-sm-8">
+                            <?= $item['titulo_produto']; ?>
+                            <span>Quantidade: <?= $item['qtd_itens']; ?></span>
+                            <span>Valor: R$ <?= number_format($item['valor_unitario_vi'],
+                            2, ',', '.');
+                            ?></span>
+                        </div>
+                        <div class="value_item col-sm-4">R$ <?= number_format(($item['valor_unitario_vi']
+                                * $item['qtd_itens']), 2, ',', '.');
+                            ?> + </div>
+                        <div class="description_item col-sm-8 divider"></div><div class="value_item col-sm-4 divider"></div>
+                        <?php
+                        $subtotal += $item['valor_unitario_vi'] * $item['qtd_itens'];
+                    endforeach;
+                    ?>
+                    <div class="description_item col-sm-8">Subtotal</div><div class="value_item col-sm-4">R$ <?= number_format($subtotal,
+                            2, ',', '.');
+                    ?> + </div>
+                    <div class="description_item col-sm-8">Frete</div><div class="value_item col-sm-4">R$ <?= number_format($this->viewData['sale']['frete_venda'],
+                            2, ',', '.');
+                    ?> + </div>
+                    <div class="description_item col-sm-8">Cumpom</div><div class="value_item col-sm-4">R$ <?= number_format($this->viewData['sale']['desconto_venda']
+                            * $subtotal, 2, ',', '.');
+                    ?> - </div>
+                    <div class="description_item col-sm-8 divider"></div><div class="value_item col-sm-4 divider"></div>
+                    <div class="description_item col-sm-8">Total</div><div class="value_item col-sm-4">R$ <?= number_format($this->viewData['sale']['valor_venda'],
+                            2, ',', '.');
+                    ?> + </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
